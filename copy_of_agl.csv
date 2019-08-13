@@ -1,0 +1,460 @@
+Home,Away,Game,Winner,Loser
+Monday,,,,
+Ennis,Brick,Archery,Ennis,Brick
+Shmuel,Ennis,Anagrams,Shmuel,Ennis
+Brick,Yitzie,Pool,Yitzie,Brick
+Yitzie,Shmuel,Archery,Yitzie,Shmuel
+Judah,Zach,Archery,Judah,Zach
+Siegel,Judah,Knockout,Judah,Siegel
+Zach,Hagler,Anagrams,Zach,Hagler
+Hagler,Siegel,Connect Four,Hagler,Siegel
+Tuesday,,,,
+Brick,Ennis,Basketball,Ennis,Brick
+Shmuel,Yitzie,Connect Four,Yitzie,Shmuel
+Ennis,Shmuel,Pool,Ennis,Shmuel
+Yitzie,Brick,Anagrams,Yitzie,Brick
+Zach,Judah,Cup Pong,Judah,Zach
+Siegel,Hagler,Anagrams,Hagler,Siegel
+Judah,Siegel,Darts,Siegel,Judah
+Hagler,Zach,Basketball,Hagler,Zach
+Wednesday,,,,
+Ennis,Yitzie,Cup Pong,Ennis,Yitzie
+Yitzie,Ennis,Anagrams,Yitzie,Ennis
+Shmuel,Brick,Anagrams,Shmuel,Brick
+Brick,Shmuel,Pool,Shmuel,Brick
+Judah,Hagler,Knockout,Judah,Hagler
+Hagler,Judah,Connect Four,Hagler,Judah
+Zach,Siegel,Cup Pong,Siegel,Zach
+Siegel,Zach,Darts,Zach,Siegel
+Thursday,,,,
+Ennis,Judah,Connect Four,Ennis,Judah
+Zach,Ennis,Darts,Zach,Ennis
+Brick,Hagler,Archery,Brick,Hagler
+Siegel,Brick,Cup Pong,Siegel,Brick
+Shmuel,Zach,Connect Four,Shmuel,Zach
+Judah,Yitzie,Cup Pong,Yitzie,Judah
+Yitzie,Siegel,Archery,Yitzie,Siegel
+Hagler,Shmuel,Cup Pong,Shmuel,Hagler
+Friday,,,,
+Ennis,Siegel,Archery,Ennis,Siegel
+Hagler,Ennis,Basketball,Ennis,Hagler
+Brick,Zach,Basketball,Zach,Brick
+Judah,Brick,Archery,Brick,Judah
+Shmuel,Judah,Cup Pong,Judah,Shmuel
+Siegel,Shmuel,Anagrams,Shmuel,Siegel
+Yitzie,Hagler,Pool,Yitzie,Hagler
+Zach,Yitzie,Darts,Zach,Yitzie
+,Away,Game,Winner,Loser
+Monday,,,,
+Ennis,Brick,Cup Pong,Ennis,Brick
+Shmuel,Ennis,Anagrams,Ennis,Shmuel
+Brick,Yitzie,Pool,Brick,Yitzie
+Yitzie,Shmuel,Archery,Yitzie,Shmuel
+Judah,Zach,Darts,Judah,Zach
+Siegel,Judah,Darts,Judah,Siegel
+Zach,Hagler,Cup Pong,Hagler,Zach
+Hagler,Siegel,Anagrams,Siegel,Hagler
+Tuesday,,,,
+Brick,Ennis,Darts,Brick,Ennis
+Shmuel,Yitzie,Knockout,Shmuel,Yitzie
+Ennis,Shmuel,Cup Pong,Shmuel,Ennis
+Yitzie,Brick,Anagrams,Yitzie,Brick
+Zach,Judah,Cup Pong,Judah,Zach
+Siegel,Hagler,Darts,Hagler,Siegel
+Judah,Siegel,Cup Pong,Judah,Siegel
+Hagler,Zach,Connect Four,Hagler,Zach
+Wednesday,,,,
+Ennis,Yitzie,Connect Four,Ennis,Yitzie
+Yitzie,Ennis,Anagrams,Yitzie,Ennis
+Shmuel,Brick,Anagrams,Shmuel,Brick
+Brick,Shmuel,Archery,Shmuel,Brick
+Judah,Hagler,Knockout,Judah,Hagler
+Hagler,Judah,Basketball,Hagler,Judah
+Zach,Siegel,Anagrams,Siegel,Zach
+Siegel,Zach,Basketball,Zach,Siegel
+Thursday,,,,
+Judah,Ennis,Knockout,Judah,Ennis
+Ennis,Zach,Connect Four,Ennis,Zach
+Hagler,Brick,Basketball,Hagler,Brick
+Brick,Siegel,Archery,Brick,Siegel
+Zach,Shmuel,Darts,Zach,Shmuel
+Yitzie,Judah,Archery,Yitzie,Judah
+Siegel,Yitzie,Anagrams,Siegel,Yitzie
+Shmuel,Hagler,Archery,Shmuel,Hagler
+Friday,,,,
+Siegel,Ennis,Knockout,Ennis,Siegel
+Ennis,Hagler,Archery,Ennis,Hagler
+Zach,Brick,Darts,Zach,Brick
+Brick,Judah,Pool,Brick,Judah
+Judah,Shmuel,Darts,Judah,Shmuel
+Shmuel,Siegel,Connect Four,Shmuel,Siegel
+Yitzie,Zach,Pool,Yitzie,Zach
+Hagler,Yitzie,Connect Four,Yitzie,Hagler
+,Away,Game,Winner,Loser
+Monday,,,,
+Brick,Ennis,Darts,Brick,Ennis
+Shmuel,Yitzie,Cup Pong,Yitzie,Shmuel
+Ennis,Shmuel,Archery,Ennis,Shmuel
+Yitzie,Brick,Archery,Yitzie,Brick
+Zach,Judah,Pool,Judah,Zach
+Siegel,Hagler,Archery,Siegel,Hagler
+Judah,Siegel,Cup Pong,Siegel,Judah
+Hagler,Zach,Basketball,Zach,Hagler
+Tuesday,,,,
+Ennis,Yitzie,Cup Pong,Ennis,Yitzie
+Yitzie,Ennis,Darts,Ennis,Yitzie
+Shmuel,Brick,Anagrams,Shmuel,Brick
+Brick,Shmuel,Pool,Brick,Shmuel
+Judah,Hagler,Knockout,Judah,Hagler
+Hagler,Judah,Basketball,Hagler,Judah
+Zach,Siegel,Darts,Zach,Siegel
+Siegel,Zach,Archery,Siegel,Zach
+Wednesday,,,,
+Ennis,Judah,Connect Four,Ennis,Judah
+Zach,Ennis,Anagrams,Ennis,Zach
+Brick,Hagler,Archery,Brick,Hagler
+Siegel,Brick,Anagrams,Siegel,Brick
+Shmuel,Zach,Connect Four,Shmuel,Zach
+Judah,Yitzie,Knockout,Judah,Yitzie
+Yitzie,Siegel,Archery,Yitzie,Siegel
+Hagler,Shmuel,Connect Four,Shmuel,Hagler
+Thursday,,,,
+Ennis,Siegel,Cup Pong,Ennis,Siegel
+Hagler,Ennis,Anagrams,Ennis,Hagler
+Brick,Zach,Archery,Brick,Zach
+Judah,Brick,Cup Pong,Judah,Brick
+Shmuel,Judah,Connect Four,Judah,Shmuel
+Siegel,Shmuel,Cup Pong,Shmuel,Siegel
+Yitzie,Hagler,Pool,Hagler,Yitzie
+Zach,Yitzie,Darts,Zach,Yitzie
+Friday,,,,
+Ennis,Brick,Pool,Ennis,Brick
+Shmuel,Ennis,Knockout,Ennis,Shmuel
+Brick,Yitzie,Pool,Yitzie,Brick
+Yitzie,Shmuel,Pool,Yitzie,Shmuel
+Judah,Zach,Darts,Judah,Zach
+Siegel,Judah,Anagrams,Siegel,Judah
+Zach,Hagler,Anagrams,Hagler,Zach
+Hagler,Siegel,Connect Four,Hagler,Siegel
+,Away,Game,Winner,Loser
+Monday,,,,
+Brick,Ennis,Darts,Brick,Ennis
+Shmuel,Yitzie,Connect Four,Shmuel,Yitzie
+Ennis,Shmuel,Pool,Ennis,Shmuel
+Yitzie,Brick,Anagrams,Yitzie,Brick
+Zach,Judah,Basketball,Zach,Judah
+Siegel,Hagler,Archery,Hagler,Siegel
+Judah,Siegel,Archery,Judah,Siegel
+Hagler,Zach,Connect Four,Zach,Hagler
+Tuesday,,,,
+Ennis,Yitzie,Cup Pong,Ennis,Yitzie
+Yitzie,Ennis,Anagrams,Yitzie,Ennis
+Shmuel,Brick,Connect Four,Shmuel,Brick
+Brick,Shmuel,Pool,Shmuel,Brick
+Judah,Hagler,Cup Pong,Judah,Hagler
+Hagler,Judah,Basketball,Hagler,Judah
+Zach,Siegel,Pool,Siegel,Zach
+Siegel,Zach,Archery,Siegel,Zach
+Wednesday,,,,
+Judah,Ennis,Darts,Ennis,Judah
+Ennis,Zach,Pool,Zach,Ennis
+Hagler,Brick,Connect Four,Hagler,Brick
+Brick,Siegel,Pool,Brick,Siegel
+Zach,Shmuel,Darts,Shmuel,Zach
+Yitzie,Judah,Archery,Yitzie,Judah
+Siegel,Yitzie,Anagrams,Siegel,Yitzie
+Shmuel,Hagler,Archery,Hagler,Shmuel
+Thursday,,,,
+Siegel,Ennis,Anagrams,Siegel,Ennis
+Ennis,Hagler,Cup Pong,Ennis,Hagler
+Zach,Brick,Anagrams,Zach,Brick
+Brick,Judah,Cup Pong,Judah,Brick
+Judah,Shmuel,Knockout,Shmuel,Judah
+Shmuel,Siegel,Cup Pong,Shmuel,Siegel
+Yitzie,Zach,Pool,Yitzie,Zach
+Hagler,Yitzie,Basketball,Hagler,Yitzie
+Friday,,,,
+Ennis,Brick,Archery,Ennis,Brick
+Shmuel,Ennis,Knockout,Ennis,Shmuel
+Brick,Yitzie,Darts,Brick,Yitzie
+Yitzie,Shmuel,Archery,Yitzie,Shmuel
+Judah,Zach,Knockout,Judah,Zach
+Siegel,Judah,Connect Four,Siegel,Judah
+Zach,Hagler,Darts,Zach,Hagler
+Hagler,Siegel,Darts,Hagler,Siegel
+,Away,Game,Winner,Loser
+Monday,,,,
+Ennis,Yitzie,Cup Pong,Yitzie,Ennis
+Yitzie,Ennis,Anagrams,Ennis,Yitzie
+Shmuel,Brick,Connect Four,Brick,Shmuel
+Brick,Shmuel,Pool,Brick,Shmuel
+Judah,Hagler,Knockout,Judah,Hagler
+Hagler,Judah,Connect Four,Hagler,Judah
+Zach,Siegel,Basketball,Siegel,Zach
+Siegel,Zach,Archery,Siegel,Zach
+Tuesday,,,,
+Ennis,Judah,Archery,Ennis,Judah
+Zach,Ennis,Darts,Ennis,Zach
+Brick,Hagler,Cup Pong,Brick,Hagler
+Siegel,Brick,Cup Pong,Brick,Siegel
+Shmuel,Zach,Archery,Shmuel,Zach
+Judah,Yitzie,Basketball,Yitzie,Judah
+Yitzie,Siegel,Pool,Yitzie,Siegel
+Hagler,Shmuel,Basketball,Hagler,Shmuel
+Wednesday,,,,
+Ennis,Siegel,Archery,Ennis,Siegel
+Hagler,Ennis,Basketball,Hagler,Ennis
+Brick,Zach,Pool,Brick,Zach
+Judah,Brick,Cup Pong,Brick,Judah
+Shmuel,Judah,Anagrams,Shmuel,Judah
+Siegel,Shmuel,Anagrams,Siegel,Shmuel
+Yitzie,Hagler,Archery,Yitzie,Hagler
+Zach,Yitzie,Darts,Zach,Yitzie
+Thursday,,,,
+Ennis,Brick,Connect Four,Brick,Ennis
+Shmuel,Ennis,Anagrams,Shmuel,Ennis
+Brick,Yitzie,Darts,Yitzie,Brick
+Yitzie,Shmuel,Archery,Yitzie,Shmuel
+Judah,Zach,,,
+Siegel,Judah,Anagrams,Siegel,Judah
+Zach,Hagler,,,
+Hagler,Siegel,Connect Four,Siegel,Hagler
+Friday,,,,
+Brick,Ennis,,,
+Shmuel,Yitzie,,,
+Ennis,Shmuel,,,
+Yitzie,Brick,,,
+Zach,Judah,,,
+Siegel,Hagler,,,
+Judah,Siegel,,,
+Hagler,Zach,,,
+,Away,Game,Winner,Loser
+Monday,,,,
+Ennis,Yitzie,,,
+Yitzie,Ennis,,,
+Shmuel,Brick,,,
+Brick,Shmuel,,,
+Judah,Hagler,,,
+Hagler,Judah,,,
+Zach,Siegel,,,
+Siegel,Zach,,,
+Tuesday,,,,
+Judah,Ennis,,,
+Ennis,Zach,,,
+Hagler,Brick,,,
+Brick,Siegel,,,
+Zach,Shmuel,,,
+Yitzie,Judah,,,
+Siegel,Yitzie,,,
+Shmuel,Hagler,,,
+Wednesday,,,,
+Siegel,Ennis,,,
+Ennis,Hagler,,,
+Zach,Brick,,,
+Brick,Judah,,,
+Judah,Shmuel,,,
+Shmuel,Siegel,,,
+Yitzie,Zach,,,
+Hagler,Yitzie,,,
+Thursday,,,,
+Ennis,Brick,,,
+Shmuel,Ennis,,,
+Brick,Yitzie,,,
+Yitzie,Shmuel,,,
+Judah,Zach,,,
+Siegel,Judah,,,
+Zach,Hagler,,,
+Hagler,Siegel,,,
+Friday,,,,
+Brick,Ennis,,,
+Shmuel,Yitzie,,,
+Ennis,Shmuel,,,
+Yitzie,Brick,,,
+Zach,Judah,,,
+Siegel,Hagler,,,
+Judah,Siegel,,,
+Hagler,Zach,,,
+,Away,Game,Winner,Loser
+Monday,,,,
+Ennis,Judah,,,
+Zach,Ennis,,,
+Brick,Hagler,,,
+Siegel,Brick,,,
+Shmuel,Zach,,,
+Judah,Yitzie,,,
+Yitzie,Siegel,,,
+Hagler,Shmuel,,,
+Tuesday,,,,
+Ennis,Siegel,,,
+Hagler,Ennis,,,
+Brick,Zach,,,
+Judah,Brick,,,
+Shmuel,Judah,,,
+Siegel,Shmuel,,,
+Yitzie,Hagler,,,
+Zach,Yitzie,,,
+Wednesday,,,,
+Ennis,Brick,,,
+Shmuel,Ennis,,,
+Brick,Yitzie,,,
+Yitzie,Shmuel,,,
+Judah,Zach,,,
+Siegel,Judah,,,
+Zach,Hagler,,,
+Hagler,Siegel,,,
+Thursday,,,,
+Brick,Ennis,,,
+Shmuel,Yitzie,,,
+Ennis,Shmuel,,,
+Yitzie,Brick,,,
+Zach,Judah,,,
+Siegel,Hagler,,,
+Judah,Siegel,,,
+Hagler,Zach,,,
+Friday,,,,
+Ennis,Yitzie,,,
+Yitzie,Ennis,,,
+Shmuel,Brick,,,
+Brick,Shmuel,,,
+Judah,Hagler,,,
+Hagler,Judah,,,
+Zach,Siegel,,,
+Siegel,Zach,,,
+,Away,Game,Winner,Loser
+Monday,,,,
+Judah,Ennis,,,
+Ennis,Zach,,,
+Hagler,Brick,,,
+Brick,Siegel,,,
+Zach,Shmuel,,,
+Yitzie,Judah,,,
+Siegel,Yitzie,,,
+Shmuel,Hagler,,,
+Tuesday,,,,
+Siegel,Ennis,,,
+Ennis,Hagler,,,
+Zach,Brick,,,
+Brick,Judah,,,
+Judah,Shmuel,,,
+Shmuel,Siegel,,,
+Yitzie,Zach,,,
+Hagler,Yitzie,,,
+Wednesday,,,,
+Ennis,Brick,,,
+Shmuel,Ennis,,,
+Brick,Yitzie,,,
+Yitzie,Shmuel,,,
+Judah,Zach,,,
+Siegel,Judah,,,
+Zach,Hagler,,,
+Hagler,Siegel,,,
+Thursday,,,,
+Brick,Ennis,,,
+Shmuel,Yitzie,,,
+Ennis,Shmuel,,,
+Yitzie,Brick,,,
+Zach,Judah,,,
+Siegel,Hagler,,,
+Judah,Siegel,,,
+Hagler,Zach,,,
+Friday,,,,
+Ennis,Yitzie,,,
+Yitzie,Ennis,,,
+Shmuel,Brick,,,
+Brick,Shmuel,,,
+Judah,Hagler,,,
+Hagler,Judah,,,
+Zach,Siegel,,,
+Siegel,Zach,,,
+,Away,Game,Winner,Loser
+Monday,,,,
+Brick,Ennis,,,
+Shmuel,Yitzie,,,
+Ennis,Shmuel,,,
+Yitzie,Brick,,,
+Zach,Judah,,,
+Siegel,Hagler,,,
+Judah,Siegel,,,
+Hagler,Zach,,,
+Tuesday,,,,
+Ennis,Yitzie,,,
+Yitzie,Ennis,,,
+Shmuel,Brick,,,
+Brick,Shmuel,,,
+Judah,Hagler,,,
+Hagler,Judah,,,
+Zach,Siegel,,,
+Siegel,Zach,,,
+Wednesday,,,,
+Ennis,Judah,,,
+Zach,Ennis,,,
+Brick,Hagler,,,
+Siegel,Brick,,,
+Shmuel,Zach,,,
+Judah,Yitzie,,,
+Yitzie,Siegel,,,
+Hagler,Shmuel,,,
+Thursday,,,,
+Ennis,Siegel,,,
+Hagler,Ennis,,,
+Brick,Zach,,,
+Judah,Brick,,,
+Shmuel,Judah,,,
+Siegel,Shmuel,,,
+Yitzie,Hagler,,,
+Zach,Yitzie,,,
+Friday,,,,
+Ennis,Brick,,,
+Shmuel,Ennis,,,
+Brick,Yitzie,,,
+Yitzie,Shmuel,,,
+Judah,Zach,,,
+Siegel,Judah,,,
+Zach,Hagler,,,
+Hagler,Siegel,,,
+,Away,Game,Winner,Loser
+Monday,,,,
+Brick,Ennis,,,
+Shmuel,Yitzie,,,
+Ennis,Shmuel,,,
+Yitzie,Brick,,,
+Zach,Judah,,,
+Siegel,Hagler,,,
+Judah,Siegel,,,
+Hagler,Zach,,,
+Tuesday,,,,
+Ennis,Yitzie,,,
+Yitzie,Ennis,,,
+Shmuel,Brick,,,
+Brick,Shmuel,,,
+Judah,Hagler,,,
+Hagler,Judah,,,
+Zach,Siegel,,,
+Siegel,Zach,,,
+Wednesday,,,,
+Judah,Ennis,,,
+Ennis,Zach,,,
+Hagler,Brick,,,
+Brick,Siegel,,,
+Zach,Shmuel,,,
+Yitzie,Judah,,,
+Siegel,Yitzie,,,
+Shmuel,Hagler,,,
+Thursday,,,,
+Siegel,Ennis,,,
+Ennis,Hagler,,,
+Zach,Brick,,,
+Brick,Judah,,,
+Judah,Shmuel,,,
+Shmuel,Siegel,,,
+Yitzie,Zach,,,
+Hagler,Yitzie,,,
+Friday,,,,
+Ennis,Brick,,,
+Shmuel,Ennis,,,
+Brick,Yitzie,,,
+Yitzie,Shmuel,,,
+Judah,Zach,,,
+Siegel,Judah,,,
+Zach,Hagler,,,
+Hagler,Siegel,,,
