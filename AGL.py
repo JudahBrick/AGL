@@ -1,58 +1,37 @@
-import numpy as np
 import pandas as pd
+from leagueDocs import Player
 
 
 class AGL:
     def __init__(self, player_names: [], schedule: pd.DataFrame, games: [], num_of_weeks: int,
-                 games_per_day_per_player: int):
+                 games_per_day: int):
         self.players = {}
+        for name in player_names:
+            self.players[name] = Player.Player(name=name, games=games, num_of_weeks=num_of_weeks, player_names=player_names)
+        self.schedule = schedule
+        self.num_of_weeks = num_of_weeks
+        self.games_per_day = games_per_day
+        self.count()
+        for player in self.players:
+            self.players.get(player).count_win_percentages()
 
-
-def count(self):
-     # for game_stat in self._stats:
-     print(self.name)
-     # df = self._schedule.loc[self._schedule['Winner'] == self._name]
-         # game_stat._game
-     num_of_week = 1
-     game_number = 0
-     game_per_week = 10 #self._games_per_day * 5
-     for index, row in self.schedule.iterrows():
-         print(index)
-         home = row['Home']  #add home wins and losses
-         away = row['Away']
-         game = row['Game']
-         loser = row['Loser']
-         self.stats.get(game).wins += 1
-         self.get_vs_players().vs_others[loser + "_" + game].wins += 1
-         self.get_vs_players().overall_per_player[loser].wins += 1
-         self.week_stats.get(num_of_week).add_game(game, True)
-         if home == self.name:
-             self.home_wins += 1
-         elif away == self.name:
-             self.away_wins += 1
-         if game_number % game_per_week == 0:
-             num_of_week += 1
-        #
-        num_of_week = 1
-        game_number = 0
-        df = self.schedule.loc[self.schedule['Loser'] == self.name]
-        for index, row in df.iterrows():
-            game_number += 1
-            home = row['Home']
+    def count(self):
+        week_num = 1
+        game_number = 1
+        game_per_week = self.games_per_day * 5
+        for index, row in self.schedule.iterrows():
+            home = row['Home']  # add home wins and losses
             away = row['Away']
             game = row['Game']
             winner = row['Winner']
-            self.stats.get(game).losses += 1
-            self.get_vs_players().overall_per_player[winner].losses += 1
-            self.get_vs_players().vs_others[winner + "_" + game].losses += 1
-            self.week_stats.get(num_of_week).add_game(game, False)
-
-            if home == self.name:
-                self.home_losses += 1
-            elif away == self.name:
-                self.away_losses += 1
+            loser = row['Loser']
+            self.players.get(winner).add_game_result(game=game, opponent=loser, won=True, home=home == winner)
+            self.players.get(loser).add_game_result(game=game, opponent=winner, won=False, home=home == loser)
+            self.players.get(winner).week_stats.get(week_num).add_game(game=game, win=True)
+            self.players.get(loser).week_stats.get(week_num).add_game(game=game, win=False)
+            game_number += 1
             if game_number % game_per_week == 0:
-                num_of_week += 1
+                week_num += 1
 
 
 def win_percentage(wins, losses):
@@ -63,13 +42,12 @@ def win_percentage(wins, losses):
     else:
         return round((wins / (wins + losses)) * 100, 1)
 
-games = ['Anagrams', 'Archery', 'Basketball', 'Cup Pong',
-         'Connect Four', 'Darts', 'Knockout', 'Pool']
-player_names = ['Brick', 'Ennis', 'Hagler', 'Shmuel', 'Zach', 'Judah', 'Siegel', 'Yitzie']
+
+gameNames = ['Anagrams', 'Archery', 'Basketball', 'Cup Pong', 'Connect Four', 'Darts', 'Knockout', 'Pool']
+playerNames = ['Brick', 'Ennis', 'Hagler', 'Shmuel', 'Zach', 'Judah', 'Siegel', 'Yitzie']
 agl = pd.read_csv('copy_of_agl.csv')
 agl = agl.dropna()
-number_of_games_per_day = 2
-weeks = 10
+
 
 #print(agl[0:20])
 # agl['game_num'] = agl.
@@ -79,20 +57,24 @@ weeks = 10
 print(agl.head(5))
 print(agl.columns)
 
-players = {}
+league = AGL(player_names=playerNames, games=gameNames, schedule=agl, games_per_day=8, num_of_weeks=10)
+for player in league.players:
+    league.players.get(player).print_per_week_win_ration()
 
-for name in player_names:
-    players[name] = Player(name=name, df=agl, games=games, player_names=player_names,
-                           games_each_day=number_of_games_per_day, num_of_weeks=weeks)
-
-
-for player in players:
-    print()
-    print()
-    players[player]._print()
-
-for player in player:
-    players[player].week_stats.get(1)
+# players = {}
+#
+#
+# for name in playerNames:
+#     players[name] = Player.Player(name=name, games=gameNames, player_names=playerNames, num_of_weeks=weeks)
+#
+#
+# for player in players:
+#     print()
+#     print()
+#     players[player].print()
+#
+# for player in player:
+#     players[player].week_stats.get(1)
 
 
 print()

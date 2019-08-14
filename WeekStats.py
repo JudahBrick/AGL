@@ -8,7 +8,6 @@ class WeekStats:
         self.won_games = []
         self.lost_games = []
 
-
     def add_game(self, game: str, win: bool):
         if win:
             self.wins += 1
@@ -17,12 +16,18 @@ class WeekStats:
             self.losses += 1
             self.lost_games.append(game)
 
+    def just_win_loss_ratio(self):
+        return "Week #" + str(self.week) + ": " + str(self.wins) + "-" + str(self.losses)
+
     def __str__(self):
         rtn = "Week #" + str(self.week) + ": " + str(self.wins) + "-" + str(self.losses) \
-               + "\n" + "Lost Games: "
+               + "\n" + "  Won Games:"
         for game_played in self.won_games:
             rtn += " "
             rtn += game_played
+        rtn += "\n  Lost Game:"
         for game_played in self.lost_games:
             rtn += " "
             rtn += game_played
+
+        return rtn
