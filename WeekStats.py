@@ -7,6 +7,7 @@ class WeekStats:
         self.losses = 0
         self.won_games = []
         self.lost_games = []
+        self.win_percentage = 0
 
     def add_game(self, game: str, win: bool):
         if win:
@@ -17,7 +18,7 @@ class WeekStats:
             self.lost_games.append(game)
 
     def just_win_loss_ratio(self):
-        return "Week #" + str(self.week) + ": " + str(self.wins) + "-" + str(self.losses)
+        return "Week #" + str(self.week) + ": " + str(self.wins) + "-" + str(self.losses) + " " + str(int(self.win_percentage)) + "%"
 
     def __str__(self):
         rtn = "Week #" + str(self.week) + ": " + str(self.wins) + "-" + str(self.losses) \

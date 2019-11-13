@@ -4,10 +4,11 @@ from leagueDocs import Player
 
 class AGL:
     def __init__(self, player_names: [], schedule: pd.DataFrame, games: [], num_of_weeks: int,
-                 games_per_day: int):
+                 games_per_day: int, east: []):
         self.players = {}
         for name in player_names:
-            self.players[name] = Player.Player(name=name, games=games, num_of_weeks=num_of_weeks, player_names=player_names)
+            self.players[name] = Player.Player(name=name, games=games, num_of_weeks=num_of_weeks,
+                                               player_names=player_names, east_division=name in east)
         self.schedule = schedule
         self.num_of_weeks = num_of_weeks
         self.games_per_day = games_per_day
@@ -16,8 +17,8 @@ class AGL:
             self.players.get(player).count_win_percentages()
 
     def count(self):
+        game_number = 0
         week_num = 1
-        game_number = 1
         game_per_week = self.games_per_day * 5
         for index, row in self.schedule.iterrows():
             home = row['Home']  # add home wins and losses
@@ -25,13 +26,39 @@ class AGL:
             game = row['Game']
             winner = row['Winner']
             loser = row['Loser']
-            self.players.get(winner).add_game_result(game=game, opponent=loser, won=True, home=home == winner)
-            self.players.get(loser).add_game_result(game=game, opponent=winner, won=False, home=home == loser)
+            score = row['Score']
+            print(game + " " + winner + " " + loser + "     Score: " + score)
+            if game == "Word Hunt":
+                game = "Word_Hunt"
+            self.players.get(winner).add_game_result(game=game, opponent=loser, won=True, home=home == winner,
+                                                     opp_in_eastern_division=self.players.get(loser).east_division,
+                                                     score=score)
+            self.players.get(loser).add_game_result(game=game, opponent=winner, won=False, home=home == loser,
+                                                    opp_in_eastern_division=self.players.get(winner).east_division,
+                                                    score=score)
             self.players.get(winner).week_stats.get(week_num).add_game(game=game, win=True)
             self.players.get(loser).week_stats.get(week_num).add_game(game=game, win=False)
             game_number += 1
             if game_number % game_per_week == 0:
                 week_num += 1
+
+    def schedule_difficulty(self):
+        for name in self.players:
+            name_player = self.players.get(name)
+            east = name_player.east_division
+            opponent_wins = 0
+            opponent_losses = 0
+            for opponent in self.players:
+                if name == opponent:
+                    continue
+                opponent_player = self.players.get(opponent)
+                if opponent_player.east_division == east:
+                    opponent_wins += opponent_player.total_wins * 2
+                    opponent_losses += opponent_player.total_losses * 2
+                else:
+                    opponent_wins += opponent_player.total_wins
+                    opponent_losses += opponent_player.total_losses
+            print(name + "'s opponent win percentage: " + str(win_percentage(opponent_wins, opponent_losses)))
 
 
 def win_percentage(wins, losses):
@@ -43,11 +70,13 @@ def win_percentage(wins, losses):
         return round((wins / (wins + losses)) * 100, 1)
 
 
-gameNames = ['Anagrams', 'Archery', 'Basketball', 'Cup Pong', 'Connect Four', 'Darts', 'Knockout', 'Pool']
-playerNames = ['Brick', 'Ennis', 'Hagler', 'Shmuel', 'Zach', 'Judah', 'Siegel', 'Yitzie']
-agl = pd.read_csv('copy_of_agl.csv')
-agl = agl.dropna()
+gameNames = ['Anagrams', 'Archery', 'Basketball', 'Cup Pong', 'Darts', 'Knockout', 'Pool', "Shuffleboard", "Word_Hunt"]
+playerNames = ["Benji", "Yitzie", "Brick", "Ilan","Hagler","Goldstein","Judah","Ennis",
+               "Alyssa","Shmuli","Ving","Zach","Siegel","Eli"]
+agl = pd.read_csv('season_2_schedule.csv')
 
+agl = agl.drop(columns=['Week', 'Games List', 'Comments'])
+agl = agl.dropna()
 
 #print(agl[0:20])
 # agl['game_num'] = agl.
@@ -56,10 +85,45 @@ agl = agl.dropna()
 # agl.set_index('game_number')
 print(agl.head(5))
 print(agl.columns)
-
-league = AGL(player_names=playerNames, games=gameNames, schedule=agl, games_per_day=8, num_of_weeks=10)
+east = ['Brick', 'Yitzie', "Benji", "Ilan", "Hagler", "Judah", "Goldstein"]
+league = AGL(player_names=playerNames, games=gameNames, schedule=agl, games_per_day=14, num_of_weeks=7, east=east)
 for player in league.players:
     league.players.get(player).print_per_week_win_ration()
+
+print("Basketball stats")
+for player in league.players:
+    print(player)
+    print(league.players.get(player).stats['Basketball'])
+
+print()
+print("Last 10")
+for player in league.players:
+    print(player)
+    print(league.players.get(player).count_record_for_last_n(10))
+
+print()
+print("Last 20")
+for player in league.players:
+    print(player)
+    print(league.players.get(player).count_record_for_last_n(20))
+
+for player in league.players:
+    print(player)
+    print(league.players.get(player).print_division_record())
+
+
+
+# league.schedule_difficulty()
+
+print()
+print()
+print()
+print("######### PRINT EVERYTHING ############")
+for player in league.players:
+    print()
+    print()
+    print(player + ":")
+    print(league.players.get(player).print())
 
 # players = {}
 #

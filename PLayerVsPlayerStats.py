@@ -14,9 +14,9 @@ class PlayerVsPlayerStats:
             for game in games:
                 self.vs_others[player + "_" + game] = StatsPerGame.StatsPerGame(player + "_" + game)
 
-    def add_result(self, opponent: str, game: str, won: bool):
-        self.vs_others.get(opponent + "_" + game).add_result(won)
-        self.overall_per_player.get(opponent).add_result(won)
+    def add_result(self, opponent: str, game: str, won: bool, score: str):
+        self.vs_others.get(opponent + "_" + game).add_result(won, score=score)
+        self.overall_per_player.get(opponent).add_result(won, score=score)
 
     def __str__(self):
         string = ""
