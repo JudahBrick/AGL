@@ -30,6 +30,9 @@ class Player:
     def get_vs_players(self):
         return self.vs_other_players
 
+    def get_stats(self):
+        return self.stats
+
     # TODO need to add the effect that this game has to everything
     # that includes:
     # total wins/losses

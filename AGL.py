@@ -73,6 +73,8 @@ def win_percentage(wins, losses):
 gameNames = ['Anagrams', 'Archery', 'Basketball', 'Cup Pong', 'Darts', 'Knockout', 'Pool', "Shuffleboard", "Word_Hunt"]
 playerNames = ["Benji", "Yitzie", "Brick", "Ilan","Hagler","Goldstein","Judah","Ennis",
                "Alyssa","Shmuli","Ving","Zach","Siegel","Eli"]
+
+
 agl = pd.read_csv('season_2_schedule.csv')
 
 agl = agl.drop(columns=['Week', 'Games List', 'Comments'])
@@ -90,16 +92,66 @@ league = AGL(player_names=playerNames, games=gameNames, schedule=agl, games_per_
 for player in league.players:
     league.players.get(player).print_per_week_win_ration()
 
+game_with_stats = ['Basketball', 'Cup Pong', 'Darts', 'Knockout', 'Pool', "Shuffleboard"]
+
+AllGamesStats = []
+# dayMap = {1:"Monday",
+#           2:"Tuesday",
+#           3:"Wednesday",
+#           4:"Thursday",
+#           5:"Friday"}
+
+#  self.game + " " + str(self.wins) + ":" + str(self.losses) \
+#                + "   " + str(self.win_percentage) + "%" + " avg score: " + str(self.avg_score) +\
+#                "  diffrential score: " + str(self.total_differential) + "  avg win diffrential score: " +\
+#                str(self.avg_win_differential) + "  OTs: " + str(self.total_ots)
+# #          + " " + str(self._wins/self._losses) + "%"
+# AllGamesStats.append(['Player', 'Wins', 'Losses', 'Win Percentage', 'AVG Score', 'Differential Score',
+#                       'AVG Win Differential Score', 'OTs'])
+for game in game_with_stats:
+    AllGamesStats.append([game, '', '', '', '', '', ''])
+    for player in league.players:
+        stats_of_game = league.players.get(player).get_stats()
+        player_stats = stats_of_game[game]
+
+        AllGamesStats.append([player, player_stats.wins, player_stats.losses, player_stats.win_percentage,
+                              player_stats.avg_score, player_stats.total_differential,
+                              player_stats.avg_win_differential, player_stats.total_ots])
+
+df2 = pd.DataFrame(AllGamesStats, columns=['Player', 'Wins', 'Losses', 'Win Percentage', 'AVG Score',
+                                           'Differential Score', 'AVG Win Differential Score', 'OTs'])
+df2.to_csv('Player Stats.csv')
+
+
 print("Basketball stats")
 for player in league.players:
-    print(player)
-    print(league.players.get(player).stats['Basketball'])
+    print(player + ",  " + str(league.players.get(player).stats['Basketball']))
+
+print()
+print("Shuffleboard stats")
+for player in league.players:
+    print(player + ",  " + str(league.players.get(player).stats['Shuffleboard']))
+
+print()
+print("Pool stats")
+for player in league.players:
+    print(player + ",  " + str(league.players.get(player).stats['Pool']))
+
+print()
+print("Darts stats")
+for player in league.players:
+    print(player + ",  " + str(league.players.get(player).stats['Darts']))
+
+print()
+print("Cup Pong stats")
+for player in league.players:
+    print(player + ",  " + str(league.players.get(player).stats['Cup Pong']))
+
 
 print()
 print("Last 10")
 for player in league.players:
-    print(player)
-    print(league.players.get(player).count_record_for_last_n(10))
+    print(player + ",  " + str(league.players.get(player).count_record_for_last_n(10)))
 
 print()
 print("Last 20")
