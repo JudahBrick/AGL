@@ -109,17 +109,19 @@ AllGamesStats = []
 # AllGamesStats.append(['Player', 'Wins', 'Losses', 'Win Percentage', 'AVG Score', 'Differential Score',
 #                       'AVG Win Differential Score', 'OTs'])
 for game in game_with_stats:
-    AllGamesStats.append([game, '', '', '', '', '', ''])
+    AllGamesStats.append(['', '', '', '', game,  '', '', '', ''])
     for player in league.players:
         stats_of_game = league.players.get(player).get_stats()
         player_stats = stats_of_game[game]
 
         AllGamesStats.append([player, player_stats.wins, player_stats.losses, player_stats.win_percentage,
                               player_stats.avg_score, player_stats.total_differential,
-                              player_stats.avg_win_differential, player_stats.total_ots])
+                              player_stats.avg_win_differential, player_stats.high_score,
+                              player_stats.lowest_score, player_stats.total_ots])
 
 df2 = pd.DataFrame(AllGamesStats, columns=['Player', 'Wins', 'Losses', 'Win Percentage', 'AVG Score',
-                                           'Differential Score', 'AVG Win Differential Score', 'OTs'])
+                                           'Differential Score', 'AVG Win Differential Score', 'High Score',
+                                           'Low Score', 'OTs'])
 df2.to_csv('Player Stats.csv')
 
 
