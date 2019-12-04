@@ -1,5 +1,4 @@
 
-
 class WeekStats:
     def __init__(self, week: int):
         self.week = week
@@ -18,7 +17,7 @@ class WeekStats:
             self.lost_games.append(game)
 
     def just_win_loss_ratio(self):
-        return "Week #" + str(self.week) + ": " + str(self.wins) + "-" + str(self.losses) + " " + str(int(self.win_percentage)) + "%"
+        return str(self.wins) + "-" + str(self.losses) + ": " + str(int(self.win_percentage)) + "%"
 
     def __str__(self):
         rtn = "Week #" + str(self.week) + ": " + str(self.wins) + "-" + str(self.losses) \
