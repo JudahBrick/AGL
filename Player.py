@@ -5,6 +5,9 @@ class Player:
 
     def __init__(self, name: str, games: [], player_names: [], num_of_weeks: int, east_division: bool):
         self.stats = {}
+        self.list_of_win_percentage = []
+        self.list_of_wins = []
+        self.list_of_losses = []
         self.stack_of_wins = []
         self.total_wins = 0
         self.total_losses = 0
@@ -47,6 +50,9 @@ class Player:
         self.stats.get(game).add_result(won=won, score=score)
         self.vs_other_players.add_result(opponent=opponent, game=game, won=won, score=score)
         self.add_personal_stats(won=won, home=home, opp_in_eastern_division=opp_in_eastern_division, game=None, opponent=None)
+        self.list_of_win_percentage.append(win_percentage(self.total_wins, self.total_losses))
+        self.list_of_wins.append(self.total_wins)
+        self.list_of_losses.append(self.total_losses)
 
     def add_personal_stats(self, game: str, opponent: str, won: bool, home: bool, opp_in_eastern_division: bool):
         if won:

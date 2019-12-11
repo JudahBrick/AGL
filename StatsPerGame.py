@@ -46,6 +46,9 @@ class StatsPerGame:
         num_of_games = games.__len__()
 
     def parse_basketball_or_shuffelboard(self, score: str, won: bool):
+        score = score.lower()
+        if score.__contains__('not scored'):
+            return
         games = score.split(":")
         num_of_games = games.__len__()
         total_score = 0
@@ -54,6 +57,7 @@ class StatsPerGame:
 
         if num_of_games > 1:
             ot = True
+            self.total_ots += 1
 
         for game in games:
             myscore = 0
@@ -80,16 +84,19 @@ class StatsPerGame:
 
             total_score += myscore
             total_opponent_score += other_score
-            self.total_score_tally += myscore
-            self.total_differential += myscore
-            self.total_differential -= other_score
 
         total_score /= num_of_games
+        self.total_score_tally += total_score
+        self.total_differential += total_score
+        self.total_differential -= total_opponent_score
 
     def parse_first_to_win_games(self, score: str, won: bool):
+        print(score)
         # Should also write how much they usualy get on avrage.
         # meaning not just the negative of how they did but also the positive.
         score = score.lower()
+        if score.__contains__('not scored'):
+            return
 
         ot_arr = score.split("ot")
         num_of_games = ot_arr.__len__()

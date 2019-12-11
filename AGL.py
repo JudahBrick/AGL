@@ -1,4 +1,6 @@
 import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
 from leagueDocs import Player
 
 
@@ -28,9 +30,12 @@ class AGL:
             loser = row['Loser']
             score = row['Score']
             week_num = row['Week']
-            #print(game + " " + winner + " " + loser + "     Score: " + score)
+
             if game == "Word Hunt":
                 game = "Word_Hunt"
+            if winner == loser:
+                print("##########   loser == winner?!  ########")
+                print(game + " " + winner + " " + loser + "     Score: " + score)
             self.players.get(winner).add_game_result(game=game, opponent=loser, won=True, home=home == winner,
                                                      opp_in_eastern_division=self.players.get(loser).east_division,
                                                      score=score)
@@ -100,7 +105,7 @@ game_with_stats = ['Basketball', 'Cup Pong', 'Darts', 'Knockout', 'Pool', "Shuff
 
 AllGamesStats = []
 for game in game_with_stats:
-    AllGamesStats.append(['', '', '', '', game,  '', '', '', ''])
+    AllGamesStats.append(['', '', '', '', '', game, '', '', ''])
     for player in league.players:
         stats_of_game = league.players.get(player).get_stats()
         player_stats = stats_of_game[game]
@@ -129,6 +134,47 @@ for player in league.players:
 
 dfw = pd.DataFrame(weeks_stats, columns=['Player', '1', '2', '3', '4', '5', '6', '7'])
 dfw.to_csv('Week Stats.csv')
+
+# p, opponent, and avg are all lists
+# where in each of them, the element at index i = the person's, opponent's, and leage avg score for week i - 1
+# and player is a string of the player name
+colors = {'#070707', '#FF9F33', '#12F0D5', '#389DB4', '#FFF333',
+          '#A5FF33', '#3AA439', '#0E4BEE', '#ABA2D6', '#9E6740',
+          '#7C13B9', '#F60AD6', '#A77407', '#FB0417'}
+# names, color = np.meshgrid(league.players, colors)
+plt.plot(range(1, 70), label='games played')
+plt.ylabel('Win Percentage')
+plt.xlabel('Games played')
+plt.title('Ranked PLayers by Win Percentage')
+for name, color in zip(league.players, colors):
+    plt.plot(league.players.get(name).list_of_win_percentage, label=name, color=color)
+# for player in league.players:
+#     plt.plot(league.players.get(player).list_of_win_percentage, label=player)
+
+plt.legend()
+plt.show()
+
+plt.plot(range(1, 70), label='games played')
+plt.xlabel('Games Won')
+plt.xlabel('Games played')
+plt.title('Ranked PLayers by Wins')
+
+for name, color in  zip(league.players, colors):
+    plt.plot(league.players.get(name).list_of_wins, label=name, color=color)
+
+plt.legend()
+plt.show()
+
+plt.plot(range(1, 70), label='games played')
+plt.xlabel('Games Won')
+plt.xlabel('Games played')
+plt.title('Ranked PLayers by Losses')
+
+for name, color in zip(league.players, colors):
+    plt.plot(league.players.get(name).list_of_losses, label=name, color=color)
+
+plt.legend()
+plt.show()
 
 
 
