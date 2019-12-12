@@ -9,6 +9,8 @@ class Player:
         self.list_of_wins = []
         self.list_of_losses = []
         self.stack_of_wins = []
+        self.dict_of_win_percent = {}
+        self.rank = {}
         self.total_wins = 0
         self.total_losses = 0
         for game in games:
@@ -51,6 +53,8 @@ class Player:
         self.vs_other_players.add_result(opponent=opponent, game=game, won=won, score=score)
         self.add_personal_stats(won=won, home=home, opp_in_eastern_division=opp_in_eastern_division, game=None, opponent=None)
         self.list_of_win_percentage.append(win_percentage(self.total_wins, self.total_losses))
+        self.dict_of_win_percent[self.total_losses + self.total_wins] \
+            = win_percentage(self.total_wins, self.total_losses)
         self.list_of_wins.append(self.total_wins)
         self.list_of_losses.append(self.total_losses)
 

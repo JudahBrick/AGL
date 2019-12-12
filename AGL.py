@@ -145,7 +145,7 @@ colors = {'#070707', '#FF9F33', '#12F0D5', '#389DB4', '#FFF333',
 plt.plot(range(1, 70), label='games played')
 plt.ylabel('Win Percentage')
 plt.xlabel('Games played')
-plt.title('Ranked PLayers by Win Percentage')
+plt.title('Ranked Players by Win Percentage')
 for name, color in zip(league.players, colors):
     plt.plot(league.players.get(name).list_of_win_percentage, label=name, color=color)
 # for player in league.players:
@@ -157,65 +157,106 @@ plt.show()
 plt.plot(range(1, 70), label='games played')
 plt.xlabel('Games Won')
 plt.xlabel('Games played')
-plt.title('Ranked PLayers by Wins')
-
+plt.title('Ranked Players by Wins')
 for name, color in  zip(league.players, colors):
     plt.plot(league.players.get(name).list_of_wins, label=name, color=color)
-
 plt.legend()
 plt.show()
 
 plt.plot(range(1, 70), label='games played')
 plt.xlabel('Games Won')
 plt.xlabel('Games played')
-plt.title('Ranked PLayers by Losses')
-
+plt.title('Ranked Players by Losses')
 for name, color in zip(league.players, colors):
     plt.plot(league.players.get(name).list_of_losses, label=name, color=color)
-
 plt.legend()
 plt.show()
 
 
+plt.plot(range(1, 70), label='games played')
+plt.ylabel('Win Percentage')
+plt.xlabel('Games played')
+plt.title('East Players by Win Percentage')
+for name, color in zip(league.players, colors):
+    if east.__contains__(name):
+        plt.plot(league.players.get(name).list_of_win_percentage, label=name, color=color)
+plt.legend()
+plt.show()
 
 
-print("Basketball stats")
-for player in league.players:
-    print(player + ",  " + str(league.players.get(player).stats['Basketball']))
-
-print()
-print("Shuffleboard stats")
-for player in league.players:
-    print(player + ",  " + str(league.players.get(player).stats['Shuffleboard']))
-
-print()
-print("Pool stats")
-for player in league.players:
-    print(player + ",  " + str(league.players.get(player).stats['Pool']))
-
-print()
-print("Darts stats")
-for player in league.players:
-    print(player + ",  " + str(league.players.get(player).stats['Darts']))
-
-print()
-print("Cup Pong stats")
-for player in league.players:
-    print(player + ",  " + str(league.players.get(player).stats['Cup Pong']))
+plt.plot(range(1, 70), label='games played')
+plt.ylabel('Win Percentage')
+plt.xlabel('Games played')
+plt.title('West Players by Win Percentage')
+for name, color in zip(league.players, colors):
+    if not east.__contains__(name):
+        plt.plot(league.players.get(name).list_of_win_percentage, label=name, color=color)
+# for player in league.players:
+#     plt.plot(league.players.get(player).list_of_win_percentage, label=player)
+plt.legend()
+plt.show()
 
 
-print()
-print("Last 10")
-for player in league.players:
-    print(player + ",  " + str(league.players.get(player).count_record_for_last_n(10)))
+# plt.plot(range(1, 70), label='games played')
+plt.xlabel('Rank')
+plt.xlabel('Games played')
+plt.title('Players by Rank')
 
-print()
-print("Last 20")
-for player in league.players:
-    print(player + ",  " + str(league.players.get(player).count_record_for_last_n(20)))
+for name, color in zip(league.players, colors):
+    dict_percentages = league.players.get(name).dict_of_win_percent
 
-for player in league.players:
-    print(player + ",  " + str(league.players.get(player).print_division_record()))
+    for game_num in dict_percentages.keys():
+        my_percentage = dict_percentages.get(game_num)
+        rank = 1
+        for player_name in league.players:
+            opponent_percentage = league.players.get(name).dict_of_win_percent.get(game_num)
+            if opponent_percentage > my_percentage:
+                rank += 1
+        league.players.get(name).rank[game_num] = rank
+    rank_list = list(league.players.get(name).rank.values())
+    plt.plot(rank_list, label=name, color=color)
+
+plt.legend()
+plt.show()
+
+#
+# print("Basketball stats")
+# for player in league.players:
+#     print(player + ",  " + str(league.players.get(player).stats['Basketball']))
+#
+# print()
+# print("Shuffleboard stats")
+# for player in league.players:
+#     print(player + ",  " + str(league.players.get(player).stats['Shuffleboard']))
+#
+# print()
+# print("Pool stats")
+# for player in league.players:
+#     print(player + ",  " + str(league.players.get(player).stats['Pool']))
+#
+# print()
+# print("Darts stats")
+# for player in league.players:
+#     print(player + ",  " + str(league.players.get(player).stats['Darts']))
+#
+# print()
+# print("Cup Pong stats")
+# for player in league.players:
+#     print(player + ",  " + str(league.players.get(player).stats['Cup Pong']))
+#
+#
+# print()
+# print("Last 10")
+# for player in league.players:
+#     print(player + ",  " + str(league.players.get(player).count_record_for_last_n(10)))
+#
+# print()
+# print("Last 20")
+# for player in league.players:
+#     print(player + ",  " + str(league.players.get(player).count_record_for_last_n(20)))
+#
+# for player in league.players:
+#     print(player + ",  " + str(league.players.get(player).print_division_record()))
 
 
 
