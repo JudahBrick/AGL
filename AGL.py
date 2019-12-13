@@ -209,7 +209,9 @@ for name, color in zip(league.players, colors):
         my_percentage = dict_percentages.get(game_num)
         rank = 1
         for player_name in league.players:
-            opponent_percentage = league.players.get(name).dict_of_win_percent.get(game_num)
+            opponent_percentage = league.players.get(player_name).dict_of_win_percent.get(game_num)
+            if opponent_percentage is None:
+                continue
             if opponent_percentage > my_percentage:
                 rank += 1
         league.players.get(name).rank[game_num] = rank
