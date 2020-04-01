@@ -78,14 +78,15 @@ def win_percentage(wins, losses):
         return round((wins / (wins + losses)) * 100, 1)
 
 
-gameNames = ['Anagrams', 'Archery', 'Basketball', 'Cup Pong', 'Darts', 'Knockout', 'Pool', "Shuffleboard", "Word_Hunt"]
-playerNames = ["Benji", "Yitzie", "Brick", "Ilan", "Hagler", "Goldstein", "Judah", "Ennis",
+gameNames = ['Anagrams', 'Archery', 'Basketball', 'Cup Pong', 'Darts',
+             'Knockout', 'Pool', "Shuffleboard", "Word_Hunt", "Golf"]
+playerNames = ["Dani", "Moshe", "Brick", "Ilan", "Hagler", "Goldstein", "Judah", "Ennis",
                "Alyssa", "Shmuli", "Ving", "Zach", "Siegel", "Eli"]
 
 
-agl = pd.read_csv('season_2_schedule.csv')
+agl = pd.read_csv('AGL Season 3 - Schedule.csv')
 
-agl = agl.drop(columns=['Games List', 'Comments'])
+agl = agl.drop(columns=['Games List', 'Comments', 'The Rulebook'])
 agl = agl.dropna()
 print(agl.head(20))
 
@@ -96,12 +97,12 @@ print(agl.head(20))
 # agl.set_index('game_number')
 print(agl.head(5))
 print(agl.columns)
-east = ['Brick', 'Yitzie', "Benji", "Ilan", "Hagler", "Judah", "Goldstein"]
+east = ['Brick', 'Ennis', "Alyssa", "Ilan", "Ving", "Judah", "Dani"]
 league = AGL(player_names=playerNames, games=gameNames, schedule=agl, games_per_day=14, num_of_weeks=7, east=east)
 for player in league.players:
     league.players.get(player).print_per_week_win_ration()
 
-game_with_stats = ['Basketball', 'Cup Pong', 'Darts', 'Knockout', 'Pool', "Shuffleboard"]
+game_with_stats = ['Basketball', 'Cup Pong', 'Darts', 'Knockout', 'Pool', "Shuffleboard", "Golf"]
 
 AllGamesStats = []
 for game in game_with_stats:
@@ -138,9 +139,11 @@ dfw.to_csv('Week Stats.csv')
 # p, opponent, and avg are all lists
 # where in each of them, the element at index i = the person's, opponent's, and leage avg score for week i - 1
 # and player is a string of the player name
-colors = {'#070707', '#FF9F33', '#12F0D5', '#389DB4', '#FFF333',
-          '#A5FF33', '#3AA439', '#0E4BEE', '#ABA2D6', '#9E6740',
-          '#7C13B9', '#F60AD6', '#A77407', '#FB0417'}
+# USE NEW COLORS from this link
+# https://github.com/vega/vega/wiki/Scales#scale-range-literals
+colors = {'#1f77b4', '#ff7f0e', '#2ca02c', '#d62728', '#9467bd',
+          '#8c564b', '#e377c2', '#7f7f7f', '#bcbd22', '#17becf',
+          '#aec7e8', '#ffbb78', '#98df8a', '#ff9896'}
 # names, color = np.meshgrid(league.players, colors)
 plt.plot(range(1, 70), label='games played')
 plt.ylabel('Win Percentage')
@@ -163,20 +166,20 @@ for name, color in  zip(league.players, colors):
 plt.legend()
 plt.show()
 
-plt.plot(range(1, 70), label='games played')
-plt.xlabel('Games Won')
-plt.xlabel('Games played')
-plt.title('Ranked Players by Losses')
-for name, color in zip(league.players, colors):
-    plt.plot(league.players.get(name).list_of_losses, label=name, color=color)
-plt.legend()
-plt.show()
+# plt.plot(range(1, 70), label='games played')
+# plt.xlabel('Games Won')
+# plt.xlabel('Games played')
+# plt.title('Ranked Players by Losses')
+# for name, color in zip(league.players, colors):
+#     plt.plot(league.players.get(name).list_of_losses, label=name, color=color)
+# plt.legend()
+# plt.show()
 
 
 plt.plot(range(1, 70), label='games played')
 plt.ylabel('Win Percentage')
 plt.xlabel('Games played')
-plt.title('East Players by Win Percentage')
+plt.title('North Wing Players by Win Percentage')
 for name, color in zip(league.players, colors):
     if east.__contains__(name):
         plt.plot(league.players.get(name).list_of_win_percentage, label=name, color=color)
@@ -187,7 +190,7 @@ plt.show()
 plt.plot(range(1, 70), label='games played')
 plt.ylabel('Win Percentage')
 plt.xlabel('Games played')
-plt.title('West Players by Win Percentage')
+plt.title('South Wing Players by Win Percentage')
 for name, color in zip(league.players, colors):
     if not east.__contains__(name):
         plt.plot(league.players.get(name).list_of_win_percentage, label=name, color=color)
@@ -201,10 +204,8 @@ plt.show()
 plt.xlabel('Rank')
 plt.xlabel('Games played')
 plt.title('Players by Rank')
-
 for name, color in zip(league.players, colors):
     dict_percentages = league.players.get(name).dict_of_win_percent
-
     for game_num in dict_percentages.keys():
         my_percentage = dict_percentages.get(game_num)
         rank = 1
@@ -217,9 +218,68 @@ for name, color in zip(league.players, colors):
         league.players.get(name).rank[game_num] = rank
     rank_list = list(league.players.get(name).rank.values())
     plt.plot(rank_list, label=name, color=color)
-
 plt.legend()
 plt.show()
+
+
+plt.xlabel('Rank')
+plt.xlabel('Games played')
+plt.title('South Wing Players by Rank')
+for name, color in zip(league.players, colors):
+    if not east.__contains__(name):
+        dict_percentages = league.players.get(name).dict_of_win_percent
+        for game_num in dict_percentages.keys():
+            my_percentage = dict_percentages.get(game_num)
+            rank = 1
+            for player_name in league.players:
+                if not east.__contains__(player_name):
+                    opponent_percentage = league.players.get(player_name).dict_of_win_percent.get(game_num)
+                    if opponent_percentage is None:
+                        continue
+                    if opponent_percentage > my_percentage:
+                        rank += 1
+            league.players.get(name).rank[game_num] = rank
+        rank_list = list(league.players.get(name).rank.values())
+        plt.plot(rank_list, label=name, color=color)
+plt.legend()
+plt.show()
+
+plt.xlabel('Rank')
+plt.xlabel('Games played')
+plt.title('North Wing Players by Rank')
+for name, color in zip(league.players, colors):
+    if east.__contains__(name):
+        dict_percentages = league.players.get(name).dict_of_win_percent
+        for game_num in dict_percentages.keys():
+            my_percentage = dict_percentages.get(game_num)
+            rank = 1
+            for player_name in league.players:
+                if east.__contains__(player_name):
+                    opponent_percentage = league.players.get(player_name).dict_of_win_percent.get(game_num)
+                    if opponent_percentage is None:
+                        continue
+                    if opponent_percentage > my_percentage:
+                        rank += 1
+            league.players.get(name).rank[game_num] = rank
+        rank_list = list(league.players.get(name).rank.values())
+        plt.plot(rank_list, label=name, color=color)
+plt.legend()
+plt.show()
+
+# objects = ('Python', 'C++', 'Java', 'Perl', 'Scala', 'Lisp')
+# players = league.players
+# avg = []
+# for name in players:
+#     avg.append(league.players.get(name).stats.get("Basketball").avg_score)
+# y_pos = np.arange(len(players))
+# performance = [10,8,6,4,2,1]
+#
+# plt.bar(y_pos, avg, align='center', alpha=0.5)
+# plt.xticks(y_pos, league.players.get(name))
+# plt.ylabel('Usage')
+# plt.title('Programming language usage')
+#
+# plt.show()
 
 #
 # print("Basketball stats")
@@ -265,15 +325,15 @@ plt.show()
 
 # league.schedule_difficulty()
 #
-# print()
-# print()
-# print()
-# print("######### PRINT EVERYTHING ############")
-# for player in league.players:
-#     print()
-#     print()
-#     print(player + ":")
-#     print(league.players.get(player).print())
+print()
+print()
+print()
+print("######### PRINT EVERYTHING ############")
+for player in league.players:
+    print()
+    print()
+    print(player + ":")
+    print(league.players.get(player).print())
 
 # players = {}
 #
