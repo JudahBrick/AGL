@@ -53,21 +53,25 @@ class AGL:
     def schedule_difficulty(self):
         for name in self.players:
             name_player = self.players.get(name)
-            east = name_player.east_division
-            opponent_wins = 0
-            opponent_losses = 0
-            for opponent in self.players:
-                if name == opponent:
-                    continue
-                opponent_player = self.players.get(opponent)
-                if opponent_player.east_division == east:
-                    opponent_wins += opponent_player.total_wins * 2
-                    opponent_losses += opponent_player.total_losses * 2
-                else:
-                    opponent_wins += opponent_player.total_wins
-                    opponent_losses += opponent_player.total_losses
-            print(name + "'s opponent win percentage: " + str(win_percentage(opponent_wins, opponent_losses)))
+            wins = 0
+            losses = 0
 
+            for match_up in name_player.games:
+                match = match_up.split("-")
+                game_name = match[0]
+                opponent_name = match[1]
+                should_win = self.should_player_a_win(name, game_name, opponent_name)
+                if should_win:
+                    wins += 1
+                else:
+                    losses += 1
+
+    def should_player_a_win(self, player_a: str, game: str, opponent_name):
+        # TODO finish this method so we can do schedule difficulty
+        #  1) this should check to see if this game is a game we should go based off of an average like basketball
+        #  2) if it isn't a game like that then it should just be based off
+        #     of the record of that player in that specific game
+        return True
 
 def win_percentage(wins, losses):
     if wins == losses and losses == 0:
@@ -85,9 +89,13 @@ playerNames = ["Dani", "Moshe", "Brick", "Ilan", "Hagler", "Goldstein", "Judah",
 
 
 agl = pd.read_csv('AGL Season 3 - Schedule.csv')
+difficulty = pd.read_csv('AGL Season 3 - Schedule.csv')
 
 agl = agl.drop(columns=['Games List', 'Comments', 'The Rulebook'])
 agl = agl.dropna()
+difficulty = difficulty.drop(columns=['Games List', 'Comments', 'The Rulebook'])
+difficulty = difficulty.dropna()
+
 print(agl.head(20))
 
 #print(agl[0:20])
@@ -116,8 +124,8 @@ for game in game_with_stats:
                               player_stats.avg_win_differential, player_stats.high_score,
                               player_stats.lowest_score, player_stats.total_ots])
 
-df2 = pd.DataFrame(AllGamesStats, columns=['Player', 'Wins', 'Losses', 'Win Percentage', 'AVG Score',
-                                           'Differential Score', 'AVG Win Differential Score', 'High Score',
+df2 = pd.DataFrame(AllGamesStats, columns=['Player', 'Ws', 'Ls', 'Win %', 'AVG',
+                                           'Differential', 'AVG Win Differential', 'High Score',
                                            'Low Score', 'OTs'])
 df2.to_csv('Player Stats.csv')
 

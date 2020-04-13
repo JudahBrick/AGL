@@ -3,6 +3,8 @@
 class StatsPerGame:
     first_to_win_games = ['Cup Pong', 'Darts',  'Pool']
     scored_games = ['Anagrams', 'Archery', 'Knockout', "Shuffleboard", "Word_Hunt"]
+    playerNames = ["Dani", "Moshe", "Brick", "Ilan", "Hagler", "Goldstein", "Judah", "Ennis",
+                   "Alyssa", "Shmuli", "Ving", "Zach", "Siegel", "Eli"]
 
     def __init__(self, game: str):
         self.game = game
@@ -24,12 +26,15 @@ class StatsPerGame:
         self.total_wins_score = 0
         self.total_ots = 0
         self.eight_ball_tap_ins = 0
+        self.games_played = []
 
     def add_result(self, won: bool, score: str):
         if won :
             self.wins += 1
         else:
             self.losses += 1
+        if self.playerNames.__contains__(self.game):
+            self.games_played.append(score)
 
         if self.game == 'Basketball' or self.game == 'Shuffleboard' or self.game == 'Golf':
             self.parse_basketball_or_shuffelboard(score, won)
@@ -208,6 +213,12 @@ class StatsPerGame:
 
     def __str__(self):
         self.calculate_avgs()
+        if self.playerNames.__contains__(self.game):
+            string = self.game + ": "
+            for played in self.games_played:
+                string += played
+                string += ", "
+            return string
         return self.game + " " + str(self.wins) + ":" + str(self.losses) \
                + "   " + str(self.win_percentage) + "%" + " avg score: " + str(self.avg_score) +\
                "  diffrential score: " + str(self.total_differential) + "  avg win diffrential score: " +\

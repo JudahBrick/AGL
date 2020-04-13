@@ -5,6 +5,7 @@ class Player:
 
     def __init__(self, name: str, games: [], player_names: [], num_of_weeks: int, east_division: bool):
         self.stats = {}
+        self.games = []
         self.list_of_win_percentage = []
         self.list_of_wins = []
         self.list_of_losses = []
@@ -57,6 +58,7 @@ class Player:
             = win_percentage(self.total_wins, self.total_losses)
         self.list_of_wins.append(self.total_wins)
         self.list_of_losses.append(self.total_losses)
+        self.games.append(game + "-" + opponent)  # for schedule difficulty look up
 
     def add_personal_stats(self, game: str, opponent: str, won: bool, home: bool, opp_in_eastern_division: bool):
         if won:
