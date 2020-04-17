@@ -50,6 +50,7 @@ class Player:
 
     def add_game_result(self, game: str, opponent: str, won: bool, home: bool, opp_in_eastern_division: bool, score: str):
         # print(self.name + " " + game + " " + opponent)
+        self.games.append(game + "&" + opponent + "&" + str(won) + "&" + score)  # for schedule difficulty look up
         self.stats.get(game).add_result(won=won, score=score)
         self.vs_other_players.add_result(opponent=opponent, game=game, won=won, score=score)
         self.add_personal_stats(won=won, home=home, opp_in_eastern_division=opp_in_eastern_division, game=None, opponent=None)
@@ -58,7 +59,6 @@ class Player:
             = win_percentage(self.total_wins, self.total_losses)
         self.list_of_wins.append(self.total_wins)
         self.list_of_losses.append(self.total_losses)
-        self.games.append(game + "-" + opponent)  # for schedule difficulty look up
 
     def add_personal_stats(self, game: str, opponent: str, won: bool, home: bool, opp_in_eastern_division: bool):
         if won:

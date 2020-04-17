@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-from leagueDocs import Player
+from leagueDocs import Player, StatsPerGame
 
 
 class AGL:
@@ -55,23 +55,111 @@ class AGL:
             name_player = self.players.get(name)
             wins = 0
             losses = 0
+            unexpected = []
 
             for match_up in name_player.games:
-                match = match_up.split("-")
+                match = match_up.split("&")
                 game_name = match[0]
                 opponent_name = match[1]
-                should_win = self.should_player_a_win(name, game_name, opponent_name)
+                actually_won = (match[2] == 'True')
+                score = match[3]
+                should_win, win_perc_chance = self.should_player_a_win(name, game_name, opponent_name)
+                # print(name + " against " + opponent_name + " in " + game_name +
+                #       ". win % chance: " + str(win_perc_chance))
                 if should_win:
                     wins += 1
                 else:
                     losses += 1
+
+                string = ""
+                # print("should win: " + str(should_win) + "  actual: " + str(actually_won))
+                # if there was an unexpected winner, then log it
+                if should_win is True and actually_won is False:
+                    string += "Lost in "
+                elif should_win is False and actually_won is True:
+                    string += "Won in "
+                # if there was an unexpected winner, then log it
+                if not string == "":
+                    string += game_name + " against " + opponent_name + " Score: " + score \
+                              + " win% chance: " + str(win_perc_chance)
+                    unexpected.append(string)
+                    # print("should win: " + str(should_win) + "  actual: " + str(actually_won)+ "  String: " + string)
+
+            # print out all of the player's expected vs actual records, along with the unexpected game wins/losses
+            print(name + "'s expected record: " + str(wins) + "-" + str(losses) + "   Actual: "
+                  + str(name_player.total_wins) + "-" + str(name_player.total_losses))
+            print("Unexpected wins/losses:")
+            print(unexpected)
+            print()
+
 
     def should_player_a_win(self, player_a: str, game: str, opponent_name):
         # TODO finish this method so we can do schedule difficulty
         #  1) this should check to see if this game is a game we should go based off of an average like basketball
         #  2) if it isn't a game like that then it should just be based off
         #     of the record of that player in that specific game
-        return True
+        # , "Darts", "Pool", "Shuffleboard", "Cup Pong"
+        scored_games = ["Basketball"]
+
+        stats_game = league.players.get(player_a).get_stats()
+        player_a_stats = stats_game[game]
+        stats_game = league.players.get(opponent_name).get_stats()
+        opponent_stats = stats_game[game]
+        win_perc_chance = self.win_percent_likelyhood_for_a(player_a_stats, opponent_stats)
+        if scored_games.__contains__(game):
+            return self.should_player_a_win_scored_game(player_a_stats, opponent_stats), win_perc_chance
+        else:
+            return self.should_player_a_win_not_scored_game(player_a_stats, opponent_stats), win_perc_chance
+
+    def should_player_a_win_scored_game(self, player_a: StatsPerGame, opponent: StatsPerGame):
+        # check avg score
+        if player_a.avg_score > opponent.avg_score:
+            return True
+        elif player_a.avg_score < opponent.avg_score:
+            return False
+        # then check win percentage
+        elif player_a.win_percentage > opponent.win_percentage:
+            return True
+        elif player_a.win_percentage < opponent.win_percentage:
+            return False
+        # then check highest score
+        elif player_a.high_score > opponent.high_score:
+            return True
+        elif player_a.high_score < opponent.high_score:
+            return False
+        # then check lowest score
+        elif player_a.lowest_score < opponent.lowest_score:
+            return True
+        elif player_a.lowest_score > opponent.lowest_score:
+            return False
+
+    def should_player_a_win_not_scored_game(self, player_a: StatsPerGame, opponent: StatsPerGame):
+        if player_a.win_percentage > opponent.win_percentage:
+            return True
+        elif player_a.win_percentage < opponent.win_percentage:
+            return False
+        elif player_a.high_score > opponent.high_score:
+            return True
+        elif player_a.high_score < opponent.high_score:
+            return False
+        elif player_a.lowest_score < opponent.lowest_score:
+            return True
+        elif player_a.lowest_score > opponent.lowest_score:
+            return False
+
+
+    def win_percent_likelyhood_for_a(self, player_a: StatsPerGame, opponent: StatsPerGame):
+        # XWins = my-win-percentage / (my-win-percentage + opponents-win-percentage)
+        a_wins = player_a.wins + .5
+        a_losses = player_a.losses + .5
+        a_win_perc = win_percentage(a_wins, a_losses)
+
+        o_wins = opponent.wins + .5
+        o_losses = opponent.losses + .5
+        o_win_perc = win_percentage(o_wins, o_losses)
+        a_wins_this_game = round((a_win_perc / (a_win_perc + o_win_perc)) * 100, 1)
+        return a_wins_this_game
+
 
 def win_percentage(wins, losses):
     if wins == losses and losses == 0:
@@ -87,7 +175,6 @@ gameNames = ['Anagrams', 'Archery', 'Basketball', 'Cup Pong', 'Darts',
 playerNames = ["Dani", "Moshe", "Brick", "Ilan", "Hagler", "Goldstein", "Judah", "Ennis",
                "Alyssa", "Shmuli", "Ving", "Zach", "Siegel", "Eli"]
 
-
 agl = pd.read_csv('AGL Season 3 - Schedule.csv')
 difficulty = pd.read_csv('AGL Season 3 - Schedule.csv')
 
@@ -96,15 +183,15 @@ agl = agl.dropna()
 difficulty = difficulty.drop(columns=['Games List', 'Comments', 'The Rulebook'])
 difficulty = difficulty.dropna()
 
-print(agl.head(20))
+# print(agl.head(20))
 
-#print(agl[0:20])
+# print(agl[0:20])
 # agl['game_num'] = agl.
 
 # agl['game_number'] = range(1, 1 +len(agl))
 # agl.set_index('game_number')
-print(agl.head(5))
-print(agl.columns)
+# print(agl.head(5))
+# print(agl.columns)
 east = ['Brick', 'Ennis', "Alyssa", "Ilan", "Ving", "Judah", "Dani"]
 league = AGL(player_names=playerNames, games=gameNames, schedule=agl, games_per_day=14, num_of_weeks=7, east=east)
 for player in league.players:
@@ -169,7 +256,7 @@ plt.plot(range(1, 70), label='games played')
 plt.xlabel('Games Won')
 plt.xlabel('Games played')
 plt.title('Ranked Players by Wins')
-for name, color in  zip(league.players, colors):
+for name, color in zip(league.players, colors):
     plt.plot(league.players.get(name).list_of_wins, label=name, color=color)
 plt.legend()
 plt.show()
@@ -194,7 +281,6 @@ for name, color in zip(league.players, colors):
 plt.legend()
 plt.show()
 
-
 plt.plot(range(1, 70), label='games played')
 plt.ylabel('Win Percentage')
 plt.xlabel('Games played')
@@ -206,7 +292,6 @@ for name, color in zip(league.players, colors):
 #     plt.plot(league.players.get(player).list_of_win_percentage, label=player)
 plt.legend()
 plt.show()
-
 
 # plt.plot(range(1, 70), label='games played')
 plt.xlabel('Rank')
@@ -228,7 +313,6 @@ for name, color in zip(league.players, colors):
     plt.plot(rank_list, label=name, color=color)
 plt.legend()
 plt.show()
-
 
 plt.xlabel('Rank')
 plt.xlabel('Games played')
@@ -329,19 +413,18 @@ plt.show()
 #     print(player + ",  " + str(league.players.get(player).print_division_record()))
 
 
-
-
-# league.schedule_difficulty()
+league.schedule_difficulty()
 #
-print()
-print()
-print()
-print("######### PRINT EVERYTHING ############")
-for player in league.players:
-    print()
-    print()
-    print(player + ":")
-    print(league.players.get(player).print())
+
+# print()
+# print()
+# print()
+# print("######### PRINT EVERYTHING ############")
+# for player in league.players:
+#     print()
+#     print()
+#     print(player + ":")
+#     print(league.players.get(player).print())
 
 # players = {}
 #
@@ -377,4 +460,3 @@ for player in league.players:
 #     print(winner + " beat " + loser + " in " + game)
 #
 # agl = agl.tail(10)
-

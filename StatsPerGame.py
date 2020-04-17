@@ -53,7 +53,7 @@ class StatsPerGame:
         num_of_games = games.__len__()
 
     def parse_basketball_or_shuffelboard(self, score: str, won: bool):
-        print(score)
+        # print(score)
         score = score.lower()
         if score.__contains__('not scored'):
             return
@@ -99,7 +99,7 @@ class StatsPerGame:
         self.total_differential -= total_opponent_score
 
     def parse_first_to_win_games(self, score: str, won: bool):
-        print(score)
+        # print(score)
         # Should also write how much they usualy get on avrage.
         # meaning not just the negative of how they did but also the positive.
         score = score.lower()
@@ -139,15 +139,15 @@ class StatsPerGame:
 
     def parse_pool(self, score: str, won: bool):
         if score.__contains__('8-ball'):
-            print(score)
+            # print(score)
             ball_tap_in = score.split(':')
-            print(ball_tap_in[1])
+            # print(ball_tap_in[1])
             self.parse_basketball_or_shuffelboard(score=ball_tap_in[1], won=won)
         else:
             self.parse_first_to_win_games(score=score, won=won)
 
     def parse_word_games(self, score: str, won: bool):
-        print(score)
+        # print(score)
         score = score.lower()
         if score.__contains__('not scored'):
             return
