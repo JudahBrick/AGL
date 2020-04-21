@@ -1,8 +1,5 @@
-
-
-
 class StatsPerGame:
-    first_to_win_games = ['Cup Pong', 'Darts',  'Pool']
+    first_to_win_games = ['Cup Pong', 'Darts', 'Pool']
     scored_games = ['Anagrams', 'Archery', 'Knockout', "Shuffleboard", "Word_Hunt"]
     playerNames = ["Dani", "Moshe", "Brick", "Ilan", "Hagler", "Goldstein", "Judah", "Ennis",
                    "Alyssa", "Shmuli", "Ving", "Zach", "Siegel", "Eli"]
@@ -30,7 +27,7 @@ class StatsPerGame:
         self.games_played = []
 
     def add_result(self, won: bool, score: str):
-        if won :
+        if won:
             self.wins += 1
         else:
             self.losses += 1
@@ -144,7 +141,6 @@ class StatsPerGame:
         from leagueDocs.agl import AGL
         AGL.data_collector.add_result(self.game, winner_score)
 
-
     def parse_pool(self, score: str, won: bool):
         if score.__contains__('8-ball'):
             print(score)
@@ -232,9 +228,7 @@ class StatsPerGame:
                 string += ", "
             return string
         return self.game + " " + str(self.wins) + ":" + str(self.losses) \
-               + "   " + str(self.win_percentage) + "%" + " avg score: " + str(self.avg_score) +\
-               "  diffrential score: " + str(self.total_differential) + "  avg win diffrential score: " +\
+               + "   " + str(self.win_percentage) + "%" + " avg score: " + str(self.avg_score) + \
+               "  diffrential score: " + str(self.total_differential) + "  avg win diffrential score: " + \
                str(self.avg_win_differential) + "  OTs: " + str(self.total_ots)
 #          + " " + str(self._wins/self._losses) + "%"
-
-

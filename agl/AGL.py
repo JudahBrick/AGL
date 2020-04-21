@@ -1,6 +1,6 @@
 import pandas as pd
 from leagueDocs.agl import Player
-from leagueDocs.agl.analysis import DataCollector
+from leagueDocs.agl.analysis.DataCollector import DataCollector
 
 
 class AGL:

@@ -2,8 +2,8 @@ from typing import List, Any
 
 import pandas as pd
 import matplotlib.pyplot as plt
-from leagueDocs.agl import AGL
-from leagueDocs.agl.analysis import ExpectedVsActualRecord
+from leagueDocs.agl.AGL import AGL
+from leagueDocs.agl.analysis.ExpectedVsActualRecord import ExpectedVsActualRecord
 from statistics import mean, median, mode, stdev
 
 gameNames = ['Anagrams', 'Archery', 'Basketball', 'Cup Pong', 'Darts',
@@ -56,7 +56,7 @@ for game in game_with_stats:
 df2 = pd.DataFrame(AllGamesStats, columns=['Player', 'Ws', 'Ls', 'Win %', 'AVG',
                                            'Differential', 'AVG Win Differential', 'High Score',
                                            'Low Score', 'OTs'])
-df2.to_csv('Player Stats.csv')
+df2.to_csv('../produced_docs/Player Stats.csv')
 
 weeks_stats = []
 for player in league.players:
@@ -71,7 +71,7 @@ for player in league.players:
                         ])
 
 dfw = pd.DataFrame(weeks_stats, columns=['Player', '1', '2', '3', '4', '5', '6', '7'])
-dfw.to_csv('Week Stats.csv')
+dfw.to_csv('../produced_docs/Week Stats.csv')
 
 # p, opponent, and avg are all lists
 # where in each of them, the element at index i = the person's, opponent's, and leage avg score for week i - 1
