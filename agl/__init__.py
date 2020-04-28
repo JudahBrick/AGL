@@ -6,41 +6,38 @@ from leagueDocs.agl.AGL import AGL
 from leagueDocs.agl.analysis.ExpectedVsActualRecord import ExpectedVsActualRecord
 from statistics import mean, median, mode, stdev
 
+# the games that are legal and in the league
 gameNames = ['Anagrams', 'Archery', 'Basketball', 'Cup Pong', 'Darts',
              'Knockout', 'Pool', "Shuffleboard", "Word_Hunt", "Golf"]
+# players in current season
 playerNames = ["Dani", "Moshe", "Brick", "Ilan", "Hagler", "Goldstein", "Judah", "Ennis",
                "Alyssa", "Shmuli", "Ving", "Zach", "Siegel", "Eli"]
+
+# players in previous season (season 2)
 previous_season_players = ["Yitzie", "Benji", "Brick", "Ilan", "Hagler", "Goldstein", "Judah", "Ennis",
                            "Alyssa", "Shmuli", "Ving", "Zach", "Siegel", "Eli"]
 previous_season_east = ['Brick', 'Hagler', "Benji", "Ilan", "Goldstein", "Judah", "Yitzie"]
 
-agl = pd.read_csv('../schedules/AGL Season 3 - Schedule.csv')
-agl = agl.drop(columns=['Games List', 'Comments', 'The Rulebook'])
-agl = agl.dropna()
+agl = pd.read_csv('../schedules/AGL Season 3 - Schedule.csv')  # read schedule tab into a panda dataframe
+agl = agl.drop(columns=['Games List', 'Comments', 'The Rulebook'])  # take out useless columns
+agl = agl.dropna()   # get rid of any empty rows, this is needed for when we run the code mid season and there are
+# games that have not been played
 
-previous_season = pd.read_csv("../schedules/season_2_schedule.csv")
+previous_season = pd.read_csv("../schedules/season_2_schedule.csv")     # read schedule tab into a panda dataframe
 # the previous doc had less on the top row, just the game list must be stripped
 previous_season = previous_season.drop(columns=['Games List', 'Comments'])
 previous_season = previous_season.dropna()
 
-# print(agl.head(20))
-
-# print(agl[0:20])
-# agl['game_num'] = agl.
-
-# agl['game_number'] = range(1, 1 +len(agl))
-# agl.set_index('game_number')
-# print(agl.head(5))
-# print(agl.columns)
+# current season's east players
 east = ['Brick', 'Ennis', "Alyssa", "Ilan", "Ving", "Judah", "Dani"]
+# creat this season's AGL POPOs
 league = AGL(player_names=playerNames, games=gameNames, schedule=agl, games_per_day=14, num_of_weeks=7, east=east)
 previous_league = AGL(player_names=previous_season_players, games=gameNames,
                       schedule=previous_season, games_per_day=14, num_of_weeks=7, east=previous_season_east)
-for player in league.players:
-    league.players.get(player).print_per_week_win_ration()
 
+
+# Create the players stats CSV which will go on the doc
 game_with_stats = ['Basketball', 'Cup Pong', 'Darts', 'Knockout', 'Pool', "Shuffleboard", "Golf"]
-
 AllGamesStats = []
 for game in game_with_stats:
     AllGamesStats.append(['', '', '', '', '', game, '', '', ''])
@@ -58,6 +55,8 @@ df2 = pd.DataFrame(AllGamesStats, columns=['Player', 'Ws', 'Ls', 'Win %', 'AVG',
                                            'Low Score', 'OTs'])
 df2.to_csv('../produced_docs/Player Stats.csv')
 
+# This will make the week's stats CSV which has essentially been replaced by the tab we currently have
+# we can probably get rid of this
 weeks_stats = []
 for player in league.players:
     player_week_stats = league.players.get(player).week_stats
@@ -69,9 +68,10 @@ for player in league.players:
                         player_week_stats.get(6).just_win_loss_ratio(),
                         player_week_stats.get(7).just_win_loss_ratio(),
                         ])
-
 dfw = pd.DataFrame(weeks_stats, columns=['Player', '1', '2', '3', '4', '5', '6', '7'])
 dfw.to_csv('../produced_docs/Week Stats.csv')
+
+# Now we make all of the graphs
 
 # p, opponent, and avg are all lists
 # where in each of them, the element at index i = the person's, opponent's, and leage avg score for week i - 1
@@ -301,25 +301,3 @@ print("done")
 #     print()
 #     players[player].print()
 #
-# for player in player:
-#     players[player].week_stats.get(1)
-
-#
-# print()
-# print()
-# print()
-# print()
-# print("######    iterating  ######")
-# # row = next(agl.iteritems())
-# agl = agl.tail(10)
-#
-#
-# for index, row in agl.iterrows():
-#     home = row['Home']
-#     away = row['Away']
-#     game = row ['Game']
-#     winner = row['Winner']
-#     loser = row['Loser']
-#     print(winner + " beat " + loser + " in " + game)
-#
-# agl = agl.tail(10)

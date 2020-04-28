@@ -3,9 +3,13 @@ from leagueDocs.agl import Player
 from leagueDocs.agl.analysis.DataCollector import DataCollector
 
 
-class AGL:
+# this calss holds all of the per season needed data.
 
-    data_collector: DataCollector = DataCollector(['Basketball', 'Cup Pong', 'Darts', 'Knockout', 'Pool', "Shuffleboard", "Golf"])
+class AGL:
+    # this collects all of the data on each game, across all of the season.
+    # we hope to use the data to gage average scores and how impressive a win is
+    data_collector: DataCollector = DataCollector(
+        ['Basketball', 'Cup Pong', 'Darts', 'Knockout', 'Pool', "Shuffleboard", "Golf"])
 
     def __init__(self, player_names: [], schedule: pd.DataFrame, games: [], num_of_weeks: int,
                  games_per_day: int, east: []):
@@ -21,7 +25,8 @@ class AGL:
         for player in self.players:
             self.players.get(player).count_win_percentages()
 
-
+    # This will run through the  dataframe (the schedule tab on the doc)
+    # and will input each game and convert it into the python POPOs (PLain Old Python Objects)
     def count(self):
         # game_number = 0
         # week_num = 1
@@ -53,4 +58,3 @@ class AGL:
             # game_number += 1
             # if game_number % game_per_week == 0:
             #     week_num += 1
-
