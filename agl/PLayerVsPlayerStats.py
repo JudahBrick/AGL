@@ -11,10 +11,9 @@ class PlayerVsPlayerStats:
         for player in players:
             if player == name:
                 continue
-            # todo maybe should take the data collector out of this, will be counting everything twice...
             self.overall_per_player[player] = StatsPerGame.StatsPerGame(player)
 
-    def add_result(self, opponent: str, game: str, won: bool, score: str):
+    def add_result(self, opponent: str, game: str, won: bool, score: str) -> None:
         search = opponent + "_" + game
         rtn = self.vs_others.get(search)
         if rtn is None:

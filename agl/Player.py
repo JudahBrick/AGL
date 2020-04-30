@@ -48,19 +48,22 @@ class Player:
     # vs this player in this game
     # stats for this week
 
-    def add_game_result(self, game: str, opponent: str, won: bool, home: bool, opp_in_eastern_division: bool, score: str):
+    def add_game_result(self, game: str, opponent: str, won: bool, home: bool, opp_in_eastern_division: bool,
+                        score: str):
         # print(self.name + " " + game + " " + opponent)
         self.games.append(game + "&" + opponent + "&" + str(won) + "&" + score)  # for schedule difficulty look up
         self.stats.get(game).add_result(won=won, score=score)
         self.vs_other_players.add_result(opponent=opponent, game=game, won=won, score=score)
-        self.add_personal_stats(won=won, home=home, opp_in_eastern_division=opp_in_eastern_division, game=None, opponent=None)
+        self.add_personal_stats(won=won, home=home, opp_in_eastern_division=opp_in_eastern_division, game=None,
+                                opponent=None)
         self.list_of_win_percentage.append(win_percentage(self.total_wins, self.total_losses))
         self.dict_of_win_percent[self.total_losses + self.total_wins] \
             = win_percentage(self.total_wins, self.total_losses)
         self.list_of_wins.append(self.total_wins)
         self.list_of_losses.append(self.total_losses)
 
-    def add_personal_stats(self, game: str, opponent: str, won: bool, home: bool, opp_in_eastern_division: bool):
+    def add_personal_stats(self, game: str, opponent: str,
+                           won: bool, home: bool, opp_in_eastern_division: bool) -> None:
         if won:
             self.stack_of_wins.append(True)
             self.total_wins += 1
@@ -80,7 +83,7 @@ class Player:
             if self.east_division == opp_in_eastern_division:
                 self.division_losses += 1
 
-    def count_win_percentages(self):
+    def count_win_percentages(self) -> None:
         self.home_win_percent = win_percentage(self.away_wins, self.home_losses)
         self.away_win_percent = win_percentage(self.away_wins, self.away_losses)
         for stat in self.stats:
@@ -98,7 +101,9 @@ class Player:
             current_week = self.week_stats.get(week)
             current_week.win_percentage = win_percentage(current_week.wins, current_week.losses)
 
-    def count_record_for_last_n(self, n: int):
+    # this is supposed to count a player's record over the past n games
+    # we don't really use this cas theres a bug and its not that crucial
+    def count_record_for_last_n(self, n: int) -> str:
         stack = self.stack_of_wins.copy()
         wins = 0
         losses = 0
@@ -110,12 +115,13 @@ class Player:
                 losses += 1
             i += 1
         return str(wins) + "-" + str(losses)
+
     #
     # def init_week_stats(self):
     #     for week in (1, self.num_of_weeks + 1):
     #         self.week_stats[week] = WeekStats(week)
 
-    def print(self):
+    def print(self) -> None:
         print(self.name, " Home ", str(self.home_wins) + ":" + str(self.home_losses),
               " Away ", str(self.away_wins), ":", str(self.away_losses))
         for stat in self.stats:
@@ -123,19 +129,21 @@ class Player:
         self.print_week_stats()
         print(self.get_vs_players())
 
-    def print_week_stats(self):
+    def print_week_stats(self) -> None:
         print(self.name)
         for week in self.week_stats:
             print(self.week_stats.get(week))
 
-    def print_per_week_win_ration(self):
+    def print_per_week_win_ration(self) -> None:
         print(self.name)
         for week in self.week_stats:
             print(self.week_stats.get(week).just_win_loss_ratio())
-    def print_division_record(self):
+
+    def print_division_record(self) -> None:
         print("Division Record: " + str(self.division_wins) + ":" + str(self.division_losses))
 
-def win_percentage(wins: int, losses: int):
+
+def win_percentage(wins: int, losses: int) -> float:
     if wins == losses and losses == 0:
         return 0
     elif losses == 0 and wins != 0:

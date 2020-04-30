@@ -32,7 +32,7 @@ class AGL:
         # week_num = 1
         # game_per_week = self.games_per_day * 5
         for index, row in self.schedule.iterrows():
-            home = row['Home']  # add home wins and losses
+            home_player = row['Home']  # add home wins and losses
             away = row['Away']
             game = row['Game']
             winner = row['Winner']
@@ -45,10 +45,10 @@ class AGL:
             if winner == loser:
                 print("##########   loser == winner?!  ########")
                 print(game + " " + winner + " " + loser + "     Score: " + score)
-            self.players.get(winner).add_game_result(game=game, opponent=loser, won=True, home=home == winner,
+            self.players.get(winner).add_game_result(game=game, opponent=loser, won=True, home=home_player == winner,
                                                      opp_in_eastern_division=self.players.get(loser).east_division,
                                                      score=score)
-            self.players.get(loser).add_game_result(game=game, opponent=winner, won=False, home=home == loser,
+            self.players.get(loser).add_game_result(game=game, opponent=winner, won=False, home=home_player == loser,
                                                     opp_in_eastern_division=self.players.get(winner).east_division,
                                                     score=score)
             # print('Week Num: ' + week_num)

@@ -26,11 +26,13 @@ class StatsPerGame:
         self.eight_ball_tap_ins = 0
         self.games_played = []
 
-    def add_result(self, won: bool, score: str):
+    def add_result(self, won: bool, score: str) -> None:
         if won:
             self.wins += 1
         else:
             self.losses += 1
+
+        # player VS player games
         if self.playerNames.__contains__(self.game):
             self.games_played.append(score)
 
@@ -42,6 +44,7 @@ class StatsPerGame:
             self.parse_first_to_win_games(score=score, won=won)
         self.calculate_avgs()
 
+    # parse the string score into our feilds
     def parse_score(self, score: str, won: bool):
         if self.first_to_win_games.__contains__(self.game):
             return self.parse_first_to_win_games(score)
@@ -50,7 +53,7 @@ class StatsPerGame:
         games = score.split(":")
         num_of_games = games.__len__()
 
-    def parse_basketball_or_shuffelboard(self, score: str, won: bool):
+    def parse_basketball_or_shuffelboard(self, score: str, won: bool) -> None:
         # print(score)
         score = score.lower()
         if score.__contains__('not scored'):
@@ -98,7 +101,7 @@ class StatsPerGame:
         self.total_differential += total_score
         self.total_differential -= total_opponent_score
 
-    def parse_first_to_win_games(self, score: str, won: bool):
+    def parse_first_to_win_games(self, score: str, won: bool) -> None:
         # print(score)
         # Should also write how much they usualy get on avrage.
         # meaning not just the negative of how they did but also the positive.
@@ -141,7 +144,7 @@ class StatsPerGame:
         from leagueDocs.agl import AGL
         AGL.data_collector.add_result(self.game, winner_score)
 
-    def parse_pool(self, score: str, won: bool):
+    def parse_pool(self, score: str, won: bool) -> None:
         if score.__contains__('8-ball'):
             print(score)
             ball_tap_in = score.split(':')
@@ -149,13 +152,14 @@ class StatsPerGame:
             new_score = ball_tap_in[1]
             # this is a hack in order to compensate for the season 2 scoring of 8-ball tap ins
             # with this new score it assumes that winner was on the 8-bal when the loser tapped it in
+            # the current (season 3 rule) would have the amount both players had
             if not new_score.__contains__('-'):
                 new_score += '-0'
             self.parse_basketball_or_shuffelboard(score=new_score, won=won)
         else:
             self.parse_first_to_win_games(score=score, won=won)
 
-    def parse_word_games(self, score: str, won: bool):
+    def parse_word_games(self, score: str, won: bool) -> None:
         # print(score)
         score = score.lower()
         if score.__contains__('not scored'):
@@ -211,7 +215,7 @@ class StatsPerGame:
             self.avg_win_score = self.total_wins_score / self.wins
             self.avg_win_differential = self.total_win_differential / self.wins
 
-    def calculate_win_percentage(self, wins: int, losses: int):
+    def calculate_win_percentage(self, wins: int, losses: int) -> float:
         if wins == losses and losses == 0:
             return 0
         elif losses == 0 and wins != 0:
@@ -219,7 +223,7 @@ class StatsPerGame:
         else:
             return round((wins / (wins + losses)) * 100, 1)
 
-    def __str__(self):
+    def __str__(self) -> str:
         self.calculate_avgs()
         if self.playerNames.__contains__(self.game):
             string = self.game + ": "

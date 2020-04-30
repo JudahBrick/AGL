@@ -1,12 +1,13 @@
+from typing import Tuple, Union, Any
+
 from leagueDocs.agl import AGL
 from leagueDocs.agl import StatsPerGame
-
 
 class ExpectedVsActualRecord:
     def __init__(self, season: AGL):
         self.season = season
 
-    def calculate_results(self):
+    def calculate_results(self) -> None:
         for name in self.season.players:
             name_player = self.season.players.get(name)
             wins = 0
@@ -53,7 +54,7 @@ class ExpectedVsActualRecord:
             print(unexpected)
             print()
 
-    def should_player_a_win(self, player_a: str, game: str, opponent_name):
+    def should_player_a_win(self, player_a: str, game: str, opponent_name) -> Tuple[bool, Union[float, Any]]:
         # TODO finish this method so we can do schedule difficulty
         #  1) this should check to see if this game is a game we should go based off of an average like basketball
         #  2) if it isn't a game like that then it should just be based off
@@ -65,59 +66,63 @@ class ExpectedVsActualRecord:
         player_a_stats = stats_game[game]
         stats_game = self.season.players.get(opponent_name).get_stats()
         opponent_stats = stats_game[game]
-        win_perc_chance = self.win_percent_likelyhood_for_a(player_a_stats, opponent_stats)
+        win_perc_chance = win_percent_likelyhood_for_a(player_a_stats, opponent_stats)
         if scored_games.__contains__(game):
-            return self.should_player_a_win_scored_game(player_a_stats, opponent_stats), win_perc_chance
+            return should_player_a_win_scored_game(player_a_stats, opponent_stats), win_perc_chance
         else:
-            return self.should_player_a_win_not_scored_game(player_a_stats, opponent_stats), win_perc_chance
+            return should_player_a_win_not_scored_game(player_a_stats, opponent_stats), win_perc_chance
 
-    def should_player_a_win_scored_game(self, player_a: StatsPerGame, opponent: StatsPerGame):
-        # check avg score
-        if player_a.avg_score > opponent.avg_score:
-            return True
-        elif player_a.avg_score < opponent.avg_score:
-            return False
-        # then check win percentage
-        elif player_a.win_percentage > opponent.win_percentage:
-            return True
-        elif player_a.win_percentage < opponent.win_percentage:
-            return False
-        # then check highest score
-        elif player_a.high_score > opponent.high_score:
-            return True
-        elif player_a.high_score < opponent.high_score:
-            return False
-        # then check lowest score
-        elif player_a.lowest_score < opponent.lowest_score:
-            return True
-        elif player_a.lowest_score > opponent.lowest_score:
-            return False
 
-    def should_player_a_win_not_scored_game(self, player_a: StatsPerGame, opponent: StatsPerGame):
-        if player_a.win_percentage > opponent.win_percentage:
-            return True
-        elif player_a.win_percentage < opponent.win_percentage:
-            return False
-        elif player_a.high_score > opponent.high_score:
-            return True
-        elif player_a.high_score < opponent.high_score:
-            return False
-        elif player_a.lowest_score < opponent.lowest_score:
-            return True
-        elif player_a.lowest_score > opponent.lowest_score:
-            return False
+def should_player_a_win_not_scored_game(player_a: StatsPerGame, opponent: StatsPerGame):
+    if player_a.win_percentage > opponent.win_percentage:
+        return True
+    elif player_a.win_percentage < opponent.win_percentage:
+        return False
+    elif player_a.high_score > opponent.high_score:
+        return True
+    elif player_a.high_score < opponent.high_score:
+        return False
+    elif player_a.lowest_score < opponent.lowest_score:
+        return True
+    elif player_a.lowest_score > opponent.lowest_score:
+        return False
 
-    def win_percent_likelyhood_for_a(self, player_a: StatsPerGame, opponent: StatsPerGame):
-        # XWins = my-win-percentage / (my-win-percentage + opponents-win-percentage)
-        a_wins = player_a.wins + .5
-        a_losses = player_a.losses + .5
-        a_win_perc = win_percentage(a_wins, a_losses)
 
-        o_wins = opponent.wins + .5
-        o_losses = opponent.losses + .5
-        o_win_perc = win_percentage(o_wins, o_losses)
-        a_wins_this_game = round((a_win_perc / (a_win_perc + o_win_perc)) * 100, 1)
-        return a_wins_this_game
+def should_player_a_win_scored_game(player_a: StatsPerGame, opponent: StatsPerGame):
+    # check avg score
+    if player_a.avg_score > opponent.avg_score:
+        return True
+    elif player_a.avg_score < opponent.avg_score:
+        return False
+    # then check win percentage
+    elif player_a.win_percentage > opponent.win_percentage:
+        return True
+    elif player_a.win_percentage < opponent.win_percentage:
+        return False
+    # then check highest score
+    elif player_a.high_score > opponent.high_score:
+        return True
+    elif player_a.high_score < opponent.high_score:
+        return False
+    # then check lowest score
+    elif player_a.lowest_score < opponent.lowest_score:
+        return True
+    elif player_a.lowest_score > opponent.lowest_score:
+        return False
+
+
+def win_percent_likelyhood_for_a(player_a: StatsPerGame, opponent: StatsPerGame):
+    # XWins = my-win-percentage / (my-win-percentage + opponents-win-percentage)
+    a_wins = player_a.wins + .5
+    a_losses = player_a.losses + .5
+    a_win_perc = win_percentage(a_wins, a_losses)
+
+    o_wins = opponent.wins + .5
+    o_losses = opponent.losses + .5
+    o_win_perc = win_percentage(o_wins, o_losses)
+    a_wins_this_game = round((a_win_perc / (a_win_perc + o_win_perc)) * 100, 1)
+    return a_wins_this_game
+
 
 
 def win_percentage(wins, losses):
