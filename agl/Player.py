@@ -140,7 +140,12 @@ class Player:
             print(self.week_stats.get(week).just_win_loss_ratio())
 
     def print_division_record(self) -> None:
+        out_of_division_wins = self.total_wins - self.division_wins
+        out_of_division_losses = self.total_losses - self.division_losses
+        print("Record: " + str(self.total_wins) + ":" + str(self.total_losses))
         print("Division Record: " + str(self.division_wins) + ":" + str(self.division_losses))
+        print("Out Of Division Record: " + str(out_of_division_wins) + ":" + str(out_of_division_losses))
+
 
 
 def win_percentage(wins: int, losses: int) -> float:

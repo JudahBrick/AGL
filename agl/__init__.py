@@ -11,7 +11,7 @@ gameNames = ['Anagrams', 'Archery', 'Basketball', 'Cup Pong', 'Darts',
              'Knockout', 'Pool', "Shuffleboard", "Word_Hunt", "Golf"]
 # players in current season
 playerNames = ["Dani", "Moshe", "Brick", "Ilan", "Hagler", "Goldstein", "Judah", "Ennis",
-               "Alyssa", "Shmuli", "Ving", "Zach", "Siegel", "Eli"]
+               "Alyssa", "Shmuli", "Ving", "Zach", "Siegel", "Elie"]
 
 # players in previous season (season 2)
 previous_season_players = ["Yitzie", "Benji", "Brick", "Ilan", "Hagler", "Goldstein", "Judah", "Ennis",
@@ -268,27 +268,36 @@ last_season_expected.calculate_results()
 print()
 print("####################################################################")
 print()
-
+# + " mode: " + str(mode(game_data))
 print(AGL.data_collector.get_all_avgs())
 for game in AGL.data_collector.game_scores.keys():
     game_data: List[Any] = AGL.data_collector.get_all_scores_for_a_game(game)
     if len(game_data) > 0:
         print(game + ":  mean: " + str(mean(game_data)) + " median: " + str(median(game_data))
-              + " std: " + str(stdev(game_data)) + " mode: " + str(mode(game_data))
+              + " std: " + str(stdev(game_data))
               + " number of datapoints: " + str(len(game_data)))
 
 print("done")
 
-# print()
-# print()
-# print()
-# print("######### PRINT EVERYTHING ############")
-# for player in league.players:
-#     print()
-#     print()
-#     print(player + ":")
-#     print(league.players.get(player).print())
+print()
+print()
+print()
+print("######### PRINT EVERYTHING ############")
+for player in league.players:
+    print()
+    print()
+    print(player + ":")
+    print(league.players.get(player).print())
 
+
+print()
+print()
+print()
+print("######### PRINT Division Records ############")
+for player in league.players:
+    print()
+    print(player + ":")
+    print(league.players.get(player).print_division_record())
 # players = {}
 #
 #
