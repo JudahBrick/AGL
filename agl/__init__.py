@@ -31,9 +31,10 @@ previous_season = previous_season.dropna()
 # current season's east players
 east = ['Brick', 'Ennis', "Alyssa", "Ilan", "Ving", "Judah", "Dani"]
 # creat this season's AGL POPOs
-league = AGL(player_names=playerNames, games=gameNames, schedule=agl, games_per_day=14, num_of_weeks=7, east=east)
-previous_league = AGL(player_names=previous_season_players, games=gameNames,
-                      schedule=previous_season, games_per_day=14, num_of_weeks=7, east=previous_season_east)
+league = AGL(player_names=playerNames, games=gameNames, schedule=agl,
+             games_per_day=14, num_of_weeks=7, east=east, season_num=3)
+previous_league = AGL(player_names=previous_season_players, games=gameNames,schedule=previous_season,
+                      games_per_day=14, num_of_weeks=7, east=previous_season_east, season_num=2)
 
 
 # Create the players stats CSV which will go on the doc
@@ -279,25 +280,28 @@ for game in AGL.data_collector.game_scores.keys():
 
 print("done")
 
-print()
-print()
-print()
-print("######### PRINT EVERYTHING ############")
-for player in league.players:
-    print()
-    print()
-    print(player + ":")
-    print(league.players.get(player).print())
+# print()
+# print()
+# print()
+# print("######### PRINT EVERYTHING ############")
+# for player in league.players:
+#     print()
+#     print()
+#     print(player + ":")
+#     print(league.players.get(player).print())
+#
+#
+# print()
+# print()
+# print()
+# print("######### PRINT Division Records ############")
+# for player in league.players:
+#     print()
+#     print(player + ":")
+#     print(league.players.get(player).print_division_record())
 
 
-print()
-print()
-print()
-print("######### PRINT Division Records ############")
-for player in league.players:
-    print()
-    print(player + ":")
-    print(league.players.get(player).print_division_record())
+
 # players = {}
 #
 #

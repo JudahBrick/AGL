@@ -223,6 +223,10 @@ class StatsPerGame:
         else:
             return round((wins / (wins + losses)) * 100, 1)
 
+    def get_win_loss_string(self) -> str:
+        return str(self.wins) + "-" + str(self.losses)
+
+
     def __str__(self) -> str:
         self.calculate_avgs()
         if self.playerNames.__contains__(self.game):

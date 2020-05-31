@@ -12,12 +12,12 @@ class AGL:
         ['Basketball', 'Cup Pong', 'Darts', 'Knockout', 'Pool', "Shuffleboard", "Golf"])
 
     def __init__(self, player_names: [], schedule: pd.DataFrame, games: [], num_of_weeks: int,
-                 games_per_day: int, east: []):
+                 games_per_day: int, east: [], season_num: int):
         self.players = {}
         for name in player_names:
             self.players[name] = Player.Player(name=name, games=games, num_of_weeks=num_of_weeks,
                                                player_names=player_names, east_division=name in east)
-
+        self.season_num = season_num
         self.schedule = schedule
         self.num_of_weeks = num_of_weeks
         self.games_per_day = games_per_day

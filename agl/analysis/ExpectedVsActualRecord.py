@@ -3,11 +3,15 @@ from typing import Tuple, Union, Any
 from leagueDocs.agl import AGL
 from leagueDocs.agl import StatsPerGame
 
+import pandas as pd
+
 class ExpectedVsActualRecord:
     def __init__(self, season: AGL):
         self.season = season
 
     def calculate_results(self) -> None:
+        upsets = []
+
         for name in self.season.players:
             name_player = self.season.players.get(name)
             wins = 0
@@ -39,6 +43,19 @@ class ExpectedVsActualRecord:
                 elif should_win is False and actually_won is True:
                     string += "Won in "
                     unexpected_wins += 1
+                    # this is for a csv to upload,
+                    # we will only log the winning games and not both
+
+                    # get the wins-losses for oth players in this game
+                    stats_game = self.season.players.get(name).get_stats()
+                    winner = stats_game[game_name]
+                    winner = '(' + winner.get_win_loss_string() + ')'
+                    stats_game = self.season.players.get(opponent_name).get_stats()
+                    loser = stats_game[game_name]
+                    loser = '(' + loser.get_win_loss_string() + ')'
+                    # add it to the df so it can go to csv later
+                    upsets.append([name, winner, game_name, opponent_name,
+                                   loser, score, win_perc_chance])
                 # if there was an unexpected winner, then log it
                 if not string == "":
                     string += game_name + " against " + opponent_name + " Score: " + score \
@@ -53,6 +70,10 @@ class ExpectedVsActualRecord:
             print("Unexpected wins/losses:")
             print(unexpected)
             print()
+
+            dfw = pd.DataFrame(upsets, columns=['Winner', 'Winner record in game', 'Game', 'Loser',
+                                                'Loser record in game', 'Score', 'Win % Chance'])
+            dfw.to_csv('../produced_docs/Upsets Season ' + str(self.season.season_num) + '.csv')
 
     def should_player_a_win(self, player_a: str, game: str, opponent_name) -> Tuple[bool, Union[float, Any]]:
         # TODO finish this method so we can do schedule difficulty
