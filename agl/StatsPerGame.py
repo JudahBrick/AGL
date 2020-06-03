@@ -1,4 +1,4 @@
-from leagueDocs.agl import AGL
+
 
 
 class StatsPerGame:
@@ -107,6 +107,7 @@ class StatsPerGame:
             # this for our data collection
             # we are trying to collect general scores of eac game so we can see what an avg
             # league score is in each game
+            from leagueDocs.agl import AGL
             AGL.data_collector.add_result(self.game, myscore)
 
     def parse_first_to_win_games(self, score: str, won: bool) -> None:
