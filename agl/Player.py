@@ -33,6 +33,7 @@ class Player:
             self.week_stats[i] = WeekStats.WeekStats(i)
             i += 1
 
+
     def get_vs_players(self):
         return self.vs_other_players
 
