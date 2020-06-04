@@ -1,6 +1,4 @@
 
-
-
 class StatsPerGame:
     first_to_win_games = ['Cup Pong', 'Darts', 'Pool']
     scored_games = ['Anagrams', 'Archery', 'Knockout', "Shuffleboard", "Word_Hunt"]
