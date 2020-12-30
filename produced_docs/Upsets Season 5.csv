@@ -1,0 +1,46 @@
+,Winner,Winner record in game,Game,Loser,Loser record in game,Score,Win % Chance
+0,Ennis,(4-4),Pool,Brick,(5-2),8-ball:2,42.1
+1,Ennis,(1-6),Basketball,Zach,(4-2),88-86,22.6
+2,Ennis,(4-4),Pool,Judah,(5-1),2,38.9
+3,Ennis,(1-2),Anagrams,Yitzie,(8-3),14700-12700:6800-9400:7800-5900,34.6
+4,Zach,(3-2),Archery,Yitzie,(6-1),2-1:3-2,41.8
+5,Zach,(3-2),Archery,Moshe,(6-2),2 ot ,44.7
+6,Zach,(3-2),Archery,Moshe,(6-2),Ot ,44.7
+7,Zach,(4-2),Basketball,Judah,(9-3),91-90,46.8
+8,Zach,(3-6),Cup Pong,Ennis,(5-2),8,33.7
+9,Moshe,(6-2),Archery,Siegel,(5-1),3-2:3-2,47.9
+10,Moshe,(6-5),Basketball,Goldstein,(3-4),89-76,55.3
+11,Moshe,(3-3),Pool,Ennis,(4-4),4,50.0
+12,Moshe,(6-5),Basketball,Goldstein,(3-4),92-74,55.3
+13,Moshe,(2-3),Darts,Goldstein,(6-7),95,47.3
+14,Moshe,(6-2),Golf,Ennis,(10-3),12-17,49.0
+15,Goldstein,(1-7),Golf,Ennis,(10-3),15-19,18.2
+16,Goldstein,(2-4),Word_Hunt,Brick,(4-6),7800-11600:11100-9800:7200-6400,46.6
+17,Goldstein,(2-4),Word_Hunt,Brick,(4-6),6300-9100:7900-7300:10000-8600,46.6
+18,Goldstein,(2-4),Cup Pong,Zach,(3-6),2,50.5
+19,Goldstein,(6-7),Darts,Shmuli,(8-1),27,35.3
+20,Dani,(2-8),Darts,Goldstein,(6-7),14,32.9
+21,Dani,(3-5),Basketball,Moshe,(6-5),77-76,41.8
+22,Dani,(2-8),Darts,Zach,(2-2),6,31.2
+23,Dani,(3-4),Pool,Siegel,(4-5),1,49.3
+24,Dani,(2-3),Cup Pong,Brick,(8-1),4,32.9
+25,Dani,(5-5),Golf,Shmuli,(5-2),30-24,42.1
+26,Dani,(3-5),Basketball,Moshe,(6-5),83-76,41.8
+27,Brick,(3-1),Golf,Judah,(4-1),15-17,48.3
+28,Brick,(3-1),Golf,Moshe,(6-2),16-14,49.2
+29,Brick,(4-6),Word_Hunt,Shmuli,(4-1),6800-5600:9800-10400:18800-15700,35.3
+30,Shmuli,(3-3),Pool,Brick,(5-2),8-ball:5,42.1
+31,Siegel,(4-5),Pool,Ennis,(4-4),8-ball:4,47.4
+32,Siegel,(4-5),Pool,Ezra,(4-2),2,41.2
+33,Ezra,(1-3),Golf,Yitzie,(5-5),19-19:16-19,37.5
+34,Ezra,(2-7),Cup Pong,Judah,(2-2),1 OT 1,33.3
+35,Elie,(3-5),Pool,Dani,(3-4),1,47.0
+36,Elie,(3-5),Pool,Shmuli,(3-3),3,43.8
+37,Elie,(1-6),Cup Pong,Siegel,(5-2),1,21.5
+38,Elie,(1-11),Darts,Dani,(2-8),99,33.6
+39,Judah,(2-5),Knockout,Shmuli,(2-2),0-0:2-0:3-0,38.4
+40,Judah,(1-3),Word_Hunt,Brick,(4-6),4400-4700:9600-6800:6900-5800,42.3
+41,Yitzie,(8-3),Anagrams,Ezra,(8-3),17000-12900:13800-9500,50.0
+42,Yitzie,(2-1),Knockout,Elie,(3-1),0-0:1-0:0-0,47.2
+43,Yitzie,(8-3),Anagrams,Siegel,(7-1),10900-9000:15700-12500,45.9
+44,Yitzie,(2-1),Knockout,Ennis,(11-1),2-0:1-0,41.4

@@ -21,11 +21,12 @@ class ExpectedVsActualRecord:
             unexpected = []
 
             for match_up in name_player.games:
-                match = match_up.split("&")
+                match = match_up.split("&&")
                 game_name = match[0]
                 opponent_name = match[1]
                 actually_won = (match[2] == 'True')
                 score = match[3]
+                # print(name + " against " + opponent_name + " in " + game_name)
                 should_win, win_perc_chance = self.should_player_a_win(name, game_name, opponent_name)
                 # print(name + " against " + opponent_name + " in " + game_name +
                 #       ". win % chance: " + str(win_perc_chance))

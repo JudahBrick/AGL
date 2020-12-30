@@ -15,7 +15,7 @@ class Player:
         self.total_wins = 0
         self.total_losses = 0
         for game in games:
-            self.stats[game] = StatsPerGame.StatsPerGame(game)
+            self.stats[game] = StatsPerGame.StatsPerGame(game, player_names)
         self.name = name
         self.east_division = east_division
         self.division_wins = 0
@@ -52,7 +52,8 @@ class Player:
     def add_game_result(self, game: str, opponent: str, won: bool, home: bool, opp_in_eastern_division: bool,
                         score: str):
         # print(self.name + " " + game + " " + opponent)
-        self.games.append(game + "&" + opponent + "&" + str(won) + "&" + score)  # for schedule difficulty look up
+        # print(score)
+        self.games.append(game + "&&" + opponent + "&&" + str(won) + "&&" + score)  # for schedule difficulty look up
         self.stats.get(game).add_result(won=won, score=score)
         self.vs_other_players.add_result(opponent=opponent, game=game, won=won, score=score)
         self.add_personal_stats(won=won, home=home, opp_in_eastern_division=opp_in_eastern_division, game=None,
