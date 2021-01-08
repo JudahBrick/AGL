@@ -81,7 +81,7 @@ class ExpectedVsActualRecord:
         #  1) this should check to see if this game is a game we should go based off of an average like basketball
         #  2) if it isn't a game like that then it should just be based off
         #     of the record of that player in that specific game
-        # , "Darts", "Pool", "Shuffleboard", "Cup Pong"
+        # , 'Cup Pong', 'Darts', 'Pool', 'Anagrams', "Word_Hunt"
         scored_games = ["Basketball"]
 
         stats_game = self.season.players.get(player_a).get_stats()
@@ -94,6 +94,30 @@ class ExpectedVsActualRecord:
         else:
             return should_player_a_win_not_scored_game(player_a_stats, opponent_stats), win_perc_chance
 
+    def game_rankings_for_players(self):
+        rankings_by_game = {}
+        for game in self.season.games:
+            # print()
+            # print(game)
+            rankings = []
+            for player_a in self.season.players:
+                rank: int = 0
+                for player_b in self.season.players:
+                    expected_results = self.should_player_a_win(player_a, game, player_b)
+                    if not expected_results[0]:
+
+                        rank += 1
+                        # print(player_a + " " + player_b + " " +str(expected_results) + " " + str(rank))
+                rankings.append((rank, player_a))
+            rankings = sorted(rankings)
+            rankings_by_game[game] = rankings
+
+        for game in rankings_by_game:
+            print()
+            print(game)
+            for player_rank in rankings_by_game[game]:
+                # if player_rank[1] == 'Ennis' or player_rank[1] == 'Brick':
+                print(str(player_rank[0]) + " " + player_rank[1])
 
 def should_player_a_win_not_scored_game(player_a: StatsPerGame, opponent: StatsPerGame):
     if player_a.win_percentage > opponent.win_percentage:

@@ -22,6 +22,7 @@ class AGL:
         self.num_of_weeks = num_of_weeks
         self.games_per_day = games_per_day
         self.count()
+        self.games = games
         for player in self.players:
             self.players.get(player).count_win_percentages()
 
