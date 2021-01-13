@@ -1,5 +1,5 @@
 ,Winner,Winner record in game,Game,Loser,Loser record in game,Score,Win % Chance
-0,Alyssa,(23-4),Darts,Judah,(22-3),2 OT 13,49.2
+0,Alyssa,(13-7),Word_Hunt,Brick,(8-17),9200-10500:13500-4600:11900-8300,66.3
 1,Alyssa,(6-5),Cup Pong,Judah,(13-8),1,46.9
 2,Alyssa,(13-7),Word_Hunt,Zach,(28-2),7000-6800:7800-6300,41.2
 3,Alyssa,(5-16),Archery,Hagler,(12-5),60-57:88-84,26.5
@@ -7,234 +7,289 @@
 5,Alyssa,(3-8),Pool,Ilan,(10-9),3,35.7
 6,Alyssa,(3-8),Pool,Shmuli,(11-13),4,38.8
 7,Alyssa,(5-16),Archery,Judah,(10-8),87-88:88-88T:87-87T,31.1
-8,Alyssa,(23-4),Darts,Ennis,(25-3),2 OT 161,48.8
-9,Alyssa,(3-8),Pool,Ennis,(9-9),2,36.9
-10,Alyssa,(23-4),Darts,Shmuli,(31-4),5,48.9
+8,Alyssa,(13-7),Word_Hunt,Brick,(8-17),9500-9300:10900-7200,66.3
+9,Alyssa,(13-7),Word_Hunt,Brick,(8-17),8400-7900:19500-16000,66.3
+10,Alyssa,(3-8),Pool,Ennis,(9-9),2,36.9
 11,Alyssa,(2-6),Golf,Zach,(8-5),24-25,31.4
 12,Alyssa,(5-16),Archery,Moshe,(9-10),Not Scored,34.5
-13,Alyssa,(5-16),Archery,Judah,(10-8),88-87:87-87T:88-88T,31.1
-14,Alyssa,(2-6),Golf,Ennis,(13-8),14-14:17-17:13-14,31.2
-15,Benji,(1-2),Shuffleboard,Hagler,(4-3),50-47,40.0
-16,Benji,(2-6),Cup Pong,Ilan,(12-11),1,34.8
-17,Benji,(2-6),Cup Pong,Alyssa,(6-5),5,33.9
-18,Benji,(2-10),Knockout,Yitzie,(5-7),1-0:3-0,31.2
-19,Benji,(2-10),Knockout,Ilan,(6-8),1-0:2-0,30.7
-20,Brick,(20-3),Archery,Siegel,(30-3),89-87:88-89:88-88T:90-90T:86-90,48.8
-21,Brick,(14-5),Cup Pong,Siegel,(21-6),1,48.6
-22,Brick,(4-15),Anagrams,Benji,(6-6),4600-4500:8100-6500,31.0
-23,Brick,(20-3),Archery,Siegel,(30-3),87-88:87-84:88-88T:89-87,48.8
-24,Brick,(7-6),Golf,Dani,(14-11),16-20,49.0
-25,Brick,(12-6),Darts,Ennis,(25-3),2 OT 35,42.8
-26,Brick,(7-6),Golf,Dani,(14-11),14-16,49.0
-27,Brick,(7-6),Golf,Judah,(7-2),15-17,41.7
-28,Brick,(7-6),Golf,Moshe,(11-7),16-14,47.0
-29,Brick,(8-17),Word_Hunt,Shmuli,(18-6),6800-5600:9800-10400:18800-15700,30.6
-30,Brick,(9-8),Knockout,Judah,(20-10),0-3:0-0:2-0:2-0,44.4
-31,Brick,(7-6),Golf,Shmuli,(9-7),12-15,48.9
-32,Dani,(14-11),Golf,Judah,(7-2),22-26,42.7
-33,Dani,(14-11),Golf,Ennis,(13-8),18-18:15-19,47.6
-34,Dani,(2-20),Darts,Goldstein,(12-31),14,27.7
-35,Dani,(3-19),Basketball,Moshe,(10-13),77-76,25.8
-36,Dani,(2-20),Darts,Zach,(18-10),6,14.6
-37,Dani,(4-7),Pool,Siegel,(9-10),1,44.1
-38,Dani,(4-7),Pool,Zach,(7-9),8-ball:1,46.0
-39,Dani,(4-6),Cup Pong,Brick,(14-5),4,36.1
-40,Dani,(14-11),Golf,Shmuli,(9-7),30-24,50.0
-41,Dani,(3-19),Basketball,Moshe,(10-13),83-76,25.8
-42,Dani,(14-11),Golf,Zach,(8-5),14-15,47.9
-43,Elie,(7-25),Darts,Goldstein,(12-31),48,44.4
-44,Elie,(7-25),Darts,Yitzie,(9-6),57,27.6
-45,Elie,(6-26),Pool,Ving,(9-7),8-ball:2,26.1
-46,Elie,(13-11),Word_Hunt,Shmuli,(18-6),6100-5600:15800-17000:13200-10300,42.2
-47,Elie,(9-20),Cup Pong,Shmuli,(8-8),3,38.8
-48,Elie,(7-25),Darts,Alyssa,(23-4),9,21.3
-49,Elie,(6-26),Pool,Siegel,(9-10),2,29.3
-50,Elie,(9-20),Cup Pong,Brick,(14-5),2 OT 3,30.4
-51,Elie,(4-10),Knockout,Siegel,(5-5),1-0:0-1:3-0,37.5
-52,Elie,(9-20),Cup Pong,Ennis,(16-5),1,29.7
-53,Elie,(9-20),Cup Pong,Ilan,(12-11),1,37.8
-54,Elie,(6-26),Pool,Alyssa,(3-8),1,40.3
-55,Elie,(9-20),Cup Pong,Alyssa,(6-5),1,36.9
-56,Elie,(9-20),Cup Pong,Shmuli,(8-8),6,38.8
-57,Elie,(2-18),Archery,Hagler,(12-5),89-85:81-88T:89-89T,14.6
-58,Elie,(6-12),Golf,Goldstein,(9-17),19-22,49.3
-59,Elie,(9-20),Cup Pong,Ilan,(12-11),4,37.8
-60,Elie,(6-12),Golf,Shmuli,(9-7),17-22,38.0
-61,Elie,(7-25),Darts,Goldstein,(12-31),1 OT 14,44.4
-62,Elie,(6-12),Golf,Shmuli,(9-7),20-22,38.0
-63,Elie,(7-25),Darts,Goldstein,(12-31),18,44.4
-64,Elie,(2-18),Archery,Dani,(13-5),Not Scored,14.3
-65,Elie,(6-12),Golf,Moshe,(11-7),17-19,36.1
-66,Elie,(9-20),Cup Pong,Siegel,(21-6),1,29.2
-67,Elie,(6-26),Pool,Dani,(4-7),1,34.4
-68,Elie,(6-26),Pool,Shmuli,(11-13),3,30.0
-69,Elie,(4-10),Knockout,Judah,(20-10),1-0:2-0,31.2
-70,Elie,(4-10),Knockout,Judah,(20-10),2-0:0-2:2-0,31.2
-71,Elie,(9-20),Cup Pong,Siegel,(21-6),1,29.2
-72,Elie,(6-26),Pool,Zach,(7-9),3,30.9
-73,Elie,(7-25),Darts,Siegel,(9-17),1 OT 14,39.2
-74,Elie,(6-12),Golf,Yitzie,(5-6),18-20,42.8
-75,Elie,(4-10),Knockout,Judah,(20-10),1-0:1-0,31.2
-76,Ennis,(9-9),Anagrams,Benji,(6-6),13600-11500:7100-5600,50.0
-77,Ennis,(12-19),Basketball,Zach,(11-16),80-75,48.8
-78,Ennis,(16-5),Cup Pong,Hagler,(7-2),4,50.0
-79,Ennis,(9-9),Pool,Hagler,(8-6),1,46.9
-80,Ennis,(9-7),Word_Hunt,Alyssa,(13-7),5900-4900:5800-7700:15800-10900,46.5
-81,Ennis,(12-19),Basketball,Brick,(37-4),91-84,30.5
-82,Ennis,(12-19),Basketball,Zach,(11-16),81-78,48.8
-83,Ennis,(12-19),Basketball,Ilan,(15-10),82-80,39.6
-84,Ennis,(9-7),Word_Hunt,Ving,(24-3),5000-4700:15100-12500:23500-22000,39.0
-85,Ennis,(12-19),Basketball,Ilan,(15-10),91-81,39.6
-86,Ennis,(12-19),Basketball,Brick,(37-4),95-93,30.5
-87,Ennis,(9-9),Pool,Brick,(21-3),8-ball:2,36.8
-88,Ennis,(12-19),Basketball,Zach,(11-16),88-86,48.8
-89,Ennis,(9-9),Pool,Judah,(14-5),2,40.8
-90,Ennis,(9-9),Anagrams,Yitzie,(15-5),14700-12700:6800-9400:7800-5900,40.4
-91,Ezra,(2-3),Golf,Yitzie,(5-6),19-19:16-19,47.7
-92,Ezra,(4-7),Cup Pong,Judah,(13-8),1 OT 1,37.9
-93,Ezra,(4-7),Cup Pong,Zach,(10-16),1,49.1
-94,Goldstein,(7-23),Cup Pong,Benji,(2-6),3,46.5
-95,Goldstein,(12-31),Darts,Alyssa,(23-4),13,25.3
-96,Goldstein,(1-3),Shuffleboard,Zach,(1-1),52-48,37.5
-97,Goldstein,(7-23),Cup Pong,Shmuli,(8-8),3,32.6
-98,Goldstein,(9-17),Golf,Dani,(14-11),16-16:16-16:21-21:17-21,38.7
-99,Goldstein,(9-17),Golf,Ennis,(13-8),20-22,36.4
-100,Goldstein,(7-28),Basketball,Moshe,(10-13),70-64,32.2
-101,Goldstein,(7-23),Cup Pong,Shmuli,(8-8),1 OT 1,32.6
-102,Goldstein,(7-23),Cup Pong,Siegel,(21-6),2,24.0
-103,Goldstein,(7-23),Cup Pong,Moshe,(6-11),1,40.1
-104,Goldstein,(12-31),Darts,Moshe,(7-6),28,34.6
-105,Goldstein,(9-17),Golf,Ennis,(13-8),15-19,36.4
-106,Goldstein,(2-21),Word_Hunt,Brick,(8-17),7800-11600:11100-9800:7200-6400,24.1
-107,Goldstein,(2-21),Word_Hunt,Brick,(8-17),6300-9100:7900-7300:10000-8600,24.1
-108,Goldstein,(7-23),Cup Pong,Ezra,(4-7),2,39.2
-109,Goldstein,(7-23),Cup Pong,Zach,(10-16),2,38.4
-110,Goldstein,(12-31),Darts,Siegel,(9-17),20,44.7
-111,Goldstein,(12-31),Darts,Shmuli,(31-4),27,24.5
-112,Goldstein,(12-31),Darts,Moshe,(7-6),98,34.6
-113,Goldstein,(9-17),Golf,Ennis,(13-8),15-17,36.4
-114,Hagler,(14-6),Basketball,Judah,(22-18),87-63,55.7
-115,Hagler,(12-5),Archery,Brick,(20-3),88-89:89-86:90-86,44.8
-116,Hagler,(6-7),Anagrams,Benji,(6-6),7000-6400:6200-4500,48.1
-117,Hagler,(7-9),Darts,Judah,(22-3),27,33.8
-118,Hagler,(6-7),Anagrams,Benji,(6-6),11400-3700:4600-5300:6100-5200,48.1
-119,Hagler,(8-6),Pool,Judah,(14-5),2,43.9
-120,Hagler,(6-10),Knockout,Ilan,(6-8),1-0:0-0:1-0,46.9
-121,Hagler,(6-10),Knockout,Ilan,(6-8),0-0:0-0:2-0,46.9
-122,Hagler,(6-10),Knockout,Ilan,(6-8),0-2:1-0:2-0,46.9
-123,Hagler,(14-6),Basketball,Judah,(22-18),87-83,55.7
-124,Hagler,(15-5),Word_Hunt,Shmuli,(18-6),8600-8400:20300-18700,49.9
-125,Hagler,(7-9),Darts,Shmuli,(31-4),1 OT 39,33.5
-126,Hagler,(6-10),Knockout,Zach,(23-6),0-0:0-3:2-0:0-0:1-0,32.8
-127,Ilan,(2-14),Darts,Goldstein,(12-31),71,34.1
-128,Ilan,(15-10),Basketball,Judah,(22-18),81-77,52.1
-129,Ilan,(5-15),Archery,Zach,(8-13),90-88:60-57,40.4
-130,Ilan,(6-8),Knockout,Siegel,(5-5),1-0:0-1:1-0,46.4
-131,Ilan,(12-11),Cup Pong,Ennis,(16-5),4,41.0
-132,Ilan,(5-15),Archery,Benji,(3-6),56-53: 56-60:58-59T:57-59,42.8
-133,Ilan,(15-10),Basketball,Judah,(22-18),87-79,52.1
-134,Ilan,(10-9),Pool,Hagler,(8-6),4,48.1
-135,Ilan,(1-11),Word_Hunt,Ennis,(9-7),19100-11600:12200-12000:10400-8200,17.1
-136,Ilan,(15-10),Basketball,Judah,(22-18),89-84,52.1
-137,Ilan,(12-11),Cup Pong,Alyssa,(6-5),6,49.0
-138,Ilan,(10-9),Pool,Judah,(14-5),1,42.0
-139,Ilan,(12-11),Cup Pong,Brick,(14-5),1 OT 2,41.8
-140,Ilan,(1-2),Shuffleboard,Hagler,(4-3),52-66:56-42:72-79,40.0
-141,Ilan,(5-15),Archery,Dani,(13-5),83-79:87-84,26.9
-142,Ilan,(10-9),Pool,Ving,(9-7),1,48.4
-143,Ilan,(2-14),Darts,Goldstein,(12-31),13,34.1
-144,Ilan,(12-11),Cup Pong,Judah,(13-8),3,45.9
-145,Ilan,(10-9),Pool,Ving,(9-7),1,48.4
-146,Ilan,(12-11),Cup Pong,Judah,(13-8),2,45.9
-147,Judah,(22-18),Basketball,Brick,(37-4),83-77,38.1
-148,Judah,(14-5),Pool,Yitzie,(11-2),8,46.9
-149,Judah,(13-8),Cup Pong,Brick,(14-5),7,45.9
-150,Judah,(10-8),Archery,Brick,(20-3),89-89T:88-90:89-87:90-89,39.3
-151,Judah,(1-12),Anagrams,Benji,(6-6),6700-6600:10200-11700:6700-8900,17.6
-152,Judah,(10-8),Archery,Dani,(13-5),87-85:59-57,43.8
-153,Judah,(20-10),Knockout,Ennis,(19-3),0-0:0-0:1-0,43.8
-154,Judah,(13-8),Cup Pong,Ennis,(16-5),2,45.0
-155,Judah,(1-21),Word_Hunt,Brick,(8-17),4400-4700:9600-6800:6900-5800,16.6
-156,Moshe,(11-7),Golf,Zach,(8-5),18-23,49.9
-157,Moshe,(10-13),Basketball,Ving,(7-14),84-78,56.2
-158,Moshe,(9-10),Archery,Ennis,(17-3),2-0,36.3
-159,Moshe,(9-10),Archery,Siegel,(30-3),3-2:3-2,34.6
-160,Moshe,(9-10),Archery,Judah,(10-8),2 ot ,46.2
-161,Moshe,(11-7),Golf,Ennis,(13-8),12-17,49.6
-162,Shmuli,(36-1),Basketball,Brick,(37-4),81-69,51.8
-163,Shmuli,(5-24),Archery,Zach,(8-13),Not Scored,32.2
-164,Shmuli,(8-8),Cup Pong,Siegel,(21-6),2,39.4
-165,Shmuli,(18-6),Word_Hunt,Ving,(24-3),14100-13200:17300-27100:5800-3500,45.8
-166,Shmuli,(5-24),Archery,Ving,(5-7),89-76:87-85,30.2
-167,Shmuli,(31-4),Darts,Ennis,(25-3),20,49.9
-168,Shmuli,(11-13),Pool,Ilan,(10-9),3,46.7
-169,Shmuli,(5-24),Archery,Moshe,(9-10),88-81:58-51,27.8
-170,Shmuli,(1-5),Anagrams,Siegel,(35-2),8200-7500:4000-3800,18.6
-171,Shmuli,(11-13),Pool,Hagler,(8-6),8-ball:7-6,44.8
-172,Shmuli,(5-24),Archery,Alyssa,(5-16),Not Scored,42.3
-173,Shmuli,(8-8),Cup Pong,Hagler,(7-2),4,40.0
-174,Shmuli,(9-7),Golf,Zach,(8-5),17-23,47.9
-175,Shmuli,(9-7),Golf,Moshe,(11-7),16-18,48.0
-176,Shmuli,(11-13),Pool,Siegel,(9-10),6,49.2
-177,Shmuli,(11-13),Pool,Brick,(21-3),8-ball:5,34.8
-178,Shmuli,(8-8),Cup Pong,Ennis,(16-5),1,40.0
-179,Shmuli,(8-8),Cup Pong,Siegel,(21-6),4,39.4
-180,Shmuli,(11-13),Pool,Siegel,(9-10),4,49.2
-181,Shmuli,(6-6),Knockout,Zach,(23-6),1:0-2:0,39.0
-182,Shmuli,(6-6),Knockout,Judah,(20-10),2-0:1-0,43.1
-183,Siegel,(5-17),Basketball,Hagler,(14-6),86-85,25.7
-184,Siegel,(9-17),Darts,Hagler,(7-9),1 OT 15,44.4
-185,Siegel,(5-5),Knockout,Ennis,(19-3),0-2:0-2,37.1
-186,Siegel,(9-10),Pool,Brick,(21-3),1,35.6
-187,Siegel,(9-10),Pool,Yitzie,(11-2),8-ball:4,36.7
-188,Siegel,(9-17),Darts,Zach,(18-10),1 OT 87,35.6
-189,Siegel,(5-17),Basketball,Judah,(22-18),91-87,30.3
-190,Siegel,(9-17),Darts,Zach,(18-10),11,35.6
-191,Siegel,(5-5),Knockout,Judah,(20-10),0-0:2-0:2-0,43.1
-192,Siegel,(4-11),Golf,Zach,(8-5),16-17,31.6
-193,Siegel,(4-11),Golf,Dani,(14-11),20-22,33.5
-194,Siegel,(5-17),Basketball,Moshe,(10-13),75-70,35.3
-195,Siegel,(2-7),Word_Hunt,Ving,(24-3),7700-9100:14700-11600:10300:9700,22.2
-196,Siegel,(2-7),Word_Hunt,Hagler,(15-5),19200-16700:27000-22800,25.3
-197,Siegel,(9-17),Darts,Zach,(18-10),2 OT 43,35.6
-198,Siegel,(9-10),Pool,Ennis,(9-9),8-ball:4,48.7
-199,Siegel,(9-10),Pool,Ezra,(4-2),2,42.5
-200,Siegel,(4-11),Golf,Goldstein,(9-17),20-28,44.4
-201,Ving,(6-6),Cup Pong,Ilan,(12-11),4,49.0
-202,Ving,(6-6),Cup Pong,Yitzie,(5-5),3,50.0
-203,Ving,(6-6),Cup Pong,Yitzie,(5-5),1 OT 2,50.0
-204,Ving,(7-11),Knockout,Brick,(9-8),0-1:2-0:3-0,42.8
-205,Ving,(6-6),Cup Pong,Ilan,(12-11),1,49.0
-206,Ving,(7-14),Basketball,Ilan,(15-10),81-71,36.4
-207,Ving,(9-7),Pool,Judah,(14-5),6,43.5
-208,Ving,(2-21),Darts,Goldstein,(12-31),42,26.8
-209,Ving,(9-7),Pool,Hagler,(8-6),1,49.6
-210,Ving,(24-3),Word_Hunt,Zach,(28-2),12500-8100:5800-6600:14400-13000,48.8
-211,Ving,(7-11),Knockout,Alyssa,(5-1),3-0:0-2:2-0,33.4
-212,Ving,(1-4),Golf,Goldstein,(9-17),24-30,41.5
-213,Ving,(2-21),Darts,Goldstein,(12-31),2 OT 81,26.8
-214,Ving,(6-6),Cup Pong,Ilan,(12-11),1,49.0
-215,Yitzie,(8-16),Basketball,Hagler,(14-6),77-76,33.0
-216,Yitzie,(9-6),Darts,Zach,(18-10),43,48.2
-217,Yitzie,(15-5),Anagrams,Siegel,(35-2),10900-9000:15700-12500,44.1
-218,Yitzie,(5-7),Knockout,Ennis,(19-3),2-0:1-0,33.3
-219,Zach,(10-16),Cup Pong,Shmuli,(8-8),4,43.8
-220,Zach,(11-16),Basketball,Ilan,(15-10),84-73,40.8
-221,Zach,(18-10),Darts,Judah,(22-3),41,42.4
-222,Zach,(10-16),Cup Pong,Yitzie,(5-5),2,43.8
-223,Zach,(8-13),Archery,Ving,(5-7),59-57:87-87:85-86:87-87:87-84,47.7
-224,Zach,(10-16),Cup Pong,Ving,(6-6),6,43.8
-225,Zach,(10-16),Cup Pong,Ving,(6-6),2,43.8
-226,Zach,(8-13),Archery,Moshe,(9-10),85-82:60-56,44.8
-227,Zach,(7-9),Pool,Hagler,(8-6),1,43.7
-228,Zach,(18-10),Darts,Shmuli,(31-4),18,42.2
-229,Zach,(7-9),Pool,Ilan,(10-9),4,45.7
-230,Zach,(1-1),Shuffleboard,Hagler,(4-3),51-68:67-60:63-59,47.1
-231,Zach,(11-16),Basketball,Judah,(22-18),89-86,42.8
-232,Zach,(8-13),Archery,Yitzie,(14-1),2-1:3-2,29.9
-233,Zach,(8-5),Golf,Ennis,(13-8),14-16,49.7
-234,Zach,(8-13),Archery,Moshe,(9-10),2 ot ,44.8
-235,Zach,(8-13),Archery,Moshe,(9-10),Ot ,44.8
-236,Zach,(11-16),Basketball,Judah,(22-18),91-90,42.8
-237,Zach,(7-9),Pool,Ennis,(9-9),1,46.9
-238,Zach,(10-16),Cup Pong,Ennis,(16-5),8,34.2
+13,Alyssa,(13-7),Word_Hunt,Elie,(13-11), 19800-17400:17000-15900,54.4
+14,Alyssa,(5-16),Archery,Judah,(10-8),88-87:87-87T:88-88T,31.1
+15,Alyssa,(13-7),Word_Hunt,Brick,(8-17),11300-3700:12900-11800,66.3
+16,Benji,(6-6),Anagrams,Brick,(4-15),7000-6700:7000-7000:7000-4400,69.0
+17,Benji,(1-2),Shuffleboard,Hagler,(4-3),50-47,40.0
+18,Benji,(6-6),Anagrams,Brick,(4-15),2900-2000: 4300-2600,69.0
+19,Benji,(2-6),Cup Pong,Ilan,(12-11),1,34.8
+20,Benji,(6-6),Anagrams,Judah,(1-12),3700-8800:9700-8900:8100-6600,82.4
+21,Benji,(6-6),Anagrams,Goldstein,(0-3),2500-2500:4700-3600:6600-2500,80.0
+22,Benji,(2-6),Cup Pong,Alyssa,(6-5),5,33.9
+23,Benji,(2-10),Knockout,Yitzie,(5-7),1-0:3-0,31.2
+24,Benji,(6-6),Anagrams,Brick,(4-15),4300-5800:8500-7300:9200-4500,69.0
+25,Benji,(2-10),Knockout,Ilan,(6-8),1-0:2-0,30.7
+26,Benji,(2-7),Pool,Elie,(6-26),1,55.9
+27,Brick,(20-3),Archery,Siegel,(30-3),89-87:88-89:88-88T:90-90T:86-90,48.8
+28,Brick,(4-15),Anagrams,Goldstein,(0-3),1400-2300:9700-3000:7900-5200,64.3
+29,Brick,(7-6),Golf,Goldstein,(9-17),16-21,60.4
+30,Brick,(20-3),Archery,Siegel,(30-3),87-88:87-84:88-88T:89-87,48.8
+31,Brick,(7-6),Golf,Dani,(14-11),16-20,49.0
+32,Brick,(12-6),Darts,Ennis,(25-3),2 OT 35,42.8
+33,Brick,(7-6),Golf,Goldstein,(9-17),17-23,60.4
+34,Brick,(7-6),Golf,Dani,(14-11),14-16,49.0
+35,Brick,(4-15),Anagrams,Goldstein,(0-3),6200-4000:6600-5500,64.3
+36,Brick,(7-6),Golf,Judah,(7-2),15-17,41.7
+37,Brick,(8-17),Word_Hunt,Shmuli,(18-6),6800-5600:9800-10400:18800-15700,30.6
+38,Brick,(9-8),Knockout,Judah,(20-10),0-3:0-0:2-0:2-0,44.4
+39,Brick,(7-6),Golf,Shmuli,(9-7),12-15,48.9
+40,Dani,(14-11),Golf,Judah,(7-2),22-26,42.7
+41,Dani,(4-6),Cup Pong,Moshe,(6-11),2,53.1
+42,Dani,(14-11),Golf,Alyssa,(2-6),17-22,66.7
+43,Dani,(14-11),Golf,Ving,(1-4),14-23,69.1
+44,Dani,(14-11),Golf,Ving,(1-4),17-17:14-16,69.1
+45,Dani,(4-6),Cup Pong,Moshe,(6-11),1 OT 1,53.1
+46,Dani,(2-20),Darts,Goldstein,(12-31),14,27.7
+47,Dani,(3-19),Basketball,Moshe,(10-13),77-76,25.8
+48,Dani,(2-20),Darts,Zach,(18-10),6,14.6
+49,Dani,(4-7),Pool,Siegel,(9-10),1,44.1
+50,Dani,(14-11),Golf,Siegel,(4-11),20-20:15-21,66.5
+51,Dani,(4-7),Pool,Zach,(7-9),8-ball:1,46.0
+52,Dani,(4-6),Cup Pong,Brick,(14-5),4,36.1
+53,Dani,(14-11),Golf,Siegel,(4-11),19-26,66.5
+54,Dani,(4-6),Cup Pong,Moshe,(6-11),6,53.1
+55,Dani,(14-11),Golf,Elie,(6-12),17-19,62.0
+56,Dani,(14-11),Golf,Shmuli,(9-7),30-24,50.0
+57,Dani,(3-19),Basketball,Moshe,(10-13),83-76,25.8
+58,Dani,(14-11),Golf,Zach,(8-5),14-15,47.9
+59,Elie,(4-0),Anagrams,Zach,(0-6),9000-8500:3000-3000:16700-15800,92.7
+60,Elie,(7-25),Darts,Goldstein,(12-31),48,44.4
+61,Elie,(7-25),Darts,Yitzie,(9-6),57,27.6
+62,Elie,(6-26),Pool,Ving,(9-7),8-ball:2,26.1
+63,Elie,(9-20),Cup Pong,Shmuli,(8-8),3,38.8
+64,Elie,(2-2),Shuffleboard,Yitzie,(0-2),68-58,75.0
+65,Elie,(7-25),Darts,Alyssa,(23-4),9,21.3
+66,Elie,(6-26),Pool,Siegel,(9-10),2,29.3
+67,Elie,(9-20),Cup Pong,Brick,(14-5),2 OT 3,30.4
+68,Elie,(4-10),Knockout,Siegel,(5-5),1-0:0-1:3-0,37.5
+69,Elie,(9-20),Cup Pong,Ennis,(16-5),1,29.7
+70,Elie,(9-20),Cup Pong,Ilan,(12-11),1,37.8
+71,Elie,(6-26),Pool,Alyssa,(3-8),1,40.3
+72,Elie,(9-20),Cup Pong,Alyssa,(6-5),1,36.9
+73,Elie,(9-20),Cup Pong,Shmuli,(8-8),6,38.8
+74,Elie,(4-0),Anagrams,Benji,(6-6),9000-8300:13600-13100,64.3
+75,Elie,(6-12),Golf,Ving,(1-4),20-28,57.8
+76,Elie,(2-18),Archery,Hagler,(12-5),89-85:81-88T:89-89T,14.6
+77,Elie,(9-20),Cup Pong,Ilan,(12-11),4,37.8
+78,Elie,(7-25),Darts,Goldstein,(12-31),1 OT 14,44.4
+79,Elie,(7-25),Darts,Goldstein,(12-31),18,44.4
+80,Elie,(2-18),Archery,Dani,(13-5),Not Scored,14.3
+81,Elie,(9-20),Cup Pong,Siegel,(21-6),1,29.2
+82,Elie,(6-26),Pool,Dani,(4-7),1,34.4
+83,Elie,(6-26),Pool,Shmuli,(11-13),3,30.0
+84,Elie,(4-10),Knockout,Judah,(20-10),1-0:2-0,31.2
+85,Elie,(4-10),Knockout,Judah,(20-10),2-0:0-2:2-0,31.2
+86,Elie,(4-0),Anagrams,Ezra,(8-4),2200-6400:11300-5300:5400-8400,57.9
+87,Elie,(9-20),Cup Pong,Siegel,(21-6),1,29.2
+88,Elie,(6-26),Pool,Zach,(7-9),3,30.9
+89,Elie,(7-25),Darts,Siegel,(9-17),1 OT 14,39.2
+90,Elie,(4-0),Anagrams,Ezra,(8-4),3700-7500:10600-12200,57.9
+91,Elie,(4-10),Knockout,Judah,(20-10),1-0:1-0,31.2
+92,Ennis,(12-19),Basketball,Zach,(11-16),80-75,48.8
+93,Ennis,(9-9),Pool,Hagler,(8-6),1,46.9
+94,Ennis,(9-7),Word_Hunt,Alyssa,(13-7),5900-4900:5800-7700:15800-10900,46.5
+95,Ennis,(9-7),Word_Hunt,Elie,(13-11),3300-5500:12000-11400:20400-16500,50.9
+96,Ennis,(12-19),Basketball,Brick,(37-4),91-84,30.5
+97,Ennis,(25-3),Darts,Alyssa,(23-4),8,51.2
+98,Ennis,(12-19),Basketball,Zach,(11-16),81-78,48.8
+99,Ennis,(12-19),Basketball,Ilan,(15-10),82-80,39.6
+100,Ennis,(9-7),Word_Hunt,Ving,(24-3),5000-4700:15100-12500:23500-22000,39.0
+101,Ennis,(12-19),Basketball,Ilan,(15-10),91-81,39.6
+102,Ennis,(12-19),Basketball,Brick,(37-4),95-93,30.5
+103,Ennis,(13-8),Golf,Shmuli,(9-7),19-21,52.3
+104,Ennis,(13-8),Golf,Dani,(14-11),17-20,52.4
+105,Ennis,(13-8),Golf,Goldstein,(9-17),18-21,63.6
+106,Ennis,(9-7),Word_Hunt,Elie,(13-11),4000-6400:9200-8900:10700-8800,50.9
+107,Ennis,(13-8),Golf,Elie,(6-12),12-18,64.2
+108,Ennis,(13-8),Golf,Goldstein,(9-17),25-27,63.6
+109,Ennis,(9-9),Pool,Brick,(21-3),8-ball:2,36.8
+110,Ennis,(12-19),Basketball,Zach,(11-16),88-86,48.8
+111,Ennis,(13-8),Golf,Elie,(6-12),16-17,64.2
+112,Ennis,(13-8),Golf,Elie,(6-12),15-31,64.2
+113,Ennis,(9-9),Pool,Judah,(14-5),2,40.8
+114,Ennis,(13-8),Golf,Ezra,(2-3),19-28,59.6
+115,Ennis,(13-8),Golf,Dani,(14-11),20-21,52.4
+116,Ennis,(9-9),Anagrams,Yitzie,(15-5),14700-12700:6800-9400:7800-5900,40.4
+117,Ennis,(13-8),Golf,Goldstein,(9-17),14-20,63.6
+118,Ezra,(4-7),Cup Pong,Judah,(13-8),1 OT 1,37.9
+119,Goldstein,(12-31),Darts,Alyssa,(23-4),13,25.3
+120,Goldstein,(1-3),Shuffleboard,Zach,(1-1),52-48,37.5
+121,Goldstein,(7-23),Cup Pong,Shmuli,(8-8),3,32.6
+122,Goldstein,(9-17),Golf,Siegel,(4-11),14-18,55.6
+123,Goldstein,(9-17),Golf,Siegel,(4-11),19-20,55.6
+124,Goldstein,(7-28),Basketball,Moshe,(10-13),70-64,32.2
+125,Goldstein,(7-23),Cup Pong,Shmuli,(8-8),1 OT 1,32.6
+126,Goldstein,(9-17),Golf,Siegel,(4-11),16-19,55.6
+127,Goldstein,(7-23),Cup Pong,Siegel,(21-6),2,24.0
+128,Goldstein,(7-23),Cup Pong,Moshe,(6-11),1,40.1
+129,Goldstein,(12-31),Darts,Moshe,(7-6),28,34.6
+130,Goldstein,(2-21),Word_Hunt,Brick,(8-17),7800-11600:11100-9800:7200-6400,24.1
+131,Goldstein,(2-21),Word_Hunt,Brick,(8-17),6300-9100:7900-7300:10000-8600,24.1
+132,Goldstein,(7-23),Cup Pong,Ezra,(4-7),2,39.2
+133,Goldstein,(7-23),Cup Pong,Zach,(10-16),2,38.4
+134,Goldstein,(12-31),Darts,Siegel,(9-17),20,44.7
+135,Goldstein,(12-31),Darts,Shmuli,(31-4),27,24.5
+136,Goldstein,(12-31),Darts,Moshe,(7-6),98,34.6
+137,Hagler,(14-6),Basketball,Judah,(22-18),87-63,55.7
+138,Hagler,(12-5),Archery,Brick,(20-3),88-89:89-86:90-86,44.8
+139,Hagler,(7-9),Darts,Judah,(22-3),27,33.8
+140,Hagler,(8-6),Pool,Judah,(14-5),2,43.9
+141,Hagler,(6-10),Knockout,Ilan,(6-8),1-0:0-0:1-0,46.9
+142,Hagler,(6-10),Knockout,Ilan,(6-8),0-0:0-0:2-0,46.9
+143,Hagler,(7-2),Cup Pong,Brick,(14-5),1,50.8
+144,Hagler,(6-10),Knockout,Ilan,(6-8),0-2:1-0:2-0,46.9
+145,Hagler,(8-0),Golf,Alyssa,(2-6),18-21,77.3
+146,Hagler,(8-0),Golf,Goldstein,(9-17),15-17,72.8
+147,Hagler,(14-6),Basketball,Judah,(22-18),87-83,55.7
+148,Hagler,(8-0),Golf,Alyssa,(2-6),17-22,77.3
+149,Hagler,(8-0),Golf,Dani,(14-11),16-18,62.8
+150,Hagler,(8-0),Golf,Ving,(1-4),20-32,79.1
+151,Hagler,(8-0),Golf,Elie,(6-12),24-18,73.4
+152,Hagler,(8-0),Golf,Siegel,(4-11),18-20,77.1
+153,Hagler,(15-5),Word_Hunt,Elie,(13-11),9600-8900: 18800-12500,57.7
+154,Hagler,(7-9),Darts,Shmuli,(31-4),1 OT 39,33.5
+155,Hagler,(6-10),Knockout,Zach,(23-6),0-0:0-3:2-0:0-0:1-0,32.8
+156,Ilan,(2-14),Darts,Goldstein,(12-31),71,34.1
+157,Ilan,(15-10),Basketball,Judah,(22-18),81-77,52.1
+158,Ilan,(5-15),Archery,Zach,(8-13),90-88:60-57,40.4
+159,Ilan,(6-8),Knockout,Siegel,(5-5),1-0:0-1:1-0,46.4
+160,Ilan,(12-11),Cup Pong,Ennis,(16-5),4,41.0
+161,Ilan,(5-15),Archery,Benji,(3-6),56-53: 56-60:58-59T:57-59,42.8
+162,Ilan,(15-10),Basketball,Judah,(22-18),87-79,52.1
+163,Ilan,(10-9),Pool,Hagler,(8-6),4,48.1
+164,Ilan,(1-11),Word_Hunt,Ennis,(9-7),19100-11600:12200-12000:10400-8200,17.1
+165,Ilan,(15-10),Basketball,Judah,(22-18),89-84,52.1
+166,Ilan,(12-11),Cup Pong,Alyssa,(6-5),6,49.0
+167,Ilan,(10-9),Pool,Judah,(14-5),1,42.0
+168,Ilan,(12-11),Cup Pong,Brick,(14-5),1 OT 2,41.8
+169,Ilan,(1-2),Shuffleboard,Hagler,(4-3),52-66:56-42:72-79,40.0
+170,Ilan,(5-15),Archery,Dani,(13-5),83-79:87-84,26.9
+171,Ilan,(2-14),Darts,Goldstein,(12-31),13,34.1
+172,Ilan,(12-11),Cup Pong,Judah,(13-8),3,45.9
+173,Ilan,(12-11),Cup Pong,Judah,(13-8),2,45.9
+174,Judah,(22-18),Basketball,Brick,(37-4),83-77,38.1
+175,Judah,(14-5),Pool,Yitzie,(11-2),8,46.9
+176,Judah,(13-8),Cup Pong,Brick,(14-5),7,45.9
+177,Judah,(10-8),Archery,Brick,(20-3),89-89T:88-90:89-87:90-89,39.3
+178,Judah,(10-8),Archery,Dani,(13-5),87-85:59-57,43.8
+179,Judah,(20-10),Knockout,Ennis,(19-3),0-0:0-0:1-0,43.8
+180,Judah,(7-2),Golf,Elie,(6-12),20-17,68.7
+181,Judah,(13-8),Cup Pong,Ennis,(16-5),2,45.0
+182,Judah,(7-2),Golf,Elie,(6-12),14-15,68.7
+183,Judah,(7-2),Golf,Goldstein,(9-17),24-18,68.1
+184,Judah,(7-2),Golf,Goldstein,(9-17),18-21,68.1
+185,Judah,(1-21),Word_Hunt,Brick,(8-17),4400-4700:9600-6800:6900-5800,16.6
+186,Moshe,(11-7),Golf,Zach,(8-5),18-23,49.9
+187,Moshe,(10-13),Basketball,Ving,(7-14),84-78,56.2
+188,Moshe,(11-7),Golf,Brick,(7-6),21-21:15-20,53.0
+189,Moshe,(11-7),Golf,Elie,(6-12),15-19,63.9
+190,Moshe,(1-16),Word_Hunt,Dani,(0-7),4200-4100:4000-5800:4500-4200,57.2
+191,Moshe,(11-7),Golf,Ezra,(2-3),16-17,59.2
+192,Moshe,(9-10),Archery,Ennis,(17-3),2-0,36.3
+193,Moshe,(11-7),Golf,Dani,(14-11),17-20,52.0
+194,Moshe,(9-10),Archery,Siegel,(30-3),3-2:3-2,34.6
+195,Moshe,(9-10),Archery,Judah,(10-8),2 ot ,46.2
+196,Moshe,(11-7),Golf,Brick,(7-6),17-18,53.0
+197,Moshe,(11-7),Golf,Siegel,(4-11),18-26,68.3
+198,Moshe,(11-7),Golf,Ennis,(13-8),12-17,49.6
+199,Moshe,(11-7),Golf,Siegel,(4-11),16-21,68.3
+200,Moshe,(11-7),Golf,Brick,(7-6),17-22,53.0
+201,Shmuli,(31-4),Darts,Alyssa,(23-4),2 OT 30,51.1
+202,Shmuli,(36-1),Basketball,Brick,(37-4),81-69,51.8
+203,Shmuli,(18-6),Word_Hunt,Hagler,(15-5),16200-15700:13900-24600:12200-12100,50.1
+204,Shmuli,(5-24),Archery,Zach,(8-13),Not Scored,32.2
+205,Shmuli,(8-8),Cup Pong,Siegel,(21-6),2,39.4
+206,Shmuli,(18-6),Word_Hunt,Ving,(24-3),14100-13200:17300-27100:5800-3500,45.8
+207,Shmuli,(5-24),Archery,Ving,(5-7),89-76:87-85,30.2
+208,Shmuli,(31-4),Darts,Ennis,(25-3),20,49.9
+209,Shmuli,(11-13),Pool,Ilan,(10-9),3,46.7
+210,Shmuli,(8-8),Cup Pong,Yitzie,(5-5),1 OT 2,50.0
+211,Shmuli,(5-24),Archery,Moshe,(9-10),88-81:58-51,27.8
+212,Shmuli,(1-5),Anagrams,Siegel,(35-2),8200-7500:4000-3800,18.6
+213,Shmuli,(18-6),Word_Hunt,Elie,(13-11),7400-5300:20900-14500,57.8
+214,Shmuli,(11-13),Pool,Hagler,(8-6),8-ball:7-6,44.8
+215,Shmuli,(5-24),Archery,Alyssa,(5-16),Not Scored,42.3
+216,Shmuli,(8-8),Cup Pong,Hagler,(7-2),4,40.0
+217,Shmuli,(9-7),Golf,Zach,(8-5),17-23,47.9
+218,Shmuli,(18-6),Word_Hunt,Elie,(13-11),18800-14400:17100-14400,57.8
+219,Shmuli,(9-7),Golf,Goldstein,(9-17),19-20,61.4
+220,Shmuli,(11-13),Pool,Brick,(21-3),8-ball:5,34.8
+221,Shmuli,(18-6),Word_Hunt,Elie,(13-11),7100-7100:16000-12800:8100-7800,57.8
+222,Shmuli,(8-8),Cup Pong,Ennis,(16-5),1,40.0
+223,Shmuli,(9-7),Golf,Elie,(6-12),16-26,62.0
+224,Shmuli,(9-7),Golf,Goldstein,(9-17),20-20:16-25,61.4
+225,Shmuli,(8-8),Cup Pong,Siegel,(21-6),4,39.4
+226,Shmuli,(9-7),Golf,Goldstein,(9-17),18-21,61.4
+227,Shmuli,(6-6),Knockout,Zach,(23-6),1:0-2:0,39.0
+228,Shmuli,(6-6),Knockout,Judah,(20-10),2-0:1-0,43.1
+229,Shmuli,(18-6),Word_Hunt,Elie,(13-11),11200-14400:14100-14100:17600-16900:13700-8800,57.8
+230,Shmuli,(9-7),Golf,Elie,(6-12),19-19:17-19,62.0
+231,Siegel,(5-17),Basketball,Hagler,(14-6),86-85,25.7
+232,Siegel,(9-17),Darts,Hagler,(7-9),1 OT 15,44.4
+233,Siegel,(5-5),Knockout,Ennis,(19-3),0-2:0-2,37.1
+234,Siegel,(9-10),Pool,Brick,(21-3),1,35.6
+235,Siegel,(9-10),Pool,Yitzie,(11-2),8-ball:4,36.7
+236,Siegel,(9-17),Darts,Zach,(18-10),1 OT 87,35.6
+237,Siegel,(5-17),Basketball,Judah,(22-18),91-87,30.3
+238,Siegel,(9-17),Darts,Zach,(18-10),11,35.6
+239,Siegel,(5-5),Knockout,Judah,(20-10),0-0:2-0:2-0,43.1
+240,Siegel,(5-17),Basketball,Moshe,(10-13),75-70,35.3
+241,Siegel,(2-7),Word_Hunt,Ving,(24-3),7700-9100:14700-11600:10300:9700,22.2
+242,Siegel,(2-7),Word_Hunt,Hagler,(15-5),19200-16700:27000-22800,25.3
+243,Siegel,(9-17),Darts,Zach,(18-10),2 OT 43,35.6
+244,Siegel,(9-10),Pool,Ennis,(9-9),8-ball:4,48.7
+245,Siegel,(9-10),Pool,Zach,(7-9),2,51.9
+246,Siegel,(9-10),Pool,Ezra,(4-2),2,42.5
+247,Siegel,(35-2),Anagrams,Ezra,(8-4),3900-6900:8500-9600,58.8
+248,Ving,(6-6),Cup Pong,Ilan,(12-11),4,49.0
+249,Ving,(6-6),Cup Pong,Yitzie,(5-5),3,50.0
+250,Ving,(6-6),Cup Pong,Yitzie,(5-5),1 OT 2,50.0
+251,Ving,(7-11),Knockout,Brick,(9-8),0-1:2-0:3-0,42.8
+252,Ving,(6-6),Cup Pong,Ilan,(12-11),1,49.0
+253,Ving,(7-14),Basketball,Ilan,(15-10),81-71,36.4
+254,Ving,(9-7),Pool,Judah,(14-5),6,43.5
+255,Ving,(2-21),Darts,Goldstein,(12-31),42,26.8
+256,Ving,(9-7),Pool,Ilan,(10-9),1,51.6
+257,Ving,(9-7),Pool,Hagler,(8-6),1,49.6
+258,Ving,(24-3),Word_Hunt,Zach,(28-2),12500-8100:5800-6600:14400-13000,48.8
+259,Ving,(7-11),Knockout,Alyssa,(5-1),3-0:0-2:2-0,33.4
+260,Ving,(2-21),Darts,Goldstein,(12-31),2 OT 81,26.8
+261,Ving,(6-6),Cup Pong,Ilan,(12-11),1,49.0
+262,Yitzie,(8-16),Basketball,Hagler,(14-6),77-76,33.0
+263,Yitzie,(9-6),Darts,Zach,(18-10),43,48.2
+264,Yitzie,(15-5),Anagrams,Ezra,(8-4),17000-12900:13800-9500,53.0
+265,Yitzie,(5-6),Golf,Ezra,(2-3),15-24,52.3
+266,Yitzie,(5-6),Golf,Siegel,(4-11),14-15,62.0
+267,Yitzie,(15-5),Anagrams,Siegel,(35-2),10900-9000:15700-12500,44.1
+268,Yitzie,(5-7),Knockout,Ennis,(19-3),2-0:1-0,33.3
+269,Yitzie,(5-6),Golf,Elie,(6-12),15-26,57.2
+270,Yitzie,(5-6),Golf,Siegel,(4-11),14-30,62.0
+271,Yitzie,(5-6),Golf,Siegel,(4-11),13-17,62.0
+272,Zach,(10-16),Cup Pong,Shmuli,(8-8),4,43.8
+273,Zach,(11-16),Basketball,Ilan,(15-10),84-73,40.8
+274,Zach,(18-10),Darts,Judah,(22-3),41,42.4
+275,Zach,(10-16),Cup Pong,Yitzie,(5-5),2,43.8
+276,Zach,(8-13),Archery,Ving,(5-7),59-57:87-87:85-86:87-87:87-84,47.7
+277,Zach,(10-16),Cup Pong,Ving,(6-6),6,43.8
+278,Zach,(8-5),Golf,Goldstein,(9-17),25-26,63.3
+279,Zach,(10-16),Cup Pong,Ving,(6-6),2,43.8
+280,Zach,(8-13),Archery,Moshe,(9-10),85-82:60-56,44.8
+281,Zach,(7-9),Pool,Hagler,(8-6),1,43.7
+282,Zach,(8-5),Golf,Elie,(6-12),25-30,64.0
+283,Zach,(18-10),Darts,Shmuli,(31-4),18,42.2
+284,Zach,(7-9),Pool,Ilan,(10-9),4,45.7
+285,Zach,(8-5),Golf,Goldstein,(9-17),15-22,63.3
+286,Zach,(1-1),Shuffleboard,Hagler,(4-3),51-68:67-60:63-59,47.1
+287,Zach,(11-16),Basketball,Judah,(22-18),89-86,42.8
+288,Zach,(8-13),Archery,Yitzie,(14-1),2-1:3-2,29.9
+289,Zach,(8-13),Archery,Moshe,(9-10),2 ot ,44.8
+290,Zach,(8-13),Archery,Moshe,(9-10),Ot ,44.8
+291,Zach,(11-16),Basketball,Judah,(22-18),91-90,42.8
+292,Zach,(7-9),Pool,Ennis,(9-9),1,46.9
+293,Zach,(10-16),Cup Pong,Ennis,(16-5),8,34.2

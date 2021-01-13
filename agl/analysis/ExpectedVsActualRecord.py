@@ -82,35 +82,65 @@ class ExpectedVsActualRecord:
         #  2) if it isn't a game like that then it should just be based off
         #     of the record of that player in that specific game
         # , 'Cup Pong', 'Darts', 'Pool', 'Anagrams', "Word_Hunt"
-        scored_games = ["Basketball"]
+        scored_games = ["Basketball", "Golf", 'Shuffleboard', 'Cup Pong', 'Darts', 'Pool', 'Anagrams', "Word_Hunt"]
 
         stats_game = self.season.players.get(player_a).get_stats()
         player_a_stats = stats_game[game]
         stats_game = self.season.players.get(opponent_name).get_stats()
         opponent_stats = stats_game[game]
         win_perc_chance = win_percent_likelyhood_for_a(player_a_stats, opponent_stats)
+
+
         if scored_games.__contains__(game):
             return should_player_a_win_scored_game(player_a_stats, opponent_stats), win_perc_chance
         else:
             return should_player_a_win_not_scored_game(player_a_stats, opponent_stats), win_perc_chance
 
     def game_rankings_for_players(self):
+        scored_games = ["Basketball", "Golf", 'Shuffleboard', 'Cup Pong', 'Darts', 'Pool', 'Anagrams', "Word_Hunt"]
+
+
+        rankings_by_game_wins = {}
+        rankings_by_game_avg_score = {}
         rankings_by_game = {}
         for game in self.season.games:
             # print()
             # print(game)
-            rankings = []
-            for player_a in self.season.players:
-                rank: int = 0
-                for player_b in self.season.players:
-                    expected_results = self.should_player_a_win(player_a, game, player_b)
-                    if not expected_results[0]:
+            rankings_by_wins = []
+            rankings_by_avg_score = []
+            combined_rankings = []
 
-                        rank += 1
+            for player_a in self.season.players:
+                rank_by_wins: int = 0
+                rank_by_avg_score: int = 0
+                combined_rank: float = 0
+                for player_b in self.season.players:
+
+                    stats_game = self.season.players.get(player_a).get_stats()
+                    player_a_stats = stats_game[game]
+                    stats_game = self.season.players.get(player_b).get_stats()
+                    opponent_stats = stats_game[game]
+
+                    if not should_player_a_win_not_scored_game(player_a_stats, opponent_stats):
+                        rank_by_wins += 1
+                        combined_rank += 1
+
+                    if scored_games.__contains__(game):
+                        if not should_player_a_win_scored_game(player_a_stats, opponent_stats):
+                            rank_by_avg_score += 1
+                            combined_rank += 1
+
+                if scored_games.__contains__(game):
+                    combined_rank /= 2
                         # print(player_a + " " + player_b + " " +str(expected_results) + " " + str(rank))
-                rankings.append((rank, player_a))
-            rankings = sorted(rankings)
-            rankings_by_game[game] = rankings
+                rankings_by_wins.append((rank_by_wins, player_a))
+                rankings_by_avg_score.append((rank_by_avg_score, player_a))
+                combined_rankings.append((combined_rank, player_a))
+
+            rankings_by_wins = sorted(rankings_by_wins)
+            rankings_by_avg_score = sorted(rankings_by_avg_score)
+            combined_rankings = sorted(combined_rankings)
+            rankings_by_game[game] = rankings_by_wins
 
         for game in rankings_by_game:
             print()
