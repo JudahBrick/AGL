@@ -96,25 +96,33 @@ class ExpectedVsActualRecord:
         else:
             return should_player_a_win_not_scored_game(player_a_stats, opponent_stats), win_perc_chance
 
-    def game_rankings_for_players(self):
+    def game_rankings_for_players(self, season_players=[]):
+
         scored_games = ["Basketball", "Golf", 'Shuffleboard', 'Cup Pong', 'Darts', 'Pool', 'Anagrams', "Word_Hunt"]
+        if len(season_players) is 0:
+            season_players = self.season.players
 
 
         rankings_by_game_wins = {}
         rankings_by_game_avg_score = {}
-        rankings_by_game = {}
+        rankings_by_game_by_win = {}
+        rankings_by_game_by_score = {}
+        dfs_of_games = {}
         for game in self.season.games:
+            list_to_become_df = []
+
+
             # print()
             # print(game)
-            rankings_by_wins = []
-            rankings_by_avg_score = []
+            rankings_by_wins = {}
+            rankings_by_avg_score = {}
             combined_rankings = []
 
-            for player_a in self.season.players:
+            for player_a in season_players:
                 rank_by_wins: int = 0
                 rank_by_avg_score: int = 0
-                combined_rank: float = 0
-                for player_b in self.season.players:
+                # combined_rank: float = 0
+                for player_b in season_players:
 
                     stats_game = self.season.players.get(player_a).get_stats()
                     player_a_stats = stats_game[game]
@@ -123,31 +131,68 @@ class ExpectedVsActualRecord:
 
                     if not should_player_a_win_not_scored_game(player_a_stats, opponent_stats):
                         rank_by_wins += 1
-                        combined_rank += 1
+                        if game == 'Knockout' or game == 'Archery':
+                            rank_by_avg_score += 1
 
                     if scored_games.__contains__(game):
                         if not should_player_a_win_scored_game(player_a_stats, opponent_stats):
                             rank_by_avg_score += 1
-                            combined_rank += 1
 
-                if scored_games.__contains__(game):
-                    combined_rank /= 2
-                        # print(player_a + " " + player_b + " " +str(expected_results) + " " + str(rank))
-                rankings_by_wins.append((rank_by_wins, player_a))
-                rankings_by_avg_score.append((rank_by_avg_score, player_a))
-                combined_rankings.append((combined_rank, player_a))
+
+                # rankings_by_wins.append((rank_by_wins, player_a))
+                rankings_by_wins[player_a] = rank_by_wins
+                # rankings_by_avg_score.append((rank_by_avg_score, player_a))
+                rankings_by_avg_score[player_a] = rank_by_avg_score
+                avg_rank: float = (rank_by_wins + rank_by_avg_score) / 2
+                combined_rankings.append((avg_rank, player_a))
+
+                # rankings.append([player_a, rank_by_wins, rank_by_avg_score, avg_rank])
+                list_to_become_df.append([player_a, rank_by_wins, rank_by_avg_score, avg_rank])
 
             rankings_by_wins = sorted(rankings_by_wins)
             rankings_by_avg_score = sorted(rankings_by_avg_score)
             combined_rankings = sorted(combined_rankings)
-            rankings_by_game[game] = rankings_by_wins
+            rankings_by_game_by_win[game] = rankings_by_wins
+            rankings_by_game_by_score[game] = rankings_by_avg_score
 
-        for game in rankings_by_game:
-            print()
-            print(game)
-            for player_rank in rankings_by_game[game]:
-                # if player_rank[1] == 'Ennis' or player_rank[1] == 'Brick':
-                print(str(player_rank[0]) + " " + player_rank[1])
+            df_of_game_rankings = pd.DataFrame(list_to_become_df,
+                                               columns=['player', 'rank by wins', 'rank by score', 'combined ranks'])
+            df_of_game_rankings.sort_values("player", inplace=True)
+
+            # creating a rank column and passing the returned rank series
+            # change method to 'min' to rank by minimum
+            df_of_game_rankings["rank"] = df_of_game_rankings["combined ranks"].rank(method='min')
+            # rankings.append(df_of_game_rankings)
+            dfs_of_games[game] = df_of_game_rankings
+
+        dfs_of_players = {}
+        for player in season_players:
+            dfs_of_players[player] = []
+
+        rankings = []
+        for game in dfs_of_games:
+            df = dfs_of_games[game]
+
+            for index, row in df.iterrows():
+                rankings.append(
+                    [game, row['player'], row['rank by wins'],
+                     row['rank by score'], row['combined ranks'], row['rank']])
+                dfs_of_players[row['player']].append([game, row['rank']])
+
+        df2 = pd.DataFrame(rankings,
+                           columns=['Game', 'player', 'rank by wins', 'rank by score', 'combined ranks', 'rank'])
+        df2.to_csv('../produced_docs/ranks for season.csv')
+
+        preferences = []
+        for player in dfs_of_players:
+            game_ranks = dfs_of_players[player]
+            df = pd.DataFrame(game_ranks, columns=['game', 'rank'])
+            df["preference"] = df["rank"].rank(method='min')
+            for index, row in df.iterrows():
+                preferences.append([player, row['game'], row['rank'], row['preference']])
+
+        preferences_df = pd.DataFrame(preferences, columns=['player', 'game', 'rank', 'preferences'])
+        preferences_df.to_csv('../produced_docs/preferences for season.csv')
 
 def should_player_a_win_not_scored_game(player_a: StatsPerGame, opponent: StatsPerGame):
     if player_a.win_percentage > opponent.win_percentage:

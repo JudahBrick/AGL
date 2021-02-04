@@ -86,36 +86,70 @@ expected_record = ExpectedVsActualRecord(seasonFiveLeague)
 expected_record.calculate_results()
 expected_record.game_rankings_for_players()
 
+#
+# print()
+# print('#################################################################################')
+# print('                                   Master AGL                                    ')
+# print('#################################################################################')
+#
+#
+# all_players = ['Alyssa', 'Benji', 'Brick', 'Dani', 'Elie', 'Ennis', 'Ezra',
+#                'Goldstein', 'Hagler', 'Ilan', 'Judah', 'Moshe', 'Shmuel',
+#                'Shmuli', 'Siegel', 'Ving', 'Yitzie', 'Zach']
+# allGameNames = ['Anagrams', 'Archery', 'Basketball', 'Cup Pong', 'Darts',
+#              'Knockout', 'Pool', "Word_Hunt", "Golf", 'Shuffleboard']
+# aglMasterSeason = pd.read_csv('../schedules/Master AGL Copy - Schedule.csv')  # read schedule tab into a panda dataframe
+# aglMasterSeason = aglMasterSeason.drop(columns=['Games List', 'Comments', 'The Rulebook'])  # take out useless columns
+# aglMasterSeason = aglMasterSeason.dropna()
+#
+# masterSeasonLeague = AGL(player_names=all_players, games=allGameNames, schedule=aglMasterSeason,
+#                        games_per_day=14, num_of_weeks=20, east=[], season_num=0)
+#
+# # Create the players stats CSV which will go on the doc
+# games_with_stats = ['Basketball', 'Cup Pong', 'Darts', 'Knockout', 'Pool', "Golf", 'Anagrams', 'Word_Hunt']
+#
+# masterSeasonStatsPrinter = SeasonStatsPrinter(league=masterSeasonLeague, games_with_stats=games_with_stats,
+#                                             season_name='Master AGL')
+# masterSeasonStatsPrinter.print()
+#
+# expected_record = ExpectedVsActualRecord(masterSeasonLeague)
+# expected_record.calculate_results()
+# expected_record.game_rankings_for_players()
+
+# exit(0)
+
 
 print()
 print('#################################################################################')
-print('                                   Master AGL                                    ')
+print('                                Season 6 prep                                    ')
 print('#################################################################################')
 
 
 all_players = ['Alyssa', 'Benji', 'Brick', 'Dani', 'Elie', 'Ennis', 'Ezra',
                'Goldstein', 'Hagler', 'Ilan', 'Judah', 'Moshe', 'Shmuel',
                'Shmuli', 'Siegel', 'Ving', 'Yitzie', 'Zach']
+s6_players = ['Alyssa', 'Brick', 'Dani', 'Elie', 'Ennis', 'Ezra',
+              'Goldstein', 'Hagler', 'Judah', 'Moshe',
+              'Shmuli', 'Siegel',  'Yitzie', 'Zach']
 allGameNames = ['Anagrams', 'Archery', 'Basketball', 'Cup Pong', 'Darts',
              'Knockout', 'Pool', "Word_Hunt", "Golf", 'Shuffleboard']
-aglMasterSeason = pd.read_csv('../schedules/Master AGL Copy - Schedule.csv')  # read schedule tab into a panda dataframe
-aglMasterSeason = aglMasterSeason.drop(columns=['Games List', 'Comments', 'The Rulebook'])  # take out useless columns
-aglMasterSeason = aglMasterSeason.dropna()
+s6_prep = pd.read_csv('../schedules/Season 6 prep - Schedule.csv')  # read schedule tab into a panda dataframe
+s6_prep = s6_prep.drop(columns=['Games List', 'Comments', 'The Rulebook'])  # take out useless columns
+s6_prep = s6_prep.dropna()
 
-masterSeasonLeague = AGL(player_names=all_players, games=allGameNames, schedule=aglMasterSeason,
+s6_prep_league = AGL(player_names=all_players, games=allGameNames, schedule=s6_prep,
                        games_per_day=14, num_of_weeks=20, east=[], season_num=0)
 
 # Create the players stats CSV which will go on the doc
 games_with_stats = ['Basketball', 'Cup Pong', 'Darts', 'Knockout', 'Pool', "Golf", 'Anagrams', 'Word_Hunt']
 
-masterSeasonStatsPrinter = SeasonStatsPrinter(league=masterSeasonLeague, games_with_stats=games_with_stats,
+masterSeasonStatsPrinter = SeasonStatsPrinter(league=s6_prep_league, games_with_stats=games_with_stats,
                                             season_name='Master AGL')
 masterSeasonStatsPrinter.print()
 
-expected_record = ExpectedVsActualRecord(masterSeasonLeague)
+expected_record = ExpectedVsActualRecord(s6_prep_league)
 expected_record.calculate_results()
-expected_record.game_rankings_for_players()
-
+expected_record.game_rankings_for_players(s6_players)
 exit(0)
 
 # Now we make all of the graphs

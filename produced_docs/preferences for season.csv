@@ -1,0 +1,141 @@
+,player,game,rank,preferences
+0,Alyssa,Anagrams,5.0,5.0
+1,Alyssa,Archery,10.0,8.0
+2,Alyssa,Basketball,1.0,1.0
+3,Alyssa,Cup Pong,6.0,6.0
+4,Alyssa,Darts,2.0,2.0
+5,Alyssa,Knockout,2.0,2.0
+6,Alyssa,Pool,11.0,9.0
+7,Alyssa,Word_Hunt,6.0,6.0
+8,Alyssa,Golf,12.0,10.0
+9,Alyssa,Shuffleboard,2.0,2.0
+10,Brick,Anagrams,10.0,8.0
+11,Brick,Archery,3.0,4.0
+12,Brick,Basketball,2.0,2.0
+13,Brick,Cup Pong,1.0,1.0
+14,Brick,Darts,5.0,5.0
+15,Brick,Knockout,5.0,5.0
+16,Brick,Pool,2.0,2.0
+17,Brick,Word_Hunt,7.0,7.0
+18,Brick,Golf,12.0,10.0
+19,Brick,Shuffleboard,10.0,8.0
+20,Dani,Anagrams,12.0,6.0
+21,Dani,Archery,5.0,1.0
+22,Dani,Basketball,12.0,6.0
+23,Dani,Cup Pong,10.0,3.0
+24,Dani,Darts,13.0,9.0
+25,Dani,Knockout,12.0,6.0
+26,Dani,Pool,11.0,4.0
+27,Dani,Word_Hunt,13.0,9.0
+28,Dani,Golf,8.0,2.0
+29,Dani,Shuffleboard,11.0,4.0
+30,Elie,Anagrams,6.0,4.0
+31,Elie,Archery,12.0,6.0
+32,Elie,Basketball,13.0,8.0
+33,Elie,Cup Pong,13.0,8.0
+34,Elie,Darts,12.0,6.0
+35,Elie,Knockout,10.0,5.0
+36,Elie,Pool,13.0,8.0
+37,Elie,Word_Hunt,5.0,2.0
+38,Elie,Golf,3.0,1.0
+39,Elie,Shuffleboard,5.0,2.0
+40,Ennis,Anagrams,6.0,6.0
+41,Ennis,Archery,4.0,5.0
+42,Ennis,Basketball,8.0,8.0
+43,Ennis,Cup Pong,3.0,4.0
+44,Ennis,Darts,2.0,3.0
+45,Ennis,Knockout,1.0,1.0
+46,Ennis,Pool,7.0,7.0
+47,Ennis,Word_Hunt,8.0,8.0
+48,Ennis,Golf,8.0,8.0
+49,Ennis,Shuffleboard,1.0,1.0
+50,Ezra,Anagrams,2.0,1.0
+51,Ezra,Archery,13.0,7.0
+52,Ezra,Basketball,14.0,10.0
+53,Ezra,Cup Pong,10.0,4.0
+54,Ezra,Darts,13.0,7.0
+55,Ezra,Knockout,13.0,7.0
+56,Ezra,Pool,4.0,3.0
+57,Ezra,Word_Hunt,10.0,4.0
+58,Ezra,Golf,3.0,2.0
+59,Ezra,Shuffleboard,11.0,6.0
+60,Goldstein,Anagrams,8.0,2.0
+61,Goldstein,Archery,13.0,7.0
+62,Goldstein,Basketball,10.0,4.0
+63,Goldstein,Cup Pong,14.0,9.0
+64,Goldstein,Darts,10.0,4.0
+65,Goldstein,Knockout,13.0,7.0
+66,Goldstein,Pool,14.0,9.0
+67,Goldstein,Word_Hunt,12.0,6.0
+68,Goldstein,Golf,3.0,1.0
+69,Goldstein,Shuffleboard,9.0,3.0
+70,Hagler,Anagrams,4.0,5.0
+71,Hagler,Archery,6.0,7.0
+72,Hagler,Basketball,4.0,5.0
+73,Hagler,Cup Pong,2.0,1.0
+74,Hagler,Darts,9.0,9.0
+75,Hagler,Knockout,11.0,10.0
+76,Hagler,Pool,6.0,7.0
+77,Hagler,Word_Hunt,3.0,3.0
+78,Hagler,Golf,2.0,1.0
+79,Hagler,Shuffleboard,3.0,3.0
+80,Judah,Anagrams,11.0,9.0
+81,Judah,Archery,9.0,8.0
+82,Judah,Basketball,4.0,5.0
+83,Judah,Cup Pong,5.0,7.0
+84,Judah,Darts,1.0,1.0
+85,Judah,Knockout,4.0,5.0
+86,Judah,Pool,3.0,3.0
+87,Judah,Word_Hunt,11.0,9.0
+88,Judah,Golf,1.0,1.0
+89,Judah,Shuffleboard,3.0,3.0
+90,Moshe,Anagrams,14.0,10.0
+91,Moshe,Archery,7.0,3.0
+92,Moshe,Basketball,7.0,3.0
+93,Moshe,Cup Pong,9.0,6.0
+94,Moshe,Darts,8.0,5.0
+95,Moshe,Knockout,5.0,1.0
+96,Moshe,Pool,5.0,1.0
+97,Moshe,Word_Hunt,13.0,9.0
+98,Moshe,Golf,11.0,7.0
+99,Moshe,Shuffleboard,11.0,7.0
+100,Shmuli,Anagrams,8.0,8.0
+101,Shmuli,Archery,11.0,9.0
+102,Shmuli,Basketball,2.0,1.0
+103,Shmuli,Cup Pong,7.0,5.0
+104,Shmuli,Darts,2.0,1.0
+105,Shmuli,Knockout,7.0,5.0
+106,Shmuli,Pool,7.0,5.0
+107,Shmuli,Word_Hunt,3.0,3.0
+108,Shmuli,Golf,3.0,3.0
+109,Shmuli,Shuffleboard,11.0,9.0
+110,Siegel,Anagrams,1.0,1.0
+111,Siegel,Archery,2.0,2.0
+112,Siegel,Basketball,10.0,9.0
+113,Siegel,Cup Pong,3.0,3.0
+114,Siegel,Darts,10.0,9.0
+115,Siegel,Knockout,9.0,6.0
+116,Siegel,Pool,9.0,6.0
+117,Siegel,Word_Hunt,9.0,6.0
+118,Siegel,Golf,8.0,5.0
+119,Siegel,Shuffleboard,5.0,4.0
+120,Yitzie,Anagrams,3.0,4.0
+121,Yitzie,Archery,1.0,1.0
+122,Yitzie,Basketball,8.0,7.0
+123,Yitzie,Cup Pong,8.0,7.0
+124,Yitzie,Darts,6.0,5.0
+125,Yitzie,Knockout,8.0,7.0
+126,Yitzie,Pool,1.0,1.0
+127,Yitzie,Word_Hunt,1.0,1.0
+128,Yitzie,Golf,14.0,10.0
+129,Yitzie,Shuffleboard,7.0,6.0
+130,Zach,Anagrams,12.0,9.0
+131,Zach,Archery,8.0,6.0
+132,Zach,Basketball,6.0,4.0
+133,Zach,Cup Pong,12.0,9.0
+134,Zach,Darts,7.0,5.0
+135,Zach,Knockout,3.0,2.0
+136,Zach,Pool,9.0,8.0
+137,Zach,Word_Hunt,2.0,1.0
+138,Zach,Golf,3.0,2.0
+139,Zach,Shuffleboard,8.0,6.0

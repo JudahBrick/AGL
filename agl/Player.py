@@ -51,7 +51,7 @@ class Player:
 
     def add_game_result(self, game: str, opponent: str, won: bool, home: bool, opp_in_eastern_division: bool,
                         score: str):
-        # print(self.name + " " + game + " " + opponent)
+        # print(self.name + " " + game + " " + opponent + " " + score + " Home:" + str(home))
         # print(score)
         self.games.append(game + "&&" + opponent + "&&" + str(won) + "&&" + score)  # for schedule difficulty look up
         self.stats.get(game).add_result(won=won, score=score)
