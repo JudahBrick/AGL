@@ -1,7 +1,7 @@
 
 class StatsPerGame:
     first_to_win_games = ['Cup Pong', 'Darts', 'Pool']
-    scored_games = ['Anagrams', "Word_Hunt", 'Archery', 'Knockout', "Shuffleboard"]
+    scored_games = ['Anagrams', "Word_Hunt", 'Word Bites', 'Archery', 'Knockout', "Shuffleboard"]
 
     def __init__(self, game: str, playerNames=[]):
         self.playerNames = playerNames
@@ -43,8 +43,10 @@ class StatsPerGame:
             self.parse_basketball_shuffelboard_or_golf(score, won)
         elif self.game == 'Pool':
             self.parse_pool(score, won)
-        elif self.game == 'Anagrams' or self.game == 'Word_Hunt':
+        elif self.game == 'Anagrams' or self.game == 'Word_Hunt' or self.game == 'Word Bites':
             self.parse_word_games(score, won)
+        elif self.game == 'Knockout':
+            self.parse_knockout(score, won)
         elif self.first_to_win_games.__contains__(self.game):
             self.parse_first_to_win_games(score=score, won=won)
         self.calculate_avgs()
@@ -54,7 +56,7 @@ class StatsPerGame:
         games = score.split(":")
         num_of_games = games.__len__()
 
-    # score is the string value from the "score" clumn in the schedule tab on the doc
+    # score is the string value from the "score" column in the schedule tab on the doc
     def parse_basketball_shuffelboard_or_golf(self, score: str, won: bool) -> None:
         # print(score)
         # put everything in lowercase in case of OT/oT/Ot
@@ -104,6 +106,74 @@ class StatsPerGame:
             # league score is in each game
             from leagueDocs.agl import AGL
             AGL.data_collector.add_result(self.game, myscore)
+
+    # score is the string value from the "score" column in the schedule tab on the doc
+    def parse_knockout(self, score: str, won: bool) -> None:
+        # print(score)
+        # put everything in lowercase in case of OT/oT/Ot
+        score = score.lower()
+        # if no score was put in
+        if score.__contains__('not scored'):
+            return
+        # if a game went into OT then multiple games would appear separated by a ":"
+        games = score.split(":")
+
+        # set variables for checking later
+        num_of_games = games.__len__()
+        total_score = 0
+        total_opponent_score = 0
+
+        # if number of games is greater than 1 that means we had OT
+        if num_of_games > 3:
+            self.total_ots += (num_of_games - 3)
+
+        for game in games:
+            myscore = 0
+            other_score = 0
+            individual_score = game.split("-")
+            # if a player won then their score is on the left (index 0)
+            if won:
+                myscore = int(individual_score[0])
+                other_score = int(individual_score[1])
+                if myscore == 0:
+                    myscore = myscore - other_score
+                total_score += myscore
+                # total_opponent_score += total_opponent_score
+                # self.total_wins_score += myscore
+                # self.total_win_differential += myscore - other_score
+            # if a player lost then their score is on the right (index 1)
+            else:
+                myscore = int(individual_score[1])
+                other_score = int(individual_score[0])
+                if myscore == 0:
+                    myscore = myscore - other_score
+                total_score += myscore
+                # total_opponent_score += total_opponent_score
+                # self.total_loss_score += myscore
+
+
+            # self.total_score_tally += myscore
+            # self.total_differential += myscore - other_score
+
+        # new high score/ low score
+        if total_score > self.high_score:
+            self.high_score = total_score
+        if total_score < self.lowest_score:
+            self.lowest_score = total_score
+
+        if won:
+            self.total_wins_score += total_score
+        else:
+            self.total_loss_score += total_score
+
+        self.total_score_tally += total_score
+        self.total_differential += total_score
+
+        # this for our data collection
+        # we are trying to collect general scores of eac game so we can see what an avg
+        # league score is in each game
+        from leagueDocs.agl import AGL
+        AGL.data_collector.add_result(self.game, total_score)
 
     def parse_first_to_win_games(self, score: str, won: bool) -> None:
         # print(score)
