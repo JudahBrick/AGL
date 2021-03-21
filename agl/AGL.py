@@ -9,7 +9,8 @@ class AGL:
     # this collects all of the data on each game, across all of the season.
     # we hope to use the data to gage average scores and how impressive a win is
     data_collector: DataCollector = DataCollector(
-        ['Basketball', 'Cup Pong', 'Darts', 'Knockout', 'Pool', "Shuffleboard", "Golf", 'Anagrams', 'Word_Hunt'])
+        ['Basketball', 'Cup Pong', 'Darts', 'Knockout', 'Pool', "Shuffleboard",
+         "Golf", 'Anagrams', 'Word_Hunt', 'Word Bites'])
 
     def __init__(self, player_names: [], schedule: pd.DataFrame, games: [], num_of_weeks: int,
                  games_per_day: int, east: [], season_num: int):

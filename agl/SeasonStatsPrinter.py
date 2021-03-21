@@ -16,13 +16,14 @@ class SeasonStatsPrinter:
             for player in self.league.players:
                 stats_of_game = self.league.players.get(player).get_stats()
                 player_stats = stats_of_game[game]
+                if player_stats.wins + player_stats.losses > 0:
 
-                all_games_stats.append([player, player_stats.wins, player_stats.losses, player_stats.win_percentage,
-                                      player_stats.avg_score, player_stats.total_differential,
-                                      player_stats.avg_win_differential, player_stats.high_score,
-                                      player_stats.lowest_score, player_stats.total_ots])
+                    all_games_stats.append([player, player_stats.wins, player_stats.losses, player_stats.win_percentage,
+                                          player_stats.avg_score, player_stats.total_differential,
+                                          player_stats.avg_win_differential, player_stats.high_score,
+                                          player_stats.lowest_score, player_stats.total_ots])
 
         df2 = pd.DataFrame(all_games_stats, columns=['Player', 'Ws', 'Ls', 'Win %', 'AVG',
                                                    'Differential', 'AVG Win Differential', 'High Score',
                                                    'Low Score', 'OTs'])
-        df2.to_csv('../produced_docs/Player Stats ' + self.season_name + '.csv')
+        df2.to_csv('/Users/yehudabrick/PycharmProjects/git/leagueDocs/produced_docs/Player Stats ' + self.season_name + '.csv')

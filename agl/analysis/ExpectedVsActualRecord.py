@@ -97,8 +97,9 @@ class ExpectedVsActualRecord:
             return should_player_a_win_not_scored_game(player_a_stats, opponent_stats), win_perc_chance
 
     def game_rankings_for_players(self, season_players=[]):
-
-        scored_games = ["Basketball", "Golf", 'Shuffleboard', 'Cup Pong', 'Darts', 'Pool', 'Anagrams', "Word_Hunt"]
+        gameNames = ['Anagrams', 'Archery', 'Basketball', 'Cup Pong', 'Darts',
+                     'Knockout', 'Pool', "Word_Hunt", "Golf"]
+        scored_games = ["Basketball", "Golf", 'Cup Pong', 'Darts', 'Pool', 'Anagrams', "Word_Hunt"]
         if len(season_players) is 0:
             season_players = self.season.players
 
@@ -108,7 +109,7 @@ class ExpectedVsActualRecord:
         rankings_by_game_by_win = {}
         rankings_by_game_by_score = {}
         dfs_of_games = {}
-        for game in self.season.games:
+        for game in gameNames:
             list_to_become_df = []
 
 
