@@ -18,24 +18,8 @@ gameNames = ['Anagrams', 'Archery', 'Basketball', 'Cup Pong', 'Darts',
 # current season's east players
 # east = ["Kim & Ron", "SOAs", "C & K", "NCHs"]
 
-playerNames = ["Ezra",
-"Moshe"	,
-"Dani"	,
-"Gavi"	,
-"Ennis"	,
-"Ilan"	,
-"Shmuli"	,
-"Hagler"	,
-"Judah"	,
-"Dave"	,
-"Goldstein"	,
-"Siegel"	,
-"Alyssa"	,
-"MBT"	,
-"Yitzie"	,
-"Zach"	,
-"Brick"	,
-"Elie"	]
+playerNames = ["Ezra", "Moshe", "Dani", "Gavi", "Ennis", "Ilan", "Shmuli", "Hagler", "Judah",
+               "Dave", "Goldstein", "Siegel", "Alyssa", "MBT", "Yitzie","Zach","Brick", "Elie"]
 easternDivision = ["Ennis", "Zach", "Moshe", "Goldstein", "Dani", "Brick"]
 aglS6 = pd.read_csv('/Users/yehudabrick/PycharmProjects/git/leagueDocs/schedules/AGL Season 6 - Schedule.csv')  # read schedule tab into a panda dataframe
 aglS6 = aglS6.drop(columns=['Games List', 'Comments', 'The Rulebook'])  # take out useless columns
@@ -48,6 +32,8 @@ league = AGL(player_names=playerNames, games=gameNames, schedule=aglS6,
 
 games_with_stats = ['Basketball', 'Cup Pong', 'Darts', 'Knockout', 'Pool', "Golf", 'Anagrams', 'Word_Hunt', 'Word Bites']
 
-seasonFiveStatsPrinter = SeasonStatsPrinter(league=league, games_with_stats=games_with_stats,
+season_6_stats_printer = SeasonStatsPrinter(league=league, games_with_stats=games_with_stats,
                                             season_name='S6')
-seasonFiveStatsPrinter.print()
+season_6_stats_printer.print()
+
+season_6_stats_printer.write_csv_for_bar_graph()

@@ -7,84 +7,84 @@ from leagueDocs.agl.SeasonStatsPrinter import SeasonStatsPrinter
 from leagueDocs.agl.analysis.ExpectedVsActualRecord import ExpectedVsActualRecord
 from statistics import mean, median, mode, stdev
 
-# # players in previous season (season 2)
-# season_two_players = ["Yitzie", "Benji", "Brick", "Ilan", "Hagler", "Goldstein", "Judah", "Ennis",
-#                       "Alyssa", "Shmuli", "Ving", "Zach", "Siegel", "Eli"]
-# season_two_east = ['Brick', 'Hagler', "Benji", "Ilan", "Goldstein", "Judah", "Yitzie"]
-#
-# agl = pd.read_csv('../schedules/AGL Season 4 - TEAM SEASON - Schedule.csv')  # read schedule tab into a panda dataframe
-# agl = agl.drop(columns=['Games List', 'Comments', 'The Rulebook'])  # take out useless columns
-# agl = agl.dropna()  # get rid of any empty rows, this is needed for when we run the code mid season and there are
-# # games that have not been played
-#
-# season_two_df = pd.read_csv("../schedules/season_2_schedule.csv")  # read schedule tab into a panda dataframe
-# # the previous doc had less on the top row, just the game list must be stripped
-# season_two_df = season_two_df.drop(columns=['Games List', 'Comments'])
-# season_two_df = season_two_df.dropna()
-#
-# # the games that are legal and in the league
-# gameNames = ['Anagrams', 'Archery', 'Basketball', 'Cup Pong', 'Darts',
-#              'Knockout', 'Pool', "Word_Hunt", "Golf"]
-# # players in current season
-# playerNames = ["Kim & Ron", "SOAs", "C & K", "NCHs", "P^5", "BFTs", "2-10ers 1CP", "PTCs"]
-#
-# # current season's east players
-# east = ["Kim & Ron", "SOAs", "C & K", "NCHs"]
-# # creat this season's AGL POPOs
-# league = AGL(player_names=playerNames, games=gameNames, schedule=agl,
-#              games_per_day=14, num_of_weeks=7, east=east, season_num=4)
-# # previous_league = AGL(player_names=previous_season_players, games=gameNames, schedule=previous_season,
-# #                       games_per_day=14, num_of_weeks=7, east=previous_season_east, season_num=2)
-#
-# # season_one_players = ["Ennis", "Zach", "Moshe", "Goldstein", "Dani", "Brick", "Shmuli", "Siegel", "Ezra", "Elie", "Judah", "Yitzie"]
-# # season_one_eastern_division = ["Ennis", "Zach", "Moshe", "Goldstein", "Dani", "Brick"]
-# # aglS1 = pd.read_csv('../schedules/AGL Season 5 - Schedule.csv')  # read schedule tab into a panda dataframe
-# # aglS1 = aglS1.drop(columns=['Games List', 'Comments', 'The Rulebook'])  # take out useless columns
-# # aglS1 = aglS1.dropna()
+# # # players in previous season (season 2)
+# # season_two_players = ["Yitzie", "Benji", "Brick", "Ilan", "Hagler", "Goldstein", "Judah", "Ennis",
+# #                       "Alyssa", "Shmuli", "Ving", "Zach", "Siegel", "Eli"]
+# # season_two_east = ['Brick', 'Hagler', "Benji", "Ilan", "Goldstein", "Judah", "Yitzie"]
 # #
-# # season_one_league = AGL(player_names=season_one_players, games=gameNames, schedule=aglS1,
-# #              games_per_day=14, num_of_weeks=6, east=season_one_eastern_division, season_num=5)
+# # agl = pd.read_csv('../schedules/AGL Season 4 - TEAM SEASON - Schedule.csv')  # read schedule tab into a panda dataframe
+# # agl = agl.drop(columns=['Games List', 'Comments', 'The Rulebook'])  # take out useless columns
+# # agl = agl.dropna()  # get rid of any empty rows, this is needed for when we run the code mid season and there are
+# # # games that have not been played
+# #
+# # season_two_df = pd.read_csv("../schedules/season_2_schedule.csv")  # read schedule tab into a panda dataframe
+# # # the previous doc had less on the top row, just the game list must be stripped
+# # season_two_df = season_two_df.drop(columns=['Games List', 'Comments'])
+# # season_two_df = season_two_df.dropna()
+# #
+# # # the games that are legal and in the league
+# # gameNames = ['Anagrams', 'Archery', 'Basketball', 'Cup Pong', 'Darts',
+# #              'Knockout', 'Pool', "Word_Hunt", "Golf"]
+# # # players in current season
+# # playerNames = ["Kim & Ron", "SOAs", "C & K", "NCHs", "P^5", "BFTs", "2-10ers 1CP", "PTCs"]
+# #
+# # # current season's east players
+# # east = ["Kim & Ron", "SOAs", "C & K", "NCHs"]
+# # # creat this season's AGL POPOs
+# # league = AGL(player_names=playerNames, games=gameNames, schedule=agl,
+# #              games_per_day=14, num_of_weeks=7, east=east, season_num=4)
+# # # previous_league = AGL(player_names=previous_season_players, games=gameNames, schedule=previous_season,
+# # #                       games_per_day=14, num_of_weeks=7, east=previous_season_east, season_num=2)
+# #
+# # # season_one_players = ["Ennis", "Zach", "Moshe", "Goldstein", "Dani", "Brick", "Shmuli", "Siegel", "Ezra", "Elie", "Judah", "Yitzie"]
+# # # season_one_eastern_division = ["Ennis", "Zach", "Moshe", "Goldstein", "Dani", "Brick"]
+# # # aglS1 = pd.read_csv('../schedules/AGL Season 5 - Schedule.csv')  # read schedule tab into a panda dataframe
+# # # aglS1 = aglS1.drop(columns=['Games List', 'Comments', 'The Rulebook'])  # take out useless columns
+# # # aglS1 = aglS1.dropna()
+# # #
+# # # season_one_league = AGL(player_names=season_one_players, games=gameNames, schedule=aglS1,
+# # #              games_per_day=14, num_of_weeks=6, east=season_one_eastern_division, season_num=5)
+# # #
+# # # # Create the players stats CSV which will go on the doc
+# # # games_with_stats = ['Basketball', 'Cup Pong', 'Darts', 'Knockout', 'Pool', "Golf", 'Anagrams', 'Word_Hunt']
+# # #
+# # # seasonFiveStatsPrinter = SeasonStatsPrinter(league=seasonFiveLeague, games_with_stats=games_with_stats, season_name='S5 test')
+# # # seasonFiveStatsPrinter.print()
+# #
+# # seasonFivePlayers = ["Ennis", "Zach", "Moshe", "Goldstein", "Dani", "Brick", "Shmuli", "Siegel", "Ezra", "Elie",
+# #                      "Judah", "Yitzie"]
+# # seasonFiveEasternDivision = ["Ennis", "Zach", "Moshe", "Goldstein", "Dani", "Brick"]
+# # aglS5 = pd.read_csv('../schedules/AGL Season 5 - Schedule.csv')  # read schedule tab into a panda dataframe
+# # aglS5 = aglS5.drop(columns=['Games List', 'Comments', 'The Rulebook'])  # take out useless columns
+# # aglS5 = aglS5.dropna()
+# #
+# # seasonFiveLeague = AGL(player_names=seasonFivePlayers, games=gameNames, schedule=aglS5,
+# #                        games_per_day=14, num_of_weeks=6, east=seasonFiveEasternDivision, season_num=5)
 # #
 # # # Create the players stats CSV which will go on the doc
 # # games_with_stats = ['Basketball', 'Cup Pong', 'Darts', 'Knockout', 'Pool', "Golf", 'Anagrams', 'Word_Hunt']
 # #
-# # seasonFiveStatsPrinter = SeasonStatsPrinter(league=seasonFiveLeague, games_with_stats=games_with_stats, season_name='S5 test')
+# # seasonFiveStatsPrinter = SeasonStatsPrinter(league=seasonFiveLeague, games_with_stats=games_with_stats,
+# #                                             season_name='S5 test')
 # # seasonFiveStatsPrinter.print()
-#
-# seasonFivePlayers = ["Ennis", "Zach", "Moshe", "Goldstein", "Dani", "Brick", "Shmuli", "Siegel", "Ezra", "Elie",
-#                      "Judah", "Yitzie"]
-# seasonFiveEasternDivision = ["Ennis", "Zach", "Moshe", "Goldstein", "Dani", "Brick"]
-# aglS5 = pd.read_csv('../schedules/AGL Season 5 - Schedule.csv')  # read schedule tab into a panda dataframe
-# aglS5 = aglS5.drop(columns=['Games List', 'Comments', 'The Rulebook'])  # take out useless columns
-# aglS5 = aglS5.dropna()
-#
-# seasonFiveLeague = AGL(player_names=seasonFivePlayers, games=gameNames, schedule=aglS5,
-#                        games_per_day=14, num_of_weeks=6, east=seasonFiveEasternDivision, season_num=5)
-#
-# # Create the players stats CSV which will go on the doc
-# games_with_stats = ['Basketball', 'Cup Pong', 'Darts', 'Knockout', 'Pool', "Golf", 'Anagrams', 'Word_Hunt']
-#
-# seasonFiveStatsPrinter = SeasonStatsPrinter(league=seasonFiveLeague, games_with_stats=games_with_stats,
-#                                             season_name='S5 test')
-# seasonFiveStatsPrinter.print()
-# # This will make the week's stats CSV which has essentially been replaced by the tab we currently have
-# # we can probably get rid of this
-# weeks_stats = []
-# for player in seasonFiveLeague.players:
-#     player_week_stats = seasonFiveLeague.players.get(player).week_stats
-#     weeks_stats.append([player, player_week_stats.get(1).just_win_loss_ratio(),
-#                         player_week_stats.get(2).just_win_loss_ratio(),
-#                         player_week_stats.get(3).just_win_loss_ratio(),
-#                         player_week_stats.get(4).just_win_loss_ratio(),
-#                         player_week_stats.get(5).just_win_loss_ratio(),
-#                         player_week_stats.get(6).just_win_loss_ratio(),
-#                         ])
-# dfw = pd.DataFrame(weeks_stats, columns=['Player', '1', '2', '3', '4', '5', '6'])
-# dfw.to_csv('../produced_docs/Week Stats.csv')
-#
-# expected_record = ExpectedVsActualRecord(seasonFiveLeague)
-# expected_record.calculate_results()
-# expected_record.game_rankings_for_players()
+# # # This will make the week's stats CSV which has essentially been replaced by the tab we currently have
+# # # we can probably get rid of this
+# # weeks_stats = []
+# # for player in seasonFiveLeague.players:
+# #     player_week_stats = seasonFiveLeague.players.get(player).week_stats
+# #     weeks_stats.append([player, player_week_stats.get(1).just_win_loss_ratio(),
+# #                         player_week_stats.get(2).just_win_loss_ratio(),
+# #                         player_week_stats.get(3).just_win_loss_ratio(),
+# #                         player_week_stats.get(4).just_win_loss_ratio(),
+# #                         player_week_stats.get(5).just_win_loss_ratio(),
+# #                         player_week_stats.get(6).just_win_loss_ratio(),
+# #                         ])
+# # dfw = pd.DataFrame(weeks_stats, columns=['Player', '1', '2', '3', '4', '5', '6'])
+# # dfw.to_csv('../produced_docs/Week Stats.csv')
+# #
+# # expected_record = ExpectedVsActualRecord(seasonFiveLeague)
+# # expected_record.calculate_results()
+# # expected_record.game_rankings_for_players()
 #
 # #
 # # print()

@@ -47,6 +47,7 @@ class AGL:
             if winner == loser:
                 print("##########   loser == winner?!  ########")
                 print(game + " " + winner + " " + loser + "     Score: " + score)
+            print(game + " " + winner + " " + loser + "     Score: " + score)
             self.players.get(winner).add_game_result(game=game, opponent=loser, won=True, home=home_player == winner,
                                                      opp_in_eastern_division=self.players.get(loser).east_division,
                                                      score=score)

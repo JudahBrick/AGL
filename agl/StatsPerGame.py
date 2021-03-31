@@ -29,6 +29,7 @@ class StatsPerGame:
         self.games_played = []
 
     def add_result(self, won: bool, score: str) -> None:
+        score = score.lower()
         # add win or loss
         if won:
             self.wins += 1
