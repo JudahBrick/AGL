@@ -26,7 +26,9 @@ class PlayerVsPlayerStats:
         else:
             str += " loss "
         str += score
-        self.overall_per_player.get(opponent).add_result(won, score=str)
+        # todo Put this back in and refactor this class,
+        #  took this out because it was throwing errors for the regular game stats class
+        # self.overall_per_player.get(opponent).add_result(won, score=str)
 
     def __str__(self):
         string = ""
