@@ -8,12 +8,13 @@ def is_game_scored(score: str):
     if score.__contains__('not scored') or score.__contains__('n/a') or score.__len__() == 0:
         return False
 
+
 class StatsPerGame:
     first_to_win_games = ['Cup Pong', 'Darts', 'Pool']
-    scored_games = ['Anagrams', "Word_Hunt", 'Word Bites', 'Archery', 'Knockout', "Shuffleboard"]
+    scored_games = ['Anagrams', "Word_Hunt", 'Word Bites', 'Archery', 'Knockout', "Shuffleboard", "Basketball"]
 
-    def __init__(self, game: str, playerNames=[]):
-        self.playerNames = playerNames
+    def __init__(self, game: str, player_names=[]):
+        self.playerNames = player_names
         self.game = game
         self.wins = 0
         self.losses = 0
@@ -39,59 +40,57 @@ class StatsPerGame:
 
     def add_result(self, won: bool, score: str) -> None:
         score = clean_score(score)
-        self.add_win_or_loss_tally(won)
+        self._add_win_or_loss_tally(won)
         if is_game_scored(score) is False:
             return
-        self.add_num_of_ots(score)
-
-
+        self._add_num_of_ots(score)
 
         if self.game == 'Basketball' or self.game == 'Shuffleboard' or self.game == 'Golf':
-            self.parse_basketball_shuffelboard_or_golf(score, won)
+            self._parse_basketball_shuffelboard_or_golf(score, won)
         elif self.game == 'Pool':
-            self.parse_pool(score, won)
+            self._parse_pool(score, won)
         elif self.game == 'Anagrams' or self.game == 'Word_Hunt' or self.game == 'Word Bites':
-            self.parse_word_games(score, won)
+            self._parse_word_games(score, won)
         elif self.game == 'Knockout':
-            self.parse_knockout(score, won)
+            self._parse_knockout(score, won)
         elif self.first_to_win_games.__contains__(self.game):
-            self.parse_first_to_win_games(score=score, won=won)
-        self.calculate_avgs()
+            self._parse_first_to_win_games(score=score, won=won)
+        self._calculate_averages()
 
-    def add_win_or_loss_tally(self, won: bool) -> None:
+    def _add_win_or_loss_tally(self, won: bool) -> None:
         if won:
             self.wins += 1
         else:
             self.losses += 1
 
-    def is_game_scored(score: str):
+    def _is_game_scored(score: str):
         if score.__contains__('not scored') or score.__contains__('n/a') or score.__len__() == 0:
             return False
 
-    def add_num_of_ots(self, score: str) -> None:
+    def _add_num_of_ots(self, score: str) -> None:
         if (self.game == 'Anagrams'
                 or self.game == 'Word_Hunt'
                 or self.game == 'Word Bites'
                 or self.game == 'Knockout'):
-            self.add_num_of_ots_for_scored_best_of_3_games(score)
+            self._add_num_of_ots_for_scored_best_of_3_games(score)
         elif self.game == 'Basketball' or self.game == 'Shuffleboard' or self.game == 'Golf':
-            self.add_num_of_ots_for_scored_single_games(score)
+            self._add_num_of_ots_for_scored_single_games(score)
         else:
-            self.add_num_of_ots_to_first_to_win_games(score)
+            self._add_num_of_ots_to_first_to_win_games(score)
 
-    def add_num_of_ots_for_scored_best_of_3_games(self, score: str) -> None:
+    def _add_num_of_ots_for_scored_best_of_3_games(self, score: str) -> None:
         games = score.split(":")
         num_of_games = games.__len__()
         if num_of_games > 3:
             self.total_ots += (num_of_games - 3)
 
-    def add_num_of_ots_for_scored_single_games(self, score: str) -> None:
+    def _add_num_of_ots_for_scored_single_games(self, score: str) -> None:
         games = score.split(":")
         num_of_games = games.__len__()
         if num_of_games > 1:
             self.total_ots += (num_of_games - 1)
 
-    def add_num_of_ots_to_first_to_win_games(self, score: str) -> None:
+    def _add_num_of_ots_to_first_to_win_games(self, score: str) -> None:
         ot_arr = score.split("ot")
         num_of_games = ot_arr.__len__()
 
@@ -100,29 +99,12 @@ class StatsPerGame:
             num_of_ots = float(ot_arr[0])
             self.total_ots += num_of_ots
 
-    def parse_scored_game(self, score: str, won: bool):
-        games = score.split(":")
-        num_of_games = games.__len__()
-
-
-    # score is the string value from the "score" column in the schedule tab on the doc
-
-    def parse_basketball_shuffelboard_or_golf(self, score: str, won: bool) -> None:
+    def _parse_basketball_shuffelboard_or_golf(self, score: str, won: bool) -> None:
         # if a game went into OT then multiple games would appear separated by a ":"
         games = score.split(":")
 
-        # set variables for checking later
-        num_of_games = games.__len__()
-        total_score = 0
-        total_opponent_score = 0
-
-        # if number of games is greater than 1 that means we had OT
-        # todo suffleboard is best 2/3 so this OT count is false
-        if num_of_games > 1:
-            self.total_ots += (num_of_games - 1)
-
         for game in games:
-            myscore = 0
+            # myscore = 0
             other_score = 0
             individual_score = game.split("-")
             # if a player won then their score is on the left
@@ -138,7 +120,7 @@ class StatsPerGame:
                 self.total_loss_score += myscore
 
             # new high score/ low score
-            self.check_for_new_high_or_low_score(myscore)
+            self._check_for_new_high_or_low_score(myscore)
 
             self.total_score_tally += myscore
             self.total_differential += myscore - other_score
@@ -149,7 +131,7 @@ class StatsPerGame:
             AGL.data_collector.add_result(self.game, myscore)
 
     # score is the string value from the "score" column in the schedule tab on the doc
-    def parse_knockout(self, score: str, won: bool) -> None:
+    def _parse_knockout(self, score: str, won: bool) -> None:
         # if a game went into OT then multiple games would appear separated by a ":"
         games = score.split(":")
 
@@ -185,7 +167,7 @@ class StatsPerGame:
             # self.total_differential += myscore - other_score
 
         # new high score/ low score
-        self.check_for_new_high_or_low_score(total_score)
+        self._check_for_new_high_or_low_score(total_score)
 
         if won:
             self.total_wins_score += total_score
@@ -201,7 +183,7 @@ class StatsPerGame:
         from leagueDocs.agl import AGL
         AGL.data_collector.add_result(self.game, total_score)
 
-    def parse_first_to_win_games(self, score: str, won: bool) -> None:
+    def _parse_first_to_win_games(self, score: str, won: bool) -> None:
         ot_arr = score.split("ot")
         num_of_games = ot_arr.__len__()
 
@@ -209,8 +191,8 @@ class StatsPerGame:
         if num_of_games > 1:
             winner_score = float(ot_arr[1])
 
-            num_of_ots = float(ot_arr[0])
-            self.total_ots += num_of_ots
+            # num_of_ots = float(ot_arr[0])
+            # self.total_ots += num_of_ots
         else:
             winner_score = float(ot_arr[0])
 
@@ -237,7 +219,7 @@ class StatsPerGame:
         from leagueDocs.agl import AGL
         AGL.data_collector.add_result(self.game, winner_score)
 
-    def parse_pool(self, score: str, won: bool) -> None:
+    def _parse_pool(self, score: str, won: bool) -> None:
         if score.__contains__('8-ball'):
             # print(score)
             ball_tap_in = score.split(':')
@@ -248,48 +230,66 @@ class StatsPerGame:
             # the current (season 3 rule) would have the amount both players had
             if not new_score.__contains__('-'):
                 new_score += '-0'
-            self.parse_basketball_shuffelboard_or_golf(score=new_score, won=won)
+            self._parse_basketball_shuffelboard_or_golf(score=new_score, won=won)
         else:
-            self.parse_first_to_win_games(score=score, won=won)
+            self._parse_first_to_win_games(score=score, won=won)
 
-    def parse_word_games(self, score: str, won: bool) -> None:
+    def _parse_word_games(self, score: str, won: bool) -> None:
         games = score.split(":")
         for game in games:
             individual_score = game.split("-")
             winning_score = int(individual_score[0])
             losing_score = int(individual_score[1])
             game_score = (winning_score - losing_score) / winning_score
-            return self.parse_first_to_win_games(str(game_score), won)
+            return self._parse_first_to_win_games(str(game_score), won)
 
-    def check_for_new_high_or_low_score(self, score: int):
+    def _check_for_new_high_or_low_score(self, score: int) -> None:
         if score > self.high_score:
             self.high_score = score
         if score < self.lowest_score:
             self.lowest_score = score
 
-    def calculate_avgs(self):
+    def _calculate_averages(self) -> None:
+        if self.scored_games.__contains__(self.game):
+            self._calculate_averages_for_scored_games()
+        else:
+            self._calculate_averages_for_first_to_win_games()
+
+    def _calculate_averages_for_scored_games(self):
         total_games = self.wins + self.losses + self.total_ots
         if total_games > 0:
-            self.win_percentage = self.calculate_win_percentage(self.wins, self.losses)
+            self._calculate_win_percentage()
             self.avg_score = self.total_score_tally / total_games
 
         if self.wins > 0:
-            self.avg_win_score = self.total_wins_score / self.wins
-            self.avg_win_differential = self.total_win_differential / self.wins
+            self._calculate_average_win_score_and_win_differential()
 
-    def calculate_win_percentage(self, wins: int, losses: int) -> float:
-        if wins == losses and losses == 0:
-            return 0
-        elif losses == 0 and wins != 0:
-            return float(100)
+    def _calculate_averages_for_first_to_win_games(self):
+        total_games = self.wins + self.losses
+        if total_games > 0:
+            self._calculate_win_percentage()
+            self.avg_score = self.total_score_tally / total_games
+
+        if self.wins > 0:
+            self._calculate_average_win_score_and_win_differential()
+
+    def _calculate_win_percentage(self) -> None:
+        if self.wins == self.losses and self.losses == 0:
+            self.win_percentage = 0
+        elif self.losses == 0 and self.wins != 0:
+            self.win_percentage = float(100)
         else:
-            return round((wins / (wins + losses)) * 100, 1)
+            self.win_percentage = round((self.wins / (self.wins + self.losses)) * 100, 1)
+
+    def _calculate_average_win_score_and_win_differential(self):
+        self.avg_win_score = self.total_wins_score / self.wins
+        self.avg_win_differential = self.total_win_differential / self.wins
 
     def get_win_loss_string(self) -> str:
         return str(self.wins) + "-" + str(self.losses)
 
     def __str__(self) -> str:
-        self.calculate_avgs()
+        self._calculate_averages()
         if self.playerNames.__contains__(self.game):
             string = self.game + ": "
             for played in self.games_played:
