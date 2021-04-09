@@ -224,15 +224,18 @@ class StatsPerGame:
             # print(score)
             ball_tap_in = score.split(':')
             # print(ball_tap_in[1])
-            new_score = ball_tap_in[1]
-            # this is a hack in order to compensate for the season 2 scoring of 8-ball tap ins
-            # with this new score it assumes that winner was on the 8-bal when the loser tapped it in
+            score = ball_tap_in[1]
+            if not won:
+                self.eight_ball_tap_ins += 1
+            # this is a hack in order to compensate for the season 2
+            # scoring of 8-ball tap ins
+            # with this new score it assumes that winner was on the 8-bal
+            # when the loser tapped it in
             # the current (season 3 rule) would have the amount both players had
-            if not new_score.__contains__('-'):
-                new_score += '-0'
-            self._parse_basketball_shuffelboard_or_golf(score=new_score, won=won)
-        else:
-            self._parse_first_to_win_games(score=score, won=won)
+            # if not new_score.__contains__('-'):
+            #     new_score += '-0'
+            # self._parse_basketball_shuffelboard_or_golf(score=new_score, won=won)
+        self._parse_first_to_win_games(score=score, won=won)
 
     def _parse_word_games(self, score: str, won: bool) -> None:
         games = score.split(":")
