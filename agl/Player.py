@@ -65,24 +65,40 @@ class Player:
 
     def add_personal_stats(self, game: str, opponent: str,
                            won: bool, home: bool, opp_in_eastern_division: bool) -> None:
+        self._add_win_loss_to_total_tally(won)
+        self._add_win_loss_to_home_away_tally(won, home)
+        self._add_win_loss_to_division_tally(won, opp_in_eastern_division)
+        self._add_win_loss_to_stack_of_game_results(won)
+
+    def _add_win_loss_to_total_tally(self, won: bool):
         if won:
-            self.stack_of_wins.append(True)
             self.total_wins += 1
-            if home:
-                self.home_wins += 1
-            else:
-                self.away_wins += 1
-            if self.east_division == opp_in_eastern_division:
-                self.division_wins += 1
         else:
             self.total_losses += 1
-            self.stack_of_wins.append(False)
-            if home:
-                self.home_losses += 1
+
+    def _add_win_loss_to_home_away_tally(self, won: bool, home: bool):
+        if won and home:
+            self.home_wins += 1
+        elif not won and home:
+            self.home_losses += 1
+
+        elif won and not home:
+            self.away_wins += 1
+        elif not won and not home:
+            self.away_losses += 1
+
+    def _add_win_loss_to_division_tally(self, won: bool, opp_in_eastern_division: bool):
+        if self.east_division == opp_in_eastern_division:
+            if won:
+                self.division_wins += 1
             else:
-                self.away_losses += 1
-            if self.east_division == opp_in_eastern_division:
                 self.division_losses += 1
+
+    def _add_win_loss_to_stack_of_game_results(self, won: bool):
+        if won:
+            self.stack_of_wins.append(True)
+        else:
+            self.stack_of_wins.append(False)
 
     def count_win_percentages(self) -> None:
         self.home_win_percent = win_percentage(self.away_wins, self.home_losses)
@@ -146,7 +162,6 @@ class Player:
         print("Record: " + str(self.total_wins) + ":" + str(self.total_losses))
         print("Division Record: " + str(self.division_wins) + ":" + str(self.division_losses))
         print("Out Of Division Record: " + str(out_of_division_wins) + ":" + str(out_of_division_losses))
-
 
 
 def win_percentage(wins: int, losses: int) -> float:
