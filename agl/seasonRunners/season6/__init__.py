@@ -19,8 +19,8 @@ gameNames = ['Anagrams', 'Archery', 'Basketball', 'Cup Pong', 'Darts',
 # east = ["Kim & Ron", "SOAs", "C & K", "NCHs"]
 
 playerNames = ["Ezra", "Moshe", "Dani", "Gavi", "Ennis", "Ilan", "Shmuli", "Hagler", "Judah",
-               "Dave", "Goldstein", "Siegel", "Alyssa", "MBT", "Yitzie","Zach","Brick", "Elie"]
-easternDivision = ["Ennis", "Zach", "Moshe", "Goldstein", "Dani", "Brick"]
+               "Dave", "Goldstein", "Siegel", "Alyssa", "MBT", "Yitzie", "Zach", "Brick", "Elie"]
+easternDivision = ["Yitzie", "Zach", "Goldstein", "Brick", "Elie", "Siegel", "Alyssa", "Dave"]
 aglS6 = pd.read_csv('/Users/yehudabrick/PycharmProjects/git/leagueDocs/schedules/AGL Season 6 - Schedule.csv')  # read schedule tab into a panda dataframe
 aglS6 = aglS6.drop(columns=['Games List', 'Comments', 'The Rulebook'])  # take out useless columns
 aglS6 = aglS6.dropna()
@@ -37,3 +37,15 @@ season_6_stats_printer = SeasonStatsPrinter(league=league, games_with_stats=game
 season_6_stats_printer.print()
 
 season_6_stats_printer.write_csv_for_bar_graph()
+
+
+
+print()
+print()
+print()
+print("######### PRINT EVERYTHING ############")
+for player in league.players:
+    print()
+    print()
+    print(player + ":")
+    print(league.players.get(player).print())

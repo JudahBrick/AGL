@@ -1,3 +1,4 @@
+from leagueDocs.agl.Util import win_percentage
 
 
 class GameTracker:
@@ -15,6 +16,7 @@ class GameTracker:
         else:
             self.losses += 1
         self.games_played.append((game_or_player, won, score))
+        self.win_percentage = win_percentage(self.wins, self.losses)
 
     def __str__(self):
         string: str = self.opponent_name_or_game + ": " \

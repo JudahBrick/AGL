@@ -24,7 +24,8 @@ class SeasonStatsPrinter:
                                             round(player_stats.total_differential, 3),
                                             round(player_stats.avg_win_differential, 3),
                                             round(player_stats.high_score, 3),
-                                            round(player_stats.lowest_score, 3), player_stats.total_ots])
+                                            round(player_stats.lowest_score, 3),
+                                            player_stats.total_ots])
 
         df2 = pd.DataFrame(all_games_stats, columns=['Player', 'Ws', 'Ls', 'Win %', 'AVG',
                                                    'Differential', 'AVG Win Differential', 'High Score',
@@ -33,7 +34,7 @@ class SeasonStatsPrinter:
 
     def write_csv_for_bar_graph(self):
         all_percentages = []
-        num_of_games: int = 0;
+        num_of_games: int = 0
         for player_name in self.league.players:
             player = self.league.players[player_name]
             percentage_list: [] = player.list_of_win_percentage

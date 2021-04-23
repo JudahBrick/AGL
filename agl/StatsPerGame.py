@@ -9,6 +9,17 @@ def is_game_scored(score: str):
         return False
 
 
+def _remove_ot_and_get_score(score: str) -> str:
+    ot_arr = score.split("ot")
+    num_of_games = ot_arr.__len__()
+
+    # if there was OT
+    if num_of_games > 1:
+        return ot_arr[1]
+    else:
+        return ot_arr[0]
+
+
 class StatsPerGame:
     first_to_win_games = ['Cup Pong', 'Darts', 'Pool']
     scored_games = ['Anagrams', "Word_Hunt", 'Word Bites', 'Archery', 'Knockout', "Shuffleboard", "Basketball"]
@@ -45,8 +56,10 @@ class StatsPerGame:
             return
         self._add_num_of_ots(score)
 
-        if self.game == 'Basketball' or self.game == 'Shuffleboard' or self.game == 'Golf':
+        if self.game == 'Basketball' or self.game == 'Shuffleboard':
             self._parse_basketball_shuffelboard_or_golf(score, won)
+        elif self.game == 'Golf':
+            self._parse_golf(score, won)
         elif self.game == 'Pool':
             self._parse_pool(score, won)
         elif self.game == 'Anagrams' or self.game == 'Word_Hunt' or self.game == 'Word Bites':
@@ -63,7 +76,7 @@ class StatsPerGame:
         else:
             self.losses += 1
 
-    def _is_game_scored(score: str):
+    def _is_game_scored(self, score: str):
         if score.__contains__('not scored') or score.__contains__('n/a') or score.__len__() == 0:
             return False
 
@@ -73,8 +86,10 @@ class StatsPerGame:
                 or self.game == 'Word Bites'
                 or self.game == 'Knockout'):
             self._add_num_of_ots_for_scored_best_of_3_games(score)
-        elif self.game == 'Basketball' or self.game == 'Shuffleboard' or self.game == 'Golf':
+        elif self.game == 'Basketball' or self.game == 'Shuffleboard':
             self._add_num_of_ots_for_scored_single_games(score)
+        elif self.game == 'Golf':
+            self._add_num_of_ots_for_golf(score)
         else:
             self._add_num_of_ots_to_first_to_win_games(score)
 
@@ -90,7 +105,7 @@ class StatsPerGame:
         if num_of_games > 1:
             self.total_ots += (num_of_games - 1)
 
-    def _add_num_of_ots_to_first_to_win_games(self, score: str) -> None:
+    def _add_num_of_ots_to_first_to_win_games(self, score: str) -> str:
         ot_arr = score.split("ot")
         num_of_games = ot_arr.__len__()
 
@@ -98,6 +113,17 @@ class StatsPerGame:
         if num_of_games > 1:
             num_of_ots = float(ot_arr[0])
             self.total_ots += num_of_ots
+            return ot_arr[1] #the score after removing ot
+        return score
+
+    # Golf can be scored as either
+    def _add_num_of_ots_for_golf(self, score: str) -> None:
+        score = self._add_num_of_ots_to_first_to_win_games(score)
+        self._add_num_of_ots_for_scored_single_games(score)
+
+    def _parse_golf(self, score: str, won: bool):
+        score = _remove_ot_and_get_score(score)
+        self._parse_basketball_shuffelboard_or_golf(score, won)
 
     def _parse_basketball_shuffelboard_or_golf(self, score: str, won: bool) -> None:
         # if a game went into OT then multiple games would appear separated by a ":"
@@ -227,6 +253,9 @@ class StatsPerGame:
             score = ball_tap_in[1]
             if not won:
                 self.eight_ball_tap_ins += 1
+                # this is a hack so that the stats printer will print the 8-ball tap ins
+                self.total_ots += 1
+
             # this is a hack in order to compensate for the season 2
             # scoring of 8-ball tap ins
             # with this new score it assumes that winner was on the 8-bal
