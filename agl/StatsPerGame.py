@@ -246,7 +246,9 @@ class StatsPerGame:
         AGL.data_collector.add_result(self.game, winner_score)
 
     def _parse_pool(self, score: str, won: bool) -> None:
-        if score.__contains__('8-ball'):
+        if score.__contains__('8-ball') \
+                or score.__contains__('8 ball') \
+                or score.__contains__('8ball'):
             # print(score)
             ball_tap_in = score.split(':')
             # print(ball_tap_in[1])
