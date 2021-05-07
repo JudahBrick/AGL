@@ -49,3 +49,8 @@ for player in league.players:
     print()
     print(player + ":")
     print(league.players.get(player).print())
+
+
+expected_record = ExpectedVsActualRecord(league)
+expected_record.calculate_results()
+expected_record.game_rankings_for_players()
