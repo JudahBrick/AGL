@@ -1,127 +1,163 @@
 ,Game,player,rank by wins,rank by score,combined ranks,rank
-0,Anagrams,Alyssa,5,6,5.5,5.0
-1,Anagrams,Brick,8,9,8.5,10.0
-2,Anagrams,Dani,13,11,12.0,12.0
-3,Anagrams,Elie,1,14,7.5,6.0
-4,Anagrams,Ennis,7,8,7.5,6.0
-5,Anagrams,Ezra,4,1,2.5,2.0
-6,Anagrams,Goldstein,11,5,8.0,8.0
-7,Anagrams,Hagler,6,4,5.0,4.0
-8,Anagrams,Judah,10,10,10.0,11.0
-9,Anagrams,Moshe,14,13,13.5,14.0
-10,Anagrams,Shmuli,9,7,8.0,8.0
-11,Anagrams,Siegel,2,2,2.0,1.0
-12,Anagrams,Yitzie,3,3,3.0,3.0
-13,Anagrams,Zach,12,12,12.0,12.0
-14,Archery,Alyssa,10,10,10.0,10.0
-15,Archery,Brick,3,3,3.0,3.0
-16,Archery,Dani,5,5,5.0,5.0
-17,Archery,Elie,12,12,12.0,12.0
-18,Archery,Ennis,4,4,4.0,4.0
-19,Archery,Ezra,14,14,14.0,13.0
-20,Archery,Goldstein,14,14,14.0,13.0
-21,Archery,Hagler,6,6,6.0,6.0
-22,Archery,Judah,9,9,9.0,9.0
-23,Archery,Moshe,7,7,7.0,7.0
-24,Archery,Shmuli,11,11,11.0,11.0
-25,Archery,Siegel,2,2,2.0,2.0
-26,Archery,Yitzie,1,1,1.0,1.0
-27,Archery,Zach,8,8,8.0,8.0
-28,Basketball,Alyssa,1,1,1.0,1.0
-29,Basketball,Brick,3,2,2.5,2.0
-30,Basketball,Dani,12,12,12.0,12.0
-31,Basketball,Elie,13,13,13.0,13.0
-32,Basketball,Ennis,8,8,8.0,8.0
-33,Basketball,Ezra,14,14,14.0,14.0
-34,Basketball,Goldstein,10,11,10.5,10.0
-35,Basketball,Hagler,4,5,4.5,4.0
-36,Basketball,Judah,5,4,4.5,4.0
-37,Basketball,Moshe,6,9,7.5,7.0
-38,Basketball,Shmuli,2,3,2.5,2.0
-39,Basketball,Siegel,11,10,10.5,10.0
-40,Basketball,Yitzie,9,7,8.0,8.0
-41,Basketball,Zach,7,6,6.5,6.0
-42,Cup Pong,Alyssa,7,6,6.5,6.0
-43,Cup Pong,Brick,1,1,1.0,1.0
-44,Cup Pong,Dani,9,12,10.5,10.0
-45,Cup Pong,Elie,13,13,13.0,13.0
-46,Cup Pong,Ennis,4,3,3.5,3.0
-47,Cup Pong,Ezra,11,10,10.5,10.0
-48,Cup Pong,Goldstein,14,14,14.0,14.0
-49,Cup Pong,Hagler,2,2,2.0,2.0
-50,Cup Pong,Judah,5,5,5.0,5.0
-51,Cup Pong,Moshe,10,9,9.5,9.0
-52,Cup Pong,Shmuli,6,8,7.0,7.0
-53,Cup Pong,Siegel,3,4,3.5,3.0
-54,Cup Pong,Yitzie,8,7,7.5,8.0
-55,Cup Pong,Zach,12,11,11.5,12.0
-56,Darts,Alyssa,4,2,3.0,2.0
-57,Darts,Brick,5,5,5.0,5.0
-58,Darts,Dani,13,14,13.5,13.0
-59,Darts,Elie,12,12,12.0,12.0
-60,Darts,Ennis,2,4,3.0,2.0
-61,Darts,Ezra,14,13,13.5,13.0
-62,Darts,Goldstein,10,11,10.5,10.0
-63,Darts,Hagler,9,9,9.0,9.0
-64,Darts,Judah,1,1,1.0,1.0
-65,Darts,Moshe,8,8,8.0,8.0
-66,Darts,Shmuli,3,3,3.0,2.0
-67,Darts,Siegel,11,10,10.5,10.0
-68,Darts,Yitzie,6,6,6.0,6.0
-69,Darts,Zach,7,7,7.0,7.0
-70,Knockout,Alyssa,2,2,2.0,2.0
-71,Knockout,Brick,6,6,6.0,5.0
-72,Knockout,Dani,12,12,12.0,12.0
-73,Knockout,Elie,10,10,10.0,10.0
-74,Knockout,Ennis,1,1,1.0,1.0
-75,Knockout,Ezra,14,14,14.0,13.0
-76,Knockout,Goldstein,14,14,14.0,13.0
-77,Knockout,Hagler,11,11,11.0,11.0
-78,Knockout,Judah,4,4,4.0,4.0
-79,Knockout,Moshe,6,6,6.0,5.0
-80,Knockout,Shmuli,7,7,7.0,7.0
-81,Knockout,Siegel,9,9,9.0,9.0
-82,Knockout,Yitzie,8,8,8.0,8.0
-83,Knockout,Zach,3,3,3.0,3.0
-84,Pool,Alyssa,12,10,11.0,11.0
-85,Pool,Brick,2,2,2.0,2.0
-86,Pool,Dani,10,12,11.0,11.0
-87,Pool,Elie,13,13,13.0,13.0
-88,Pool,Ennis,8,7,7.5,7.0
-89,Pool,Ezra,4,4,4.0,4.0
-90,Pool,Goldstein,14,14,14.0,14.0
-91,Pool,Hagler,6,6,6.0,6.0
-92,Pool,Judah,3,3,3.0,3.0
-93,Pool,Moshe,5,5,5.0,5.0
-94,Pool,Shmuli,7,8,7.5,7.0
-95,Pool,Siegel,9,11,10.0,9.0
-96,Pool,Yitzie,1,1,1.0,1.0
-97,Pool,Zach,11,9,10.0,9.0
-98,Word_Hunt,Alyssa,5,7,6.0,6.0
-99,Word_Hunt,Brick,8,6,7.0,7.0
-100,Word_Hunt,Dani,14,12,13.0,13.0
-101,Word_Hunt,Elie,7,3,5.0,5.0
-102,Word_Hunt,Ennis,6,9,7.5,8.0
-103,Word_Hunt,Ezra,13,8,10.5,10.0
-104,Word_Hunt,Goldstein,10,13,11.5,12.0
-105,Word_Hunt,Hagler,4,4,4.0,3.0
-106,Word_Hunt,Judah,11,11,11.0,11.0
-107,Word_Hunt,Moshe,12,14,13.0,13.0
-108,Word_Hunt,Shmuli,3,5,4.0,3.0
-109,Word_Hunt,Siegel,9,10,9.5,9.0
-110,Word_Hunt,Yitzie,1,1,1.0,1.0
-111,Word_Hunt,Zach,2,2,2.0,2.0
-112,Golf,Alyssa,13,6,9.5,12.0
-113,Golf,Brick,7,12,9.5,12.0
-114,Golf,Dani,8,7,7.5,8.0
-115,Golf,Elie,12,2,7.0,3.0
-116,Golf,Ennis,4,11,7.5,8.0
-117,Golf,Ezra,10,4,7.0,3.0
-118,Golf,Goldstein,11,3,7.0,3.0
-119,Golf,Hagler,1,10,5.5,2.0
-120,Golf,Judah,2,5,3.5,1.0
-121,Golf,Moshe,3,13,8.0,11.0
-122,Golf,Shmuli,6,8,7.0,3.0
-123,Golf,Siegel,14,1,7.5,8.0
-124,Golf,Yitzie,9,14,11.5,14.0
-125,Golf,Zach,5,9,7.0,3.0
+0,Anagrams,Alyssa,5,8,6.5,5.0
+1,Anagrams,Brick,15,17,16.0,18.0
+2,Anagrams,Dani,12,14,13.0,15.0
+3,Anagrams,Dave,18,7,12.5,12.0
+4,Anagrams,Elie,13,18,15.5,17.0
+5,Anagrams,Ennis,8,9,8.5,7.0
+6,Anagrams,Ezra,4,4,4.0,4.0
+7,Anagrams,Gavi,2,3,2.5,3.0
+8,Anagrams,Goldstein,18,7,12.5,12.0
+9,Anagrams,Hagler,18,7,12.5,12.0
+10,Anagrams,Ilan,10,11,10.5,8.0
+11,Anagrams,Judah,14,15,14.5,16.0
+12,Anagrams,MBT,6,10,8.0,6.0
+13,Anagrams,Moshe,7,16,11.5,10.0
+14,Anagrams,Shmuli,9,12,10.5,8.0
+15,Anagrams,Siegel,1,2,1.5,1.0
+16,Anagrams,Yitzie,3,1,2.0,2.0
+17,Anagrams,Zach,11,13,12.0,11.0
+18,Archery,Alyssa,18,18,18.0,8.0
+19,Archery,Brick,5,5,5.0,4.0
+20,Archery,Dani,7,7,7.0,7.0
+21,Archery,Dave,18,18,18.0,8.0
+22,Archery,Elie,18,18,18.0,8.0
+23,Archery,Ennis,3,3,3.0,1.0
+24,Archery,Ezra,18,18,18.0,8.0
+25,Archery,Gavi,18,18,18.0,8.0
+26,Archery,Goldstein,18,18,18.0,8.0
+27,Archery,Hagler,18,18,18.0,8.0
+28,Archery,Ilan,18,18,18.0,8.0
+29,Archery,Judah,3,3,3.0,1.0
+30,Archery,MBT,18,18,18.0,8.0
+31,Archery,Moshe,6,6,6.0,6.0
+32,Archery,Shmuli,18,18,18.0,8.0
+33,Archery,Siegel,5,5,5.0,4.0
+34,Archery,Yitzie,3,3,3.0,1.0
+35,Archery,Zach,18,18,18.0,8.0
+36,Basketball,Alyssa,2,1,1.5,1.0
+37,Basketball,Brick,1,2,1.5,1.0
+38,Basketball,Dani,11,13,12.0,12.0
+39,Basketball,Dave,7,11,9.0,9.0
+40,Basketball,Elie,13,12,12.5,13.0
+41,Basketball,Ennis,18,18,18.0,16.0
+42,Basketball,Ezra,18,18,18.0,16.0
+43,Basketball,Gavi,14,15,14.5,14.0
+44,Basketball,Goldstein,8,9,8.5,8.0
+45,Basketball,Hagler,4,3,3.5,3.0
+46,Basketball,Ilan,12,10,11.0,11.0
+47,Basketball,Judah,5,4,4.5,5.0
+48,Basketball,MBT,15,14,14.5,14.0
+49,Basketball,Moshe,6,6,6.0,6.0
+50,Basketball,Shmuli,3,5,4.0,4.0
+51,Basketball,Siegel,18,18,18.0,16.0
+52,Basketball,Yitzie,9,7,8.0,7.0
+53,Basketball,Zach,10,8,9.0,9.0
+54,Cup Pong,Alyssa,4,2,3.0,3.0
+55,Cup Pong,Brick,1,1,1.0,1.0
+56,Cup Pong,Dani,14,15,14.5,14.0
+57,Cup Pong,Dave,12,11,11.5,11.0
+58,Cup Pong,Elie,17,17,17.0,17.0
+59,Cup Pong,Ennis,2,3,2.5,2.0
+60,Cup Pong,Ezra,15,16,15.5,16.0
+61,Cup Pong,Gavi,16,14,15.0,15.0
+62,Cup Pong,Goldstein,7,13,10.0,10.0
+63,Cup Pong,Hagler,10,7,8.5,8.0
+64,Cup Pong,Ilan,6,6,6.0,5.0
+65,Cup Pong,Judah,3,4,3.5,4.0
+66,Cup Pong,MBT,13,10,11.5,11.0
+67,Cup Pong,Moshe,11,12,11.5,11.0
+68,Cup Pong,Shmuli,5,8,6.5,6.0
+69,Cup Pong,Siegel,9,9,9.0,9.0
+70,Cup Pong,Yitzie,8,5,6.5,6.0
+71,Cup Pong,Zach,18,18,18.0,18.0
+72,Darts,Alyssa,2,1,1.5,1.0
+73,Darts,Brick,4,4,4.0,4.0
+74,Darts,Dani,18,9,13.5,13.0
+75,Darts,Dave,10,10,10.0,9.0
+76,Darts,Elie,13,12,12.5,11.0
+77,Darts,Ennis,5,5,5.0,5.0
+78,Darts,Ezra,17,18,17.5,18.0
+79,Darts,Gavi,12,13,12.5,11.0
+80,Darts,Goldstein,15,15,15.0,16.0
+81,Darts,Hagler,1,2,1.5,1.0
+82,Darts,Ilan,14,14,14.0,15.0
+83,Darts,Judah,3,3,3.0,3.0
+84,Darts,MBT,16,17,16.5,17.0
+85,Darts,Moshe,6,7,6.5,6.0
+86,Darts,Shmuli,7,6,6.5,6.0
+87,Darts,Siegel,11,16,13.5,13.0
+88,Darts,Yitzie,9,11,10.0,9.0
+89,Darts,Zach,8,8,8.0,8.0
+90,Knockout,Alyssa,18,18,18.0,15.0
+91,Knockout,Brick,7,7,7.0,7.0
+92,Knockout,Dani,9,9,9.0,9.0
+93,Knockout,Dave,12,12,12.0,11.0
+94,Knockout,Elie,5,5,5.0,5.0
+95,Knockout,Ennis,2,2,2.0,2.0
+96,Knockout,Ezra,13,13,13.0,13.0
+97,Knockout,Gavi,14,14,14.0,14.0
+98,Knockout,Goldstein,18,18,18.0,15.0
+99,Knockout,Hagler,10,10,10.0,10.0
+100,Knockout,Ilan,6,6,6.0,6.0
+101,Knockout,Judah,1,1,1.0,1.0
+102,Knockout,MBT,18,18,18.0,15.0
+103,Knockout,Moshe,3,3,3.0,3.0
+104,Knockout,Shmuli,8,8,8.0,8.0
+105,Knockout,Siegel,12,12,12.0,11.0
+106,Knockout,Yitzie,18,18,18.0,15.0
+107,Knockout,Zach,4,4,4.0,4.0
+108,Pool,Alyssa,13,11,12.0,12.0
+109,Pool,Brick,5,3,4.0,4.0
+110,Pool,Dani,6,6,6.0,6.0
+111,Pool,Dave,10,10,10.0,10.0
+112,Pool,Elie,9,13,11.0,11.0
+113,Pool,Ennis,7,9,8.0,7.0
+114,Pool,Ezra,12,12,12.0,12.0
+115,Pool,Gavi,18,18,18.0,18.0
+116,Pool,Goldstein,16,17,16.5,17.0
+117,Pool,Hagler,11,7,9.0,9.0
+118,Pool,Ilan,8,8,8.0,7.0
+119,Pool,Judah,1,1,1.0,1.0
+120,Pool,MBT,15,15,15.0,14.0
+121,Pool,Moshe,2,2,2.0,2.0
+122,Pool,Shmuli,17,14,15.5,16.0
+123,Pool,Siegel,14,16,15.0,14.0
+124,Pool,Yitzie,4,5,4.5,5.0
+125,Pool,Zach,3,4,3.5,3.0
+126,Word_Hunt,Alyssa,3,3,3.0,2.0
+127,Word_Hunt,Brick,13,15,14.0,16.0
+128,Word_Hunt,Dani,18,9,13.5,13.0
+129,Word_Hunt,Dave,18,9,13.5,13.0
+130,Word_Hunt,Elie,7,12,9.5,8.0
+131,Word_Hunt,Ennis,12,11,11.5,11.0
+132,Word_Hunt,Ezra,6,6,6.0,6.0
+133,Word_Hunt,Gavi,8,13,10.5,10.0
+134,Word_Hunt,Goldstein,14,16,15.0,17.0
+135,Word_Hunt,Hagler,1,17,9.0,7.0
+136,Word_Hunt,Ilan,9,10,9.5,8.0
+137,Word_Hunt,Judah,10,1,5.5,5.0
+138,Word_Hunt,MBT,11,14,12.5,12.0
+139,Word_Hunt,Moshe,18,9,13.5,13.0
+140,Word_Hunt,Shmuli,4,5,4.5,3.0
+141,Word_Hunt,Siegel,15,18,16.5,18.0
+142,Word_Hunt,Yitzie,2,2,2.0,1.0
+143,Word_Hunt,Zach,5,4,4.5,3.0
+144,Golf,Alyssa,1,11,6.0,4.0
+145,Golf,Brick,9,6,7.5,6.0
+146,Golf,Dani,8,2,5.0,2.0
+147,Golf,Dave,5,9,7.0,5.0
+148,Golf,Elie,4,1,2.5,1.0
+149,Golf,Ennis,2,17,9.5,8.0
+150,Golf,Ezra,6,13,9.5,8.0
+151,Golf,Gavi,7,4,5.5,3.0
+152,Golf,Goldstein,16,5,10.5,10.0
+153,Golf,Hagler,15,3,9.0,7.0
+154,Golf,Ilan,18,16,17.0,18.0
+155,Golf,Judah,3,18,10.5,10.0
+156,Golf,MBT,17,7,12.0,15.0
+157,Golf,Moshe,10,12,11.0,14.0
+158,Golf,Shmuli,13,8,10.5,10.0
+159,Golf,Siegel,11,10,10.5,10.0
+160,Golf,Yitzie,12,15,13.5,16.0
+161,Golf,Zach,14,14,14.0,17.0
