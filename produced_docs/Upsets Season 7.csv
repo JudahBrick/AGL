@@ -1,0 +1,59 @@
+,Winner,Winner record in game,Game,Loser,Loser record in game,Score,Win % Chance
+0,Brick,(5-2),Pool,Hagler,(5-3),2,53.0
+1,Brick,(5-2),Pool,Yitzie,(4-2),2,51.7
+2,Brick,(2-0),Golf,Elie,(2-3),14-18,66.6
+3,Brick,(2-0),Golf,Moshe,(3-6),16-18,70.4
+4,Dani,(2-4),Golf,MBT,(1-2),14-22,48.8
+5,Dani,(3-2),Archery,Yitzie,(6-1),3-3:3-3:3-2,41.8
+6,Dave,(1-1),Knockout,Dani,(2-2),2-0,50.0
+7,Elie,(1-2),Knockout,Judah,(2-3),0-3:1-0:1-0,47.3
+8,Elie,(2-3),Golf,SK,(1-5),16-16:18-23,66.1
+9,Ennis,(4-0),Golf,Ving,(1-2),14-23,70.6
+10,Ennis,(4-0),Golf,Moshe,(3-6),16-20,72.0
+11,Ennis,(4-0),Golf,Dani,(2-4),18-19,71.6
+12,Ennis,(2-5),Cup Pong,Hagler,(4-2),4,32.7
+13,Ennis,(4-0),Golf,Ilan,(0-1),16-28,78.3
+14,Ezra,(2-2),Anagrams,Zach,(2-2),2300-2200:4500-2900,50.0
+15,Ezra,(3-1),Golf,Dave,(0-3),15-20,84.8
+16,Ezra,(3-1),Golf,Dani,(2-4),19-24,66.2
+17,Ezra,(2-2),Anagrams,Gavi,(3-1),6900-5900:19000-16800,41.7
+18,Ezra,(3-1),Golf,Moshe,(3-6),14-15,66.7
+19,Goldstein,(3-3),Cup Pong,Ennis,(2-5),2,61.6
+20,Hagler,(3-0),Golf,Moshe,(3-6),18-19,71.4
+21,Hagler,(3-0),Golf,Shmuli,(2-3),17-21,67.7
+22,Hagler,(3-0),Golf,Goldstein,(2-3),12-17,67.7
+23,Hagler,(4-2),Cup Pong,MBT,(4-2),1 OT 2,50.0
+24,Ilan,(1-2),Word_Hunt,Ving,(5-2),15200-16100:7600-5800:15000-12700,35.3
+25,Ilan,(3-5),Pool,MBT,(4-4),1,43.8
+26,Ilan,(3-5),Pool,Brick,(5-2),2,36.1
+27,Ilan,(3-5),Pool,Hagler,(5-3),1,38.9
+28,Judah,(2-3),Knockout,Dani,(2-2),2-0:0-2:0-0:1-0,45.5
+29,Judah,(3-1),Golf,Dave,(0-3),16-24,84.8
+30,Judah,(3-1),Golf,Goldstein,(2-3),17-25,62.7
+31,Judah,(3-1),Golf,Moshe,(3-6),16-20,66.7
+32,MBT,(4-4),Pool,Hagler,(5-3),1,45.0
+33,MBT,(2-2),Word_Hunt,Ilan,(1-2),11200 - 15100:13400-12400:17500-12300,57.1
+34,MBT,(2-2),Word_Hunt,Shmuli,(1-4),5600-4700 : 8400 - 7400,66.7
+35,Moshe,(3-6),Golf,MBT,(1-2),20-36,48.3
+36,Moshe,(3-6),Golf,Shmuli,(2-3),19-20,45.6
+37,Moshe,(3-6),Golf,Gavi,(2-1),17-25,35.9
+38,Moshe,(2-1),Darts,Brick,(4-1),20,45.5
+39,Shmuli,(1-4),Word_Hunt,Ving,(5-2),16300-15500:12100-18200:7600-6800,26.7
+40,Shmuli,(3-1),Cup Pong,MBT,(4-2),1,52.1
+41,Shmuli,(2-3),Golf,SK,(1-5),15-18,66.1
+42,Shmuli,(2-3),Golf,Dave,(0-3),18-22,76.9
+43,Shmuli,(1-2),Pool,Ilan,(3-5),8-ball:2,49.1
+44,Siegel,(1-2),Pool,Elie,(5-2),1,35.3
+45,SK,(5-3),Cup Pong,Ilan,(3-2),2,51.2
+46,SK,(1-2),Darts,Nolan,(0-6),39,84.1
+47,SK,(1-2),Pool,Brick,(5-2),1,35.3
+48,Ving,(1-2),Golf,SK,(1-5),15-14,63.7
+49,Ving,(2-2),Darts,Moshe,(2-1),9,44.4
+50,Yitzie,(2-0),Golf,Judah,(3-1),14-17,54.3
+51,Yitzie,(2-0),Golf,Goldstein,(2-3),17-27,66.6
+52,Yitzie,(1-2),Anagrams,SK,(2-3),6300-4900:20300-18400,47.3
+53,Yitzie,(4-2),Pool,Elie,(5-2),3,48.3
+54,Yitzie,(1-1),Word_Hunt,Shmuli,(1-4),8200-12000:16900-11800:15900-14900,66.7
+55,Zach,(2-0),Golf,Dani,(2-4),16-17,70.0
+56,Zach,(5-1),Word_Hunt,Ilan,(1-2),5800-7900:5800-5300:3300:3400,67.7
+57,Zach,(2-0),Golf,Elie,(2-3),18-20,66.6
